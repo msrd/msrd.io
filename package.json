@@ -10,6 +10,6 @@
     "jade": "*",
     "stylus": "*",
     "nib": "*",
-    "discount": "~0.2.3"
+    "marked": "~0.2.6"
   }
 }
