@@ -1,0 +1,157 @@
+@import 'nib/gradients'
+@import 'nib/vendor'
+@import 'buttons/buttons.styl'
+
+$fontsize = 16pt
+$whiteish = hsl(0, 0, 99)
+$blackish = hsl(0, 0, 7)
+
+$phi = 0.6250
+$0 = 1.0
+$1 = $phi + $0      // 1.6250
+$2 = $0 + $1        // 2.6250
+$3 = $1 + $2        // 4.2500
+$4 = $2 + $3        // 6.8750
+
+*
+  box-sizing: border-box
+
+html
+  background url(/images/debut_light.png) 
+
+body
+  font          1.0rem/1.5 sans-serif
+  width         42em
+  margin        0 auto
+  color         $blackish
+  //background    $whiteish
+  // background    url('http://www.baselineme.com/24') center top repeat
+  // background url(/images/24.svg) center top repeat
+
+article
+  max-width     944px
+  margin        auto
+
+h1
+  font-size     6.8750 rem
+  line-height   7.5 rem
+  margin-top    1.5 rem
+  margin-bottom 3.0 rem
+  margin-left  -0.3 rem
+  letter-spacing -2px
+  text-rendering optimizelegibility
+  color rgb(9,79,178)
+
+  span
+    color lightGray
+
+  small
+    color darkGray
+    font-size 1rem
+    line-height 1.333rem
+    font-style normal
+    letter-spacing 0px
+
+p.slug
+  font-weight bold
+  //font-variant small-caps
+  margin-top -3.0 rem
+  //margin-bottom -1.5 rem
+  color rgb(255, 85, 64)
+
+span.invert
+  color $blackish
+  background-color: rgb(87, 193, 233)
+  padding: 4px
+
+
+/* button styles from twitter bootstrap
+   http://twitter.github.com/bootstrap/base-css.html#buttons
+*/
+
+a:visited, a:link
+  color hsl(205, 20%, 50%)
+  text-decoration none
+  border-bottom 1px solid #F2ECDA
+
+a:active, a:hover
+  border-bottom 1px solid #999
+
+figure
+  a:active, a:hover
+    border-bottom 0px
+
+figcaption
+  font-variant small-caps
+  margin-top    0rem
+  margin-bottom 1.5rem
+  color darkGray
+
+figcaptionsmall
+  font-style italic
+  font-size 0.625 rem
+  line-height 1.5 rem
+  margin-bottom 1.5 rem
+
+oldbutton
+  display inline-block
+  padding 0.3rem 0.75rem
+  margin 0 0 1.5rem 0
+  font-size 2 rem
+
+h2
+  color rgb(9,79,178)
+  font-size     2.6250 rem
+  line-height   3.0000 rem
+  margin-top    3.0 rem
+  margin-bottom 1.5 rem
+  // See http://➡.ws/border-top
+  background url('images/1x1.svg') top left repeat-x
+
+h3
+  font-size     1.6250 rem
+  line-height   3.0 rem
+  margin-top    1.5 rem
+  margin-bottom 0 rem
+  color rgb(9,79,178)
+
+p, ul, ol
+  margin-top    0rem
+  margin-bottom 1.5rem
+
+aside
+  font-size     0.6250rem
+  float right
+  padding 0 0 0 1.5em
+  margin 0 0 0 1em
+  max-width 20em
+
+blockquote
+  font-family Georgia
+  font-style italic
+  text-indent -0.4rem
+  
+
+.amp
+  font-style: italic
+  font-family: "Minion Pro", Constantia, "Palatino Linotype"
+
+.box1
+  font-size 12px
+  width 1em
+  height 1em
+  border 1px solid black
+  text-align center
+
+.box2
+  font-size 60px
+  width 1em
+  height 1em
+  border 1px solid black
+  text-align center
+
+spam
+  border-radius 5px
+  box-shadow 0 0 5px black
+  opacity 0.75
+

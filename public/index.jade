@@ -1,0 +1,108 @@
+extends template
+block content
+
+  h1 msrd
+    span .io
+
+  p.slug microsoft regional directors DRAFT 
+
+  :markdown
+    The Microsoft Regional Director program has a new logo. In keeping with the 
+    spirit of Microsoft's 2012 corporate and product line rebranding, the RD 
+    logo was refashioned to reflect their new design asthetic:
+
+  ul
+    li Monochromatic
+    li Segoe typeface
+    li Simple layout and icon
+
+  h2 The Logo
+  p.
+    There are three sizes of images (all PNGs) to choose from, with each size
+    coming in 2 flavors: white background and transparent background.
+
+  ul
+    li 336 x 96 pixels
+    li 672 x 192 pixels
+    li 1344 x 384 pixels
+
+  h3 Small
+
+  figure
+    a(href='/logo/msrd-logo-96px.png')
+      img(src='/logo/msrd-logo-96px.png', alt='my alt')
+    figcaption 336x96 px png
+
+  figure
+    a(href='/logo/msrd-logo-96px-alpha.png')
+      img(src='/logo/msrd-logo-96px-alpha.png')
+    figcaption 336x96 px with alpha transparency png
+
+  h3 Medium
+
+  figure
+    a(href='/logo/msrd-logo-192px.png')
+      img(src='/logo/msrd-logo-192px.png')
+    figcaption 672x192 pixel png
+
+  h3 Large
+
+  :markdown
+    The really big version of the logo is 1344 x 384 pixels, available in 
+    [white](/logo/msrd-logo-384px.png) or 
+    [transparent](/logo/msrd-logo-384px-alpha.png) backgrounds. 
+
+  h2 Details
+
+  p.
+    Compare the new logo with the previous version, which was in use for the
+    past decade. It featured the as-of-then corporate typeface with a narrow
+    band of the four primary Microsoft colors. 
+
+  figure
+    a(href='/logo/msrd-old-96px.jpg')
+      img(src='/logo/msrd-old-96px.jpg')
+    figcaption rd logo prior to 2013
+
+  :markdown
+      Then contrast the new logo within the larger Microsoft [product family like Office and Xbox](http://www.neowin.net/news/the-new-microsoft-brand-family-at-a-glance).
+
+  p More details about the logo files
+    ul
+      li Rendered from Adobe Illustrator 
+      li File size minimized and optimized with <a href='http://optipng.com'>OptiPNG</a>
+      li Image height is evenly divisble by 16 or 24 pixels for typographical baseline
+      li The logo is a 3 ½ : 1 ratio  
+      li The screen color is <span class="invert">rgb (9, 79, 178)</span>
+      li For print, use <span class="invert">cmyk (85, 50, 0, 0)</span>
+      li.
+         Designed by Sean Dolinsky at <a href="http://www.vertigo.com">Vertigo</a>. 
+         Some of his <a href='logo/sketches.png'>early sketches</a>.
+
+  h3 Usage Guidelines PDF
+  p We put together usage guidelines for the logo in a convienent 5-page PDF.
+  p 
+    a(href='/logo/msrd-guidelines.pdf')
+      img(src='/logo/msrd-guidelines-preview.png')
+
+  h2 Download
+  p Download all the images in one 1.5M zip file. Contents are:
+  form(method='get', action='/logo/msrd-logos.zip')
+    button(type="submit").btn <i class="icon-box"></i> Download All
+
+  pre.
+    msrd-logo-96px.png                2,473 bytes
+    msrd-logo-96px-alpha.png          2,473
+    msrd-logo-192px.png               5,444
+    msrd-logo-192px-alpha.png         5,308
+    msrd-logo-384px.png              11,927
+    msrd-logo-384px-alpha.png        11,557
+    msrd-logo.eps                   523,270
+    msrd-guidelines.pdf           1,266,849
+
+  p &nbsp;
+  p &nbsp;
+
+
+
+
