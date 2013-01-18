@@ -13,6 +13,14 @@ Technical details about the RD site
 - Git for source control; change sets pushed to Azure via `git push`
 - Source will be on [github](http://github.com)
 
+Getting Started
+---------------
+	% npm install
+	% npm install -g supervisor
+	% ./autostart
+
+Now open http://localhost:3000 to view
+
 Stretch goals for the site
 --------------------------
 

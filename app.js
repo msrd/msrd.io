@@ -34,6 +34,7 @@ app.configure(function(){
   app.use(express.static(__dirname + '/public'));
 
   /*
+   * TODO: Consider refactoring or just removing
   app.use(function(req, res, next) {
     return routes.not_found(res);
   });
