@@ -10,7 +10,6 @@ var app = express();
 function compile(str, path) {
   return stylus(str)
     .set('filename', path)
-/*    .set('compress', true)  */
     .use(nib());
 }
 
@@ -33,11 +32,6 @@ app.configure(function(){
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
 
-  /*
-  app.use(function(req, res, next) {
-    return routes.not_found(res);
-  });
-  */
 });
 
 app.configure('development', function(){
