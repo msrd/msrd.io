@@ -25,15 +25,27 @@ $2 = $0 + $1        // 2.6250
 $3 = $1 + $2        // 4.2500
 $4 = $2 + $3        // 6.8750
 
+// font-face
+@font-face
+  font-family: DINWeb
+  src: url("../fonts/DINWeb.woff") format("woff")
+
+@font-face
+  font-family: DINWeb-Bold
+  src: url("../fonts/DINWeb-Bold.woff") format("woff")
+
 // main
 *
   box-sizing: border-box
+  -webkit-transition: all 0.05s linear;
+  -moz-transition: all 0.05s linear;
+  transition: all 0.05s linear;
 
 body
   max-width: $maxwidth
   margin: 0 auto
   padding: 0 $padding
-  font: 400 $fontsize/1.5em 'Open Sans', 'Roboto', sans-serif
+  font: 400 $fontsize/1.5em DINWeb, sans-serif
   color: $gray
   -webkit-font-smoothing: antialiased
   font-smoothing: antialiased
@@ -78,12 +90,15 @@ header figure, header h1
 header figure img
   width: 18em
 
+header h1
+  font-family: DINWeb-Bold
+
 nav
   column(6)
   text-align: right
-  font-size: 0.8em
+  font-size: 0.9em
   text-transform: uppercase
-  color: $blue
+  color: $lightgray
   font-weight: 400
 
 nav
@@ -117,7 +132,7 @@ section h1
   text-align: center
   padding: 1em 0
   font-weight: 300
-  font-size: $2 em
+  font-size: 3em
   line-height: 1.2em
 
 .subheading
@@ -150,6 +165,20 @@ footer p
   column(12)
   font-size: 0.8em
   color: $lightgray
+
+// font-size on media queries
+@media screen and (max-width: 480px)
+  body
+    font-size: $fontsize*0.85
+@media screen and (min-width: 481px) and (max-width: 768px)
+  body
+    font-size: $fontsize*0.9
+@media screen and (min-width: 769px) and (max-width: 1024px)
+  body
+    font-size: $fontsize*0.95
+@media screen and (min-width: 1025px)
+  body
+    font-size: $fontsize
 
 // html
 //   background url(/images/debut_light.png) 

@@ -1,0 +1,180 @@
+// grid
+@import grid
+
+// variables
+$fontsize = 14pt
+$bodypadding = 2em
+$blue = #094FB2
+$darkblue = #063373
+$bluegray = #5C6573
+$gray = #444
+$lightgray = #aaa
+
+$phi = 0.6250
+$0 = 1.0
+$1 = $phi + $0      // 1.6250
+$2 = $0 + $1        // 2.6250
+$3 = $1 + $2        // 4.2500
+$4 = $2 + $3        // 6.8750
+
+// font-face
+@font-face
+  font-family: DINWeb
+  src: url("../fonts/DINWeb.woff") format("woff")
+
+@font-face
+  font-family: DINWeb-Bold
+  src: url("../fonts/DINWeb-Bold.woff") format("woff")
+
+// main
+*
+  box-sizing: border-box
+  -webkit-transition: all 0.05s linear;
+  -moz-transition: all 0.05s linear;
+  transition: all 0.05s linear;
+
+body
+  margin: 0
+  padding: 0
+  width: 100%
+  font: 400 100%/1.5em DINWeb, sans-serif
+  color: $gray
+  -webkit-font-smoothing: antialiased
+  font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+
+h1
+  color: $blue
+  font-weight: 400
+  font-size: 2em
+  line-height: 1.5em
+
+h2
+  font-weight: 400
+  color: $lightgray
+
+header, footer, section
+  row(12)
+  margin: 0 auto
+  background: red // remove later
+
+img
+  max-width: 100%
+  width: auto\9
+  height: auto
+  vertical-align: middle
+  border: 0
+  -ms-interpolation-mode: bicubic
+
+// clear floats
+header:before, header:after, 
+footer:before, footer:after, 
+section:before, section:after
+  display: table
+  content: ""
+  line-height: 0
+
+header:after, 
+footer:after, 
+section:after
+  clear: both
+
+// header and nav
+header
+  vertical-align: middle
+
+header figure, header h1
+  column(6)
+
+header figure img
+  width: 18em
+
+header h1
+  font-family: DINWeb-Bold
+
+nav
+  column(6)
+  text-align: right
+  font-size: 0.9em
+  text-transform: uppercase
+  color: $lightgray
+  font-weight: 400
+
+nav
+  li
+    display: inline-block
+    list-style: none outside none
+    padding-right: $1 em
+    &:last-child
+      padding-right: 0
+
+// sections
+section
+  padding: 3em 0 4.5em
+
+section:before, section:after
+  display: table
+  content: ""
+  line-height: 0
+
+section:after
+  clear: both
+
+section h1
+  column(12)
+
+.about 
+  text-align: center
+
+.about h1
+  color: $bluegray
+  text-align: center
+  padding: 1em 0
+  font-weight: 300
+  font-size: 3em
+  line-height: 1.2em
+
+.subheading
+  column(4)
+
+.rds h1
+  column(12)
+
+.regions-list
+  column(3)
+
+.regions-content
+  column(9)
+
+.news-post
+  column(4)
+
+.logo p
+  column(6)
+
+.hero figure
+  column(12)
+
+//@media screen and (max-width: 767px)
+//  .subheading, .news-post, .logo p
+//    column(12)
+
+// footer
+footer p
+  column(12)
+  font-size: 0.8em
+  color: $lightgray
+
+// font-size on media queries
+@media screen and (max-width: 480px)
+  body
+    font-size: $fontsize*0.85
+@media screen and (min-width: 481px) and (max-width: 768px)
+  body
+    font-size: $fontsize*0.9
+@media screen and (min-width: 769px) and (max-width: 1024px)
+  body
+    font-size: $fontsize*0.95
+@media screen and (min-width: 1025px)
+  body
+    font-size: $fontsize
