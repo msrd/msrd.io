@@ -1,0 +1,216 @@
+// @import 'nib/gradients'
+// @import 'nib/vendor'
+// @import 'buttons/buttons.styl'
+
+
+// grid
+@import grid
+columns = 12
+total-width=100%
+
+// variables
+$padding = 2em
+$maxwidth = 1200px
+$fontsize = 12pt
+$bluegray = hsl(215, 20, 45)
+$blue = hsl(215, 95, 70)
+$darkblue = hsl(215, 95, 45)
+
+$phi = 0.6250
+$0 = 1.0
+$1 = $phi + $0      // 1.6250
+$2 = $0 + $1        // 2.6250
+$3 = $1 + $2        // 4.2500
+$4 = $2 + $3        // 6.8750
+
+// main
+*
+  box-sizing: border-box
+
+body
+  max-width: $maxwidth
+  margin: 0 auto
+  padding: 0 $padding
+  font-size: $fontsize
+  font-family: 'helvetica neue', 'Roboto', 'Open Sans', sans-serif
+  -webkit-font-smoothing: antialiased
+  font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+
+h1 
+  font-weight: 500
+  color: $bluegray
+  margin: 0 0 1em
+
+h2
+  font-weight: 500
+  padding: 0 0 1em
+
+p
+  padding: 0 0 1em
+
+header, footer, section
+  row(12)
+
+img
+  max-width: 100%
+  width: auto\9
+  height: auto
+  vertical-align: middle
+  border: 0
+  -ms-interpolation-mode: bicubic
+
+// header and nav
+header
+  margin-top: 1em
+  margin-bottom: 1em
+  vertical-align: middle
+
+header figure, header h1
+  column(6)
+
+nav
+  column(6)
+  text-align: right
+
+nav
+  li
+    display: inline-block
+    list-style: none outside none
+    padding-right: 1em
+    &:last-child
+      padding-right: 0
+
+// sections
+section
+  padding: 0 0 3em
+
+section:before, section:after
+  display: table
+  content: ""
+  line-height: 0
+
+section:after
+  clear: both
+
+section h1
+  column(12)
+
+.about h1
+  text-align: center
+  padding: 1.5em 0
+
+.about p
+  column(4)
+
+.rds h1
+  column(12)
+
+.regions-list
+  column(3)
+
+.regions-content
+  column(9)
+
+.news-post
+  column(4)
+
+.logo p
+  column(6)
+
+.hero figure
+  column(12)
+
+@media screen and (max-width: 767px)
+  .about p, .news-post, .logo p
+    column(12)
+
+// footer
+footer p
+  column(12)
+
+// html
+//   background url(/images/debut_light.png) 
+// 
+// body
+//   font          1.0rem/1.5 sans-serif
+//   width         42em
+//   margin        0 auto
+//   color         $blackish
+//   // background    $whiteish
+//   // background    url('http://www.baselineme.com/24') center top repeat
+//   // background url(/images/24.svg) center top repeat
+// 
+// article
+//   max-width     944px
+//   margin        auto
+// 
+// h1
+//   font-size     6.8750 rem
+//   line-height   7.5 rem
+//   margin-top    1.5 rem
+//   margin-bottom 3.0 rem
+//   margin-left  -0.3 rem
+//   letter-spacing -2px
+//   text-rendering optimizelegibility
+//   color rgb(9,79,178)
+// 
+//   span
+//     color lightGray
+// 
+// p.slug
+//   font-weight bold
+//   //font-variant small-caps
+//   margin-top -3.0 rem
+//   //margin-bottom -1.5 rem
+//   color rgb(255, 85, 64)
+// 
+// span.invert
+//   color $blackish
+//   background-color: rgb(87, 193, 233)
+//   padding: 4px
+// 
+// a:visited, a:link
+//   color hsl(205, 20%, 50%)
+//   text-decoration none
+//   border-bottom 1px solid #F2ECDA
+// 
+// a:active, a:hover
+//   border-bottom 1px solid #999
+// 
+// figure
+//   a:active, a:hover, a:visited, a:link
+//     border-bottom 0px
+// 
+// figcaption
+//   font-variant small-caps
+//   margin-top    0rem
+//   margin-bottom 1.5rem
+//   color darkGray
+// 
+// h2
+//   color rgb(9,79,178)
+//   font-size     2.6250 rem
+//   line-height   3.0000 rem
+//   margin-top    3.0 rem
+//   margin-bottom 1.5 rem
+//   // See http://➡.ws/border-top
+//   background url('/images/1x1.svg') top left repeat-x
+// 
+// h3
+//   font-size     1.6250 rem
+//   line-height   3.0 rem
+//   margin-top    1.5 rem
+//   margin-bottom 0 rem
+//   color rgb(9,79,178)
+// 
+// p, ul, ol
+//   margin-top    0rem
+//   margin-bottom 1.5rem
+// 
+// aside
+//   font-size     0.6250rem
+//   float right
+//   padding 0 0 0 1.5em
+//   margin 0 0 0 1em
+//   max-width 20em
