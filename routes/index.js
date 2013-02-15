@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'msrd.io' });
+  res.render('index2', { title: 'msrd.io' });
 };
 
 exports.not_found = function(res) {
