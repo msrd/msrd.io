@@ -8,7 +8,7 @@ gutter-width = 1.5rem
 columns = 12
 
 // Utility variable — you should never need to modify this
-_gridsystem-width = (column-width + gutter-width) * columns
+_gridsystem-width = column-width * columns + gutter-width * (columns - 1)
 
 // Set @total-width to 100% for a fluid layout
 total-width = _gridsystem-width
@@ -48,7 +48,7 @@ row(columns = columns)
 	*margin 0 total-width * (((gutter-width * 0.5) / _gridsystem-width ) * - 1)-correction
 
 column(x, columns = columns)
-	display inline
+	display inline-block
 	float left
 	overflow hidden
 	width total-width * ((((gutter-width + column-width ) * x) - gutter-width) / _gridsystem-width)

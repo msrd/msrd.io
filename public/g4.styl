@@ -3,7 +3,7 @@
 
 // variables
 $fontsize = 14pt
-$bodypadding = 2em
+$bodypadding = 2rem
 $blue = #094FB2
 $darkblue = #063373
 $bluegray = #5C6573
@@ -29,34 +29,41 @@ $4 = $2 + $3        // 6.8750
 // main
 *
   box-sizing: border-box
-  -webkit-transition: all 0.05s linear;
-  -moz-transition: all 0.05s linear;
-  transition: all 0.05s linear;
+  -webkit-transition: all 0.05s linear
+  -moz-transition: all 0.05s linear
+  transition: all 0.05s linear
+
+html
+  font: 400 95%/1.5em DINWeb, sans-serif
 
 body
   margin: 0
-  padding: 0
   width: 100%
-  font: 400 100%/1.5em DINWeb, sans-serif
   color: $gray
   -webkit-font-smoothing: antialiased
   font-smoothing: antialiased
   text-rendering: optimizeLegibility
 
 h1
+  margin: 0
+  padding: 0 0 ($1 rem)
   color: $blue
   font-weight: 400
-  font-size: 2em
-  line-height: 1.5em
+  font-size: $2 rem
+  line-height: 1.2em
 
 h2
+  margin: 0
+  padding: 0 0 ($0 rem)
   font-weight: 400
+  font-size: $1 rem
   color: $lightgray
 
-header, footer, section
-  row(12)
-  margin: 0 auto
-  background: red // remove later
+p, li
+  margin: 0
+  padding: 0 0 ($0 rem)
+  font-size: $0 rem
+  color: $gray
 
 img
   max-width: 100%
@@ -65,6 +72,14 @@ img
   vertical-align: middle
   border: 0
   -ms-interpolation-mode: bicubic
+
+figure
+  margin: 0
+
+// containers
+header, footer, section
+  row(12)
+  margin: 0 auto
 
 // clear floats
 header:before, header:after, 
@@ -82,12 +97,13 @@ section:after
 // header and nav
 header
   vertical-align: middle
+  padding: (1rem) 0
 
 header figure, header h1
   column(6)
 
 header figure img
-  width: 18em
+  width: 18rem
 
 header h1
   font-family: DINWeb-Bold
@@ -95,44 +111,31 @@ header h1
 nav
   column(6)
   text-align: right
-  font-size: 0.9em
+  font-size: $0 rem
   text-transform: uppercase
-  color: $lightgray
-  font-weight: 400
 
 nav
   li
     display: inline-block
     list-style: none outside none
-    padding-right: $1 em
+    padding-right: $1 rem
     &:last-child
       padding-right: 0
 
-// sections
+// general sections
 section
-  padding: 3em 0 4.5em
-
-section:before, section:after
-  display: table
-  content: ""
-  line-height: 0
-
-section:after
-  clear: both
+  padding: 3em 0
 
 section h1
   column(12)
 
-.about 
-  text-align: center
-
+// about section
 .about h1
   color: $bluegray
   text-align: center
-  padding: 1em 0
-  font-weight: 300
-  font-size: 3em
+  font-size: 3rem
   line-height: 1.2em
+  padding: ($1 rem) 0 ($3 rem)
 
 .subheading
   column(4)
@@ -146,9 +149,14 @@ section h1
 .regions-content
   column(9)
 
+// news section
 .news-post
   column(4)
 
+.news-post img
+  margin: 0 0 ($1 rem)
+
+// logo section
 .logo p
   column(6)
 

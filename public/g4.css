@@ -24,36 +24,38 @@ body:after {
   -moz-transition: all 0.05s linear;
   transition: all 0.05s linear;
 }
+html {
+  font: 400 95%/1.5em DINWeb, sans-serif;
+}
 body {
   margin: 0;
-  padding: 0;
   width: 100%;
-  font: 400 100%/1.5em DINWeb, sans-serif;
   color: #444;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 h1 {
+  margin: 0;
+  padding: 0 0 1.625rem;
   color: #094fb2;
   font-weight: 400;
-  font-size: 2em;
-  line-height: 1.5em;
+  font-size: 2.625rem;
+  line-height: 1.2em;
 }
 h2 {
+  margin: 0;
+  padding: 0 0 1rem;
   font-weight: 400;
+  font-size: 1.625rem;
   color: #aaa;
 }
-header,
-footer,
-section {
-  display: block;
-  width: 73.5rem;
-  margin: 0 -0.75rem;
-  *width: 73.5rem -correction;
-  *margin: 0 -0.75rem -correction;
-  margin: 0 auto;
-  background: #f00;
+p,
+li {
+  margin: 0;
+  padding: 0 0 1rem;
+  font-size: 1rem;
+  color: #444;
 }
 img {
   max-width: 100%;
@@ -62,6 +64,19 @@ img {
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
+}
+figure {
+  margin: 0;
+}
+header,
+footer,
+section {
+  display: block;
+  width: 72rem;
+  margin: 0 -0.75rem;
+  *width: 72rem -correction;
+  *margin: 0 -0.75rem -correction;
+  margin: 0 auto;
 }
 header:before,
 header:after,
@@ -80,10 +95,11 @@ section:after {
 }
 header {
   vertical-align: middle;
+  padding: 1rem 0;
 }
 header figure,
 header h1 {
-  display: inline;
+  display: inline-block;
   float: left;
   overflow: hidden;
   width: 34.5rem;
@@ -92,13 +108,13 @@ header h1 {
   *margin: 0 0.75rem -correction;
 }
 header figure img {
-  width: 18em;
+  width: 18rem;
 }
 header h1 {
   font-family: DINWeb-Bold;
 }
 nav {
-  display: inline;
+  display: inline-block;
   float: left;
   overflow: hidden;
   width: 34.5rem;
@@ -106,33 +122,22 @@ nav {
   *width: 34.5rem -correction;
   *margin: 0 0.75rem -correction;
   text-align: right;
-  font-size: 0.9em;
+  font-size: 1rem;
   text-transform: uppercase;
-  color: #aaa;
-  font-weight: 400;
 }
 nav li {
   display: inline-block;
   list-style: none outside none;
-  padding-right: 1.625em;
+  padding-right: 1.625rem;
 }
 nav li:last-child {
   padding-right: 0;
 }
 section {
-  padding: 3em 0 4.5em;
-}
-section:before,
-section:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-section:after {
-  clear: both;
+  padding: 3em 0;
 }
 section h1 {
-  display: inline;
+  display: inline-block;
   float: left;
   overflow: hidden;
   width: 70.5rem;
@@ -140,19 +145,15 @@ section h1 {
   *width: 70.5rem -correction;
   *margin: 0 0.75rem -correction;
 }
-.about {
-  text-align: center;
-}
 .about h1 {
   color: #5c6573;
   text-align: center;
-  padding: 1em 0;
-  font-weight: 300;
-  font-size: 3em;
+  font-size: 3rem;
   line-height: 1.2em;
+  padding: 1.625rem 0 4.25rem;
 }
 .subheading {
-  display: inline;
+  display: inline-block;
   float: left;
   overflow: hidden;
   width: 22.5rem;
@@ -161,7 +162,7 @@ section h1 {
   *margin: 0 0.75rem -correction;
 }
 .rds h1 {
-  display: inline;
+  display: inline-block;
   float: left;
   overflow: hidden;
   width: 70.5rem;
@@ -170,7 +171,7 @@ section h1 {
   *margin: 0 0.75rem -correction;
 }
 .regions-list {
-  display: inline;
+  display: inline-block;
   float: left;
   overflow: hidden;
   width: 16.5rem;
@@ -179,7 +180,7 @@ section h1 {
   *margin: 0 0.75rem -correction;
 }
 .regions-content {
-  display: inline;
+  display: inline-block;
   float: left;
   overflow: hidden;
   width: 52.5rem;
@@ -188,7 +189,7 @@ section h1 {
   *margin: 0 0.75rem -correction;
 }
 .news-post {
-  display: inline;
+  display: inline-block;
   float: left;
   overflow: hidden;
   width: 22.5rem;
@@ -196,8 +197,11 @@ section h1 {
   *width: 22.5rem -correction;
   *margin: 0 0.75rem -correction;
 }
+.news-post img {
+  margin: 0 0 1.625rem;
+}
 .logo p {
-  display: inline;
+  display: inline-block;
   float: left;
   overflow: hidden;
   width: 34.5rem;
@@ -206,7 +210,7 @@ section h1 {
   *margin: 0 0.75rem -correction;
 }
 .hero figure {
-  display: inline;
+  display: inline-block;
   float: left;
   overflow: hidden;
   width: 70.5rem;
@@ -215,7 +219,7 @@ section h1 {
   *margin: 0 0.75rem -correction;
 }
 footer p {
-  display: inline;
+  display: inline-block;
   float: left;
   overflow: hidden;
   width: 70.5rem;
