@@ -4,27 +4,20 @@
 // variables
 $fontsize = 14pt
 $bodypadding = 2rem
+
 $blue = #094FB2
 $darkblue = #063373
 $bluegray = #5C6573
 $gray = #777
-$lightgray = #ccc
+$lightgray = #bbb
+$white = #fff
 
-$phi = 0.6250
+$phi = 0.618034
 $0 = 1.0
 $1 = $phi + $0      // 1.6250
 $2 = $0 + $1        // 2.6250
 $3 = $1 + $2        // 4.2500
 $4 = $2 + $3        // 6.8750
-
-// font-face
-@font-face
-  font-family: DINWeb
-  src: url("../fonts/DINWeb.woff") format("woff")
-
-@font-face
-  font-family: DINWeb-Bold
-  src: url("../fonts/DINWeb-Bold.woff") format("woff")
 
 // main
 *
@@ -35,6 +28,7 @@ $4 = $2 + $3        // 6.8750
 
 html
   font: 400 95%/$1 em 'Roboto', sans-serif
+  overflow-x: hidden
 
 body
   margin: 0
@@ -50,14 +44,14 @@ h1
   margin: 0
   padding: 0 0 ($1 rem)
   color: $blue
-  font-weight: 500
+  font-weight: 400
   font-size: $1 + $phi rem
   line-height: 1.2em
 
 h2
   margin: 0
-  padding: 0 0 ($0 rem)
-  font-weight: 500
+  padding: 0 0 ($phi rem)
+  font-weight: 400
   font-size: $1 rem
   color: $lightgray
 
@@ -69,6 +63,9 @@ p, li
 
 p
   font-family: georgia, serif
+
+a
+  text-decoration: none
 
 img
   max-width: 100%
@@ -108,7 +105,7 @@ header
   h1, figure
     column(6)
   h1
-    font-weight: 600
+    font-weight: 700
   figure
     width: 18rem
 
@@ -123,7 +120,9 @@ nav
     &:last-child
       padding-right: 0
   a
-    text-decoration: none
+    color: $blue
+    &:hover
+      color: $darkblue
 
 // general sections
 body>section
@@ -140,54 +139,50 @@ body>section
     line-height: 1.2em
     padding: ($0 rem) 0 ($3 rem)
     font-weight: 300
+  section
+    column(4)
 
-.subheading
-  column(4)
+// hero section
+.hero 
+  figure
+    column(12)
 
+// directors section
 .rds h1
   column(12)
 
-.regions-list
+// change later!
+.regions-list 
   column(3)
 
 .regions-content
   column(9)
 
 // news section
-.news-post
-  column(4)
-
-.news-post img
-  margin: 0 0 ($1 rem)
+.news
+  section
+    column(4)
+    img
+      margin: 0 0 ($0 rem)
 
 // logo section
-.logo p
-  column(6)
-
-.hero figure
-  column(12)
+.logo
+  section
+    column(6)
 
 // footer
-footer p
-  column(12)
-  font-size: 0.8em
-  color: $lightgray
-  background: red
-  position: relative
+.container
+  background: $bluegray
+  padding: ($2 rem) 0
+  margin-top: $2 rem
 
-footer p:before, footer p:after
-  content: "";
-  position: absolute;
-  background: red;  /* Match the background */
-  top: 0;
-  bottom: 0;
-  width: 9999px;   /* some huge width */
+footer
+  p
+    column(12)
+    color: $white
+    font-family: inherit
+    padding: 0
 
-footer p:before
-  right: 100%
-
-footer p:after
-  left: 100%
 
 // media queries
 @media screen and (max-width: 30rem)

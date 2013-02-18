@@ -10,19 +10,12 @@ body:after {
 body:after {
   clear: both;
 }
-@font-face {
-  font-family: DINWeb;
-  src: url("../fonts/DINWeb.woff") format("woff");
-}
-@font-face {
-  font-family: DINWeb-Bold;
-  src: url("../fonts/DINWeb-Bold.woff") format("woff");
-}
 * {
   box-sizing: border-box;
 }
 html {
-  font: 400 95%/1.625 em 'Roboto', sans-serif;
+  font: 400 95%/1.618034 em 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -37,18 +30,18 @@ h2 {
 }
 h1 {
   margin: 0;
-  padding: 0 0 1.625rem;
+  padding: 0 0 1.618034rem;
   color: #094fb2;
-  font-weight: 500;
-  font-size: 2.25rem;
+  font-weight: 400;
+  font-size: 2.236068rem;
   line-height: 1.2em;
 }
 h2 {
   margin: 0;
-  padding: 0 0 1rem;
-  font-weight: 500;
-  font-size: 1.625rem;
-  color: #ccc;
+  padding: 0 0 0.618034rem;
+  font-weight: 400;
+  font-size: 1.618034rem;
+  color: #bbb;
 }
 p,
 li {
@@ -59,6 +52,9 @@ li {
 }
 p {
   font-family: georgia, serif;
+}
+a {
+  text-decoration: none;
 }
 img {
   max-width: 100%;
@@ -114,7 +110,7 @@ header figure {
   *margin: 0 0.75rem -correction;
 }
 header h1 {
-  font-weight: 600;
+  font-weight: 700;
 }
 header figure {
   width: 18rem;
@@ -133,13 +129,16 @@ nav li {
   font-size: 1rem;
   display: inline-block;
   list-style: none outside none;
-  padding: 0 2.625rem 0 0;
+  padding: 0 2.6180339999999998rem 0 0;
 }
 nav li:last-child {
   padding-right: 0;
 }
 nav a {
-  text-decoration: none;
+  color: #094fb2;
+}
+nav a:hover {
+  color: #063373;
 }
 body>section {
   padding: 3em 0;
@@ -158,16 +157,25 @@ body>section h1 {
   text-align: center;
   font-size: 3rem;
   line-height: 1.2em;
-  padding: 1rem 0 4.25rem;
+  padding: 1rem 0 4.2360679999999995rem;
   font-weight: 300;
 }
-.subheading {
+.about section {
   display: inline-block;
   float: left;
   overflow: hidden;
   width: 22.5rem;
   margin: 0 0.75rem;
   *width: 22.5rem -correction;
+  *margin: 0 0.75rem -correction;
+}
+.hero figure {
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+  width: 70.5rem;
+  margin: 0 0.75rem;
+  *width: 70.5rem -correction;
   *margin: 0 0.75rem -correction;
 }
 .rds h1 {
@@ -197,7 +205,7 @@ body>section h1 {
   *width: 52.5rem -correction;
   *margin: 0 0.75rem -correction;
 }
-.news-post {
+.news section {
   display: inline-block;
   float: left;
   overflow: hidden;
@@ -206,10 +214,10 @@ body>section h1 {
   *width: 22.5rem -correction;
   *margin: 0 0.75rem -correction;
 }
-.news-post img {
-  margin: 0 0 1.625rem;
+.news section img {
+  margin: 0 0 1rem;
 }
-.logo p {
+.logo section {
   display: inline-block;
   float: left;
   overflow: hidden;
@@ -218,14 +226,10 @@ body>section h1 {
   *width: 34.5rem -correction;
   *margin: 0 0.75rem -correction;
 }
-.hero figure {
-  display: inline-block;
-  float: left;
-  overflow: hidden;
-  width: 70.5rem;
-  margin: 0 0.75rem;
-  *width: 70.5rem -correction;
-  *margin: 0 0.75rem -correction;
+.container {
+  background: #5c6573;
+  padding: 2.6180339999999998rem 0;
+  margin-top: 2.6180339999999998rem;
 }
 footer p {
   display: inline-block;
@@ -235,27 +239,9 @@ footer p {
   margin: 0 0.75rem;
   *width: 70.5rem -correction;
   *margin: 0 0.75rem -correction;
-  font-size: 0.8em;
-  color: #ccc;
-  background: #f00;
-  position: relative;
-}
-footer p:before,
-footer p:after {
-  content: "";
-  position: absolute;
-  background: #f00;
-/* Match the background */
-  top: 0;
-  bottom: 0;
-  width: 9999px;
-/* some huge width */
-}
-footer p:before {
-  right: 100%;
-}
-footer p:after {
-  left: 100%;
+  color: #fff;
+  font-family: inherit;
+  padding: 0;
 }
 @media screen and (max-width: 30rem) {
   html {
