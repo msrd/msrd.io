@@ -20,17 +20,17 @@ body:after {
 }
 * {
   box-sizing: border-box;
-  -webkit-transition: all 0.05s linear;
-  -moz-transition: all 0.05s linear;
-  transition: all 0.05s linear;
 }
 html {
-  font: 400 95%/1.5em DINWeb, sans-serif;
+  font: 400 95%/1.625 em 'Roboto', sans-serif;
 }
 body {
   margin: 0;
   width: 100%;
-  color: #444;
+  color: #777;
+}
+h1,
+h2 {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -39,23 +39,26 @@ h1 {
   margin: 0;
   padding: 0 0 1.625rem;
   color: #094fb2;
-  font-weight: 400;
-  font-size: 2.625rem;
+  font-weight: 500;
+  font-size: 2.25rem;
   line-height: 1.2em;
 }
 h2 {
   margin: 0;
   padding: 0 0 1rem;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.625rem;
-  color: #aaa;
+  color: #ccc;
 }
 p,
 li {
   margin: 0;
   padding: 0 0 1rem;
   font-size: 1rem;
-  color: #444;
+  color: #777;
+}
+p {
+  font-family: georgia, serif;
 }
 img {
   max-width: 100%;
@@ -70,7 +73,7 @@ figure {
 }
 header,
 footer,
-section {
+body>section {
   display: block;
   width: 72rem;
   margin: 0 -0.75rem;
@@ -82,23 +85,26 @@ header:before,
 header:after,
 footer:before,
 footer:after,
-section:before,
-section:after {
+body>section:before,
+body>section:after {
   display: table;
   content: "";
   line-height: 0;
 }
 header:after,
 footer:after,
-section:after {
+body>section:after {
   clear: both;
 }
 header {
   vertical-align: middle;
-  padding: 1rem 0;
+  padding: 3rem 0 1rem;
 }
-header figure,
-header h1 {
+header section>* {
+  padding: 0;
+}
+header h1,
+header figure {
   display: inline-block;
   float: left;
   overflow: hidden;
@@ -107,11 +113,11 @@ header h1 {
   *width: 34.5rem -correction;
   *margin: 0 0.75rem -correction;
 }
-header figure img {
-  width: 18rem;
-}
 header h1 {
-  font-family: DINWeb-Bold;
+  font-weight: 600;
+}
+header figure {
+  width: 18rem;
 }
 nav {
   display: inline-block;
@@ -122,21 +128,23 @@ nav {
   *width: 34.5rem -correction;
   *margin: 0 0.75rem -correction;
   text-align: right;
-  font-size: 1rem;
-  text-transform: uppercase;
 }
 nav li {
+  font-size: 1rem;
   display: inline-block;
   list-style: none outside none;
-  padding-right: 1.625rem;
+  padding: 0 2.625rem 0 0;
 }
 nav li:last-child {
   padding-right: 0;
 }
-section {
+nav a {
+  text-decoration: none;
+}
+body>section {
   padding: 3em 0;
 }
-section h1 {
+body>section h1 {
   display: inline-block;
   float: left;
   overflow: hidden;
@@ -150,7 +158,8 @@ section h1 {
   text-align: center;
   font-size: 3rem;
   line-height: 1.2em;
-  padding: 1.625rem 0 4.25rem;
+  padding: 1rem 0 4.25rem;
+  font-weight: 300;
 }
 .subheading {
   display: inline-block;
@@ -227,25 +236,44 @@ footer p {
   *width: 70.5rem -correction;
   *margin: 0 0.75rem -correction;
   font-size: 0.8em;
-  color: #aaa;
+  color: #ccc;
+  background: #f00;
+  position: relative;
 }
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 11.9pt;
+footer p:before,
+footer p:after {
+  content: "";
+  position: absolute;
+  background: #f00;
+/* Match the background */
+  top: 0;
+  bottom: 0;
+  width: 9999px;
+/* some huge width */
+}
+footer p:before {
+  right: 100%;
+}
+footer p:after {
+  left: 100%;
+}
+@media screen and (max-width: 30rem) {
+  html {
+    font-size: 84%;
   }
 }
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  body {
-    font-size: 12.6pt;
+@media screen and (min-width: 30rem) and (max-width: 50rem) {
+  html {
+    font-size: 84%;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  body {
-    font-size: 13.299999999999999pt;
+@media screen and (min-width: 50rem) and (max-width: 70rem) {
+  html {
+    font-size: 90%;
   }
 }
-@media screen and (min-width: 1025px) {
-  body {
-    font-size: 14pt;
+@media screen and (min-width: 70rem) {
+  html {
+    font-size: 100%;
   }
 }

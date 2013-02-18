@@ -7,8 +7,8 @@ $bodypadding = 2rem
 $blue = #094FB2
 $darkblue = #063373
 $bluegray = #5C6573
-$gray = #444
-$lightgray = #aaa
+$gray = #777
+$lightgray = #ccc
 
 $phi = 0.6250
 $0 = 1.0
@@ -29,17 +29,19 @@ $4 = $2 + $3        // 6.8750
 // main
 *
   box-sizing: border-box
-  -webkit-transition: all 0.05s linear
-  -moz-transition: all 0.05s linear
-  transition: all 0.05s linear
+//  -webkit-transition: all 0.05s linear
+//  -moz-transition: all 0.05s linear
+//  transition: all 0.05s linear
 
 html
-  font: 400 95%/1.5em DINWeb, sans-serif
+  font: 400 95%/$1 em 'Roboto', sans-serif
 
 body
   margin: 0
   width: 100%
   color: $gray
+
+h1, h2
   -webkit-font-smoothing: antialiased
   font-smoothing: antialiased
   text-rendering: optimizeLegibility
@@ -48,14 +50,14 @@ h1
   margin: 0
   padding: 0 0 ($1 rem)
   color: $blue
-  font-weight: 400
-  font-size: $2 rem
+  font-weight: 500
+  font-size: $1 + $phi rem
   line-height: 1.2em
 
 h2
   margin: 0
   padding: 0 0 ($0 rem)
-  font-weight: 400
+  font-weight: 500
   font-size: $1 rem
   color: $lightgray
 
@@ -64,6 +66,9 @@ p, li
   padding: 0 0 ($0 rem)
   font-size: $0 rem
   color: $gray
+
+p
+  font-family: georgia, serif
 
 img
   max-width: 100%
@@ -77,65 +82,64 @@ figure
   margin: 0
 
 // containers
-header, footer, section
+header, footer, body>section
   row(12)
   margin: 0 auto
 
 // clear floats
 header:before, header:after, 
 footer:before, footer:after, 
-section:before, section:after
+body>section:before, body>section:after
   display: table
   content: ""
   line-height: 0
 
 header:after, 
 footer:after, 
-section:after
+body>section:after
   clear: both
 
 // header and nav
 header
   vertical-align: middle
-  padding: (1rem) 0
-
-header figure, header h1
-  column(6)
-
-header figure img
-  width: 18rem
-
-header h1
-  font-family: DINWeb-Bold
+  padding: (3rem) 0 (1rem)
+  section>*
+    padding: 0
+  h1, figure
+    column(6)
+  h1
+    font-weight: 600
+  figure
+    width: 18rem
 
 nav
   column(6)
   text-align: right
-  font-size: $0 rem
-  text-transform: uppercase
-
-nav
   li
+    font-size: $0 rem
     display: inline-block
     list-style: none outside none
-    padding-right: $1 rem
+    padding: 0 ($2 rem) 0 0
     &:last-child
       padding-right: 0
+  a
+    text-decoration: none
 
 // general sections
-section
+body>section
   padding: 3em 0
-
-section h1
-  column(12)
+  h1
+    column(12)
 
 // about section
-.about h1
-  color: $bluegray
-  text-align: center
-  font-size: 3rem
-  line-height: 1.2em
-  padding: ($1 rem) 0 ($3 rem)
+.about 
+  h1
+    color: $bluegray
+    text-align: center
+    font-size: 3rem
+    line-height: 1.2em
+    padding: ($0 rem) 0 ($3 rem)
+    font-weight: 300
 
 .subheading
   column(4)
@@ -163,26 +167,38 @@ section h1
 .hero figure
   column(12)
 
-//@media screen and (max-width: 767px)
-//  .subheading, .news-post, .logo p
-//    column(12)
-
 // footer
 footer p
   column(12)
   font-size: 0.8em
   color: $lightgray
+  background: red
+  position: relative
 
-// font-size on media queries
-@media screen and (max-width: 480px)
-  body
-    font-size: $fontsize*0.85
-@media screen and (min-width: 481px) and (max-width: 768px)
-  body
-    font-size: $fontsize*0.9
-@media screen and (min-width: 769px) and (max-width: 1024px)
-  body
-    font-size: $fontsize*0.95
-@media screen and (min-width: 1025px)
-  body
-    font-size: $fontsize
+footer p:before, footer p:after
+  content: "";
+  position: absolute;
+  background: red;  /* Match the background */
+  top: 0;
+  bottom: 0;
+  width: 9999px;   /* some huge width */
+
+footer p:before
+  right: 100%
+
+footer p:after
+  left: 100%
+
+// media queries
+@media screen and (max-width: 30rem)
+  html
+    font-size: 84%
+@media screen and (min-width: 30rem) and (max-width: 50rem)
+  html
+    font-size: 84%
+@media screen and (min-width: 50rem) and (max-width: 70rem)
+  html
+    font-size: 90%
+@media screen and (min-width: 70rem)
+  html
+    font-size: 100%
