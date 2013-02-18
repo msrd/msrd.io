@@ -27,8 +27,7 @@ $4 = $2 + $3        // 6.8750
 //  transition: all 0.05s linear
 
 html
-  font: 400 95%/$1 em 'Roboto', sans-serif
-  overflow-x: hidden
+  font: 400 100%/$1 em 'Roboto', sans-serif
 
 body
   margin: 0
@@ -42,7 +41,7 @@ h1, h2
 
 h1
   margin: 0
-  padding: 0 0 ($1 rem)
+  padding: 0 0 ($2 rem)
   color: $blue
   font-weight: 400
   font-size: $1 + $phi rem
@@ -55,9 +54,12 @@ h2
   font-size: $1 rem
   color: $lightgray
 
+ul
+  padding: 0
+
 p, li
   margin: 0
-  padding: 0 0 ($0 rem)
+  padding: 0 0 ($1 rem)
   font-size: $0 rem
   color: $gray
 
@@ -102,33 +104,53 @@ header
   padding: (3rem) 0 (1rem)
   section>*
     padding: 0
-  h1, figure
-    column(6)
   h1
-    font-weight: 700
+    a
+      font-weight: 900
+      color: $blue
   figure
     width: 18rem
 
 nav
-  column(6)
-  text-align: right
-  li
-    font-size: $0 rem
-    display: inline-block
-    list-style: none outside none
-    padding: 0 ($2 rem) 0 0
-    &:last-child
-      padding-right: 0
   a
     color: $blue
     &:hover
       color: $darkblue
 
-// general sections
+@media screen and (min-width: 600px)
+  header
+    h1
+      column(4)
+  nav
+    column(8)
+    text-align: right
+    li
+      display: inline-block
+      list-style: none outside none
+      padding: 0 ($2 + $phi rem) 0 0
+      &:last-child
+        padding-right: 0
+
+@media screen and (max-width: 599px)
+  header
+    h1
+      column(12)
+  nav
+    column(12)
+    text-align: left
+    li
+      display: inline-block
+      list-style: none outside none
+      padding: 0 0 0 ($3 rem)
+      &:first-child
+        padding-left: 0
+
+// sections
 body>section
-  padding: 3em 0
+  padding: ($2 rem) 0
   h1
     column(12)
+    padding-top: $1 rem
 
 // about section
 .about 
@@ -137,10 +159,8 @@ body>section
     text-align: center
     font-size: 3rem
     line-height: 1.2em
-    padding: ($0 rem) 0 ($3 rem)
+    padding: ($1 rem) 0 ($3 + $phi rem)
     font-weight: 300
-  section
-    column(4)
 
 // hero section
 .hero 
@@ -161,7 +181,6 @@ body>section
 // news section
 .news
   section
-    column(4)
     img
       margin: 0 0 ($0 rem)
 
@@ -173,8 +192,8 @@ body>section
 // footer
 .container
   background: $bluegray
-  padding: ($2 rem) 0
-  margin-top: $2 rem
+  padding: ($3 rem) 0
+  margin-top: $3 rem
 
 footer
   p
@@ -183,17 +202,119 @@ footer
     font-family: inherit
     padding: 0
 
-
 // media queries
-@media screen and (max-width: 30rem)
+
+//@media screen and (max-width: 30rem)
+//  html
+//    font-size: 84%
+//@media screen and (min-width: 30rem) and (max-width: 50rem)
+//  html
+//    font-size: 84%
+//@media screen and (min-width: 50rem) and (max-width: 77.999rem)
+//  html
+//    font-size: 92%
+//@media screen and (min-width: 78rem)
+//  html
+//    font-size: 100%
+
+@media screen and (max-width: 319px)
   html
-    font-size: 84%
-@media screen and (min-width: 30rem) and (max-width: 50rem)
+    font-size: 4px
+@media screen and (min-width: 320px) and (max-width:409px)
   html
-    font-size: 84%
-@media screen and (min-width: 50rem) and (max-width: 70rem)
+    font-size: 5px
+@media screen and (min-width: 410px) and (max-width:451px)
   html
-    font-size: 90%
-@media screen and (min-width: 70rem)
+    font-size: 5.5px
+
+@media screen and (min-width: 450px) and (max-width: 499px)
+  html
+    font-size: 6px
+@media screen and (min-width: 500px) and (max-width: 529px)
+  html
+    font-size: 6.5px
+@media screen and (min-width: 530px) and (max-width: 599px)
+  html
+    font-size: 7px
+
+@media screen and (min-width: 600px) and (max-width: 679px)
+  html
+    font-size: 8px
+@media screen and (min-width: 680px) and (max-width: 767px)
+  html
+    font-size: 9px
+
+@media screen and (min-width: 768px) and (max-width: 899px)
+  html
+    font-size: 64%
+@media screen and (min-width: 900px) and (max-width: 1023px)
+  html
+    font-size: 73%
+
+@media screen and (min-width: 1024px) and (max-width: 1123px)
+  html
+    font-size: 87%
+@media screen and (min-width: 1124px) and (max-width: 1223px)
+  html
+    font-size: 92%
+@media screen and (min-width: 1224px)
   html
     font-size: 100%
+
+@media screen and (min-width: 1024px)
+  .about section, .news section
+    column(4)
+
+@media screen and (max-width: 1023px)
+  .news
+    section
+      img
+        display: none
+
+@media screen and (min-width: 768px) and (max-width: 1023px)
+  .rds section, .logo section
+    column(12)
+  .about 
+    section
+      p, h2
+        column(6)
+  .news
+    section
+      p, h2
+        column(6)
+  h1
+    font-size: $2 rem
+  h2
+    font-size: $1 + $phi rem
+  p, li
+    font-size: $0 * (2 - $phi) rem
+
+@media screen and (min-width: 600px) and (max-width: 767px)
+  .hero 
+    display: none
+  .about section, .news section
+    column(12)
+  .about
+    h1
+      font-size: $3 rem
+  h1
+    font-size: $3 rem
+  h2
+    font-size: $2 + (1 - $phi) rem
+  p, li
+    font-size: $1 + (1 - $phi) rem
+
+@media screen and (max-width: 599px)
+  .hero 
+    display: none
+  .about section, .news section
+    column(12)
+  .about
+    h1
+      font-size: $3 rem
+  h1
+    font-size: $3 rem
+  h2
+    font-size: $2 + $phi rem
+  p, li
+    font-size: $1 + $phi rem
