@@ -1,371 +1,359 @@
 // grid
 @import grid
 
-// variables
-$fontsize = 14pt
-$bodypadding = 2rem
 
+// mixins
+border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
+
+// variables
 $blue = #007CC2
 $darkblue = #004973
 $bluegray = #5C6A73
+$green = #0ACFAC
+$red = #D55340
 $darkgray = #333
 $gray = #777
 $lightgray = #bbb
 $white = #fff
-$whiteish = #eee
-$green = #0ACFAC
-$red = #D55340
 
-$phi = 0.618034
-$0 = 1.0
-$1 = $phi + $0      // 1.6250
-$2 = $0 + $1        // 2.6250
-$3 = $1 + $2        // 4.2500
-$4 = $2 + $3        // 6.8750
-$5 = $3 + $4
+// 3:5 stranded scale
+$sn3 = 0.4615
+$sn2 = 0.6154
+$sn1 = 0.7692
+$s0 = 1.0
+$s1 = 1.2308
+$s2 = 1.6154
+$s3 = 2.0
+$s4 = 2.6154
+$s5 = 3.2308
+$s6 = 4.2308
+$s7 = 5.2308
+$s8 = 6.8462
+$s9 = 8.4616
 
 // main
 *
-  box-sizing: border-box
+  box-sizing border-box
 
 html
-  font: 400 100%/$1 em 'Roboto', sans-serif
+  font 400 100%/$s2 em 'Roboto', sans-serif
 
 body
-  margin: 0
-  width: 100%
-  color: $gray
+  margin 0
+  width 100%
+  color $gray
+  border-top 5px solid $bluegray
 
 h1, h2
-  -webkit-font-smoothing: antialiased
-  font-smoothing: antialiased
-  text-rendering: optimizeLegibility
+  -webkit-font-smoothing antialiased
+  font-smoothing antialiased
+  text-rendering optimizeLegibility
 
 h1
-  margin: 0
-  padding: 0 0 ($2 rem)
-  color: $blue
-  font-weight: 400
-  font-size: $1 + $phi rem
-  line-height: 1.2em
+  margin 0
+  padding 0 0 ($sn1 em)
+  color $blue
+  font-weight 400
+  font-size $s3 rem
+  line-height $s2 em
 
 h2
-  margin: 0
-  padding: 0 0 ($phi rem)
-  font-weight: 400
-  font-size: $1 rem
-  color: $lightgray
+  margin 0
+  padding 0 0 ($sn1 rem)
+  color $lightgray
+  font-weight 400
+  font-size $s2 rem
+  line-height $s2 em
 
 ul
-  padding: 0
+  margin 0
+  padding 0
 
 li
-  list-style: none outside none
+  list-style none outside none
+  display inline-block
 
 p, li
-  margin: 0
-  padding: 0 0 ($1 rem)
-  font-size: $0 rem
-  color: $gray
+  margin 0
+  padding 0 0 ($s3 em)
+  color $gray
+  font-size $s0 rem
 
 p
-  font-family: georgia, serif
+  font-family georgia, serif
 
 a
-  text-decoration: none
+  text-decoration none
+  color $blue
+  &:hover
+    color $darkblue
 
 img
-  max-width: 100%
-  width: auto\9
-  height: auto
-  vertical-align: middle
-  border: 0
-  -ms-interpolation-mode: bicubic
+  max-width 100%
+  width auto\9
+  height auto
+  vertical-align middle
+  border 0
+  -ms-interpolation-mode bicubic
 
 figure
-  margin: 0
+  margin 0
 
 // containers
 header, footer, body>section
   row(12)
-  margin: 0 auto
-
-// clear floats
-header:before, header:after, 
-footer:before, footer:after, 
-body>section:before, body>section:after
-  display: table
-  content: ""
-  line-height: 0
-
-header:after, 
-footer:after, 
-body>section:after
-  clear: both
+  clearfix()
+  margin 0 auto
 
 // header and nav
 header
-  vertical-align: middle
-  padding: (3rem) 0 (1rem)
-  section>*
-    padding: 0
-  h1
-    a
-      font-weight: 900
-      color: $blue
+  padding ($s5 em) 0 ($s3 em)
   figure
-    img
-      width: 18rem
+    column(6)
+  figure img, nav ul
+    height $s6 rem
 
 nav
+  column(6)
+  ul
+    display table
+  li
+    display table-cell
+    width 100%
+    height 100%
+    vertical-align middle
+    text-align right
+    font-size $s1 rem
+    padding 0 ($s4 rem) 0 0
+    &:last-child
+      padding-right 0
   a
-    color: $blue
+    color $gray
     &:hover
-      color: $darkblue
-
-@media screen and (min-width: 500px)
-  header
-    h1, figure
-      column(4)
-  nav
-    column(8)
-    text-align: right
-    li
-      display: inline-block
-      padding: 0 ($2 + $phi rem) 0 0
-      &:last-child
-        padding-right: 0
-
-@media screen and (max-width: 499px)
-  header
-    h1, figure
-      column(12)
-  nav
-    column(12)
-    text-align: left
-    li
-      display: inline-block
-      padding: 0 0 0 ($3 rem)
-      &:first-child
-        padding-left: 0
+      color $blue
 
 // sections
 body>section
-  padding: ($2 rem) 0
+  padding ($s3 rem) 0
   h1
     column(12)
-    padding-top: $1 rem
+    padding-top $s0 rem // anchors will have padding at top
 
 // about section
-.about 
+.about
+  text-align center
   h1
-    color: $bluegray
-    text-align: center
-    font-size: 3rem
-    line-height: 1.2em
-    padding: ($1 rem) 0 ($3 + $phi rem)
-    font-weight: 300
-  section
-    text-align: center
+    column(10)
+    offset(1)
+    padding ($sn3 em) 0 ($s0 em)
+    color $bluegray
+    font-weight 300
+    font-size $s4 rem
+    line-height $s1 em
   i
-    font-size: $4 + $phi rem
-    line-height: 1.5em
+    font-size $s8 rem
+    line-height $s2 em
   // change these icon colors later
   .icon-headphones
-    color: $green
+    color $green
   .icon-comments
-    color: $blue
+    color $blue
   .icon-bullhorn
-    color: $red
+    color $red
 
 // directors section
 .rds 
-  h1
-    column(12)
   .regions
     ul li
-      column(3)
-      font-size: $1 rem
-      background: $whiteish
-      padding: 0 ($phi rem)
-      margin-bottom: 1.5rem
-      &:hover
-        background: $bluegray
-        cursor: pointer
+      column(2)
+      padding-bottom 0
       h2
-        color: $gray
-        font-size: 1.3rem
-        padding-bottom: 0
+        margin-bottom 5px
+        padding ($sn3 rem) ($sn2 em)
+        color $white
+        background $bluegray
+        font-size $s1 rem
         &:hover
-          color: $white
+          color $white
+          background $blue
+          cursor pointer
   .directors
     h2
       column(12)
-      padding: ($2 rem) 0
-      color: $bluegray
+      padding ($s3 rem) 0 ($s5 rem)
+      color $bluegray
     ul li
       column(3)
-      text-align: center
+      text-align center
       img
-        width: 10.5rem
-        -webkit-border-radius: 5.75rem
-        -moz-border-radius: 5.75rem
-        border-radius: 5.75rem
-        margin-top: $0 rem
+        width 70%
+        border-radius(70%)
+        margin-top $s0 rem
       .name, .location
-        font-family: inherit
-        padding: 0
+        font-family inherit
+        padding 0
       .name
-        margin-top: $0 rem
-        color: $blue
+        margin-top $s0 rem
+        color $bluegray
       .location
-        color: $lightgray
+        color $lightgray
 
 // news section
 .news
   section
     img
-      margin: 0 0 ($0 rem)
+      margin 0 0 ($s0 rem)
 
 // logo section
+.logo
+  section
+    column(6)
 
 // footer
 .container
-  background: $bluegray
-  padding: ($3 rem) 0
-  margin-top: $3 rem
+  background $bluegray
+  padding ($s6 rem) 0
+  margin-top $s6 em
 
 footer
   p, ul
     column(12)
   p
-    color: $lightgray
-    font-family: inherit
-    padding: 0
+    color $lightgray
+    font-family inherit
+    padding 0
   ul
-    margin-bottom: $0 rem
+    margin-bottom $s0 em
   li, li a
-    color: $white
-    padding: 0 ($phi rem) 0 0
-    display: inline
+    color $white
+    padding 0 ($sn2 rem) 0 0
+    display inline
     &:first-child
-      padding-left: 0
+      padding-left 0
+    &:hover
+      color: $white
 
-// shitload of media queries, will reduce to three in later version
-@media screen and (max-width: 319px)
-  html
-    font-size: 4px
-@media screen and (min-width: 320px) and (max-width:409px)
-  html
-    font-size: 5px
-@media screen and (min-width: 410px) and (max-width:449px)
-  html
-    font-size: 5.5px
+// media queries
 
-@media screen and (min-width: 450px) and (max-width: 499px)
+// large
+@media screen and (min-width: 1220px)
   html
-    font-size: 6px
-@media screen and (min-width: 500px) and (max-width: 529px)
-  html
-    font-size: 6.5px
-@media screen and (min-width: 530px) and (max-width: 599px)
-  html
-    font-size: 7px
-
-@media screen and (min-width: 600px) and (max-width: 679px)
-  html
-    font-size: 8px
-@media screen and (min-width: 680px) and (max-width: 767px)
-  html
-    font-size: 9px
-
-@media screen and (min-width: 768px) and (max-width: 899px)
-  html
-    font-size: 64%
-@media screen and (min-width: 900px) and (max-width: 1023px)
-  html
-    font-size: 73%
-
-@media screen and (min-width: 1024px) and (max-width: 1123px)
-  html
-    font-size: 87%
-@media screen and (min-width: 1124px) and (max-width: 1223px)
-  html
-    font-size: 92%
-@media screen and (min-width: 1224px)
-  html
-    font-size: 92%
-
-@media screen and (min-width: 1024px)
+    font-size 92%
   .about section, .news section
     column(4)
-  .logo
-    section
-      column(6)
 
-@media screen and (max-width: 1023px)
-  .news
+// small and medium
+@media screen and (max-width: 1219px)
+  header
+    padding-top $s6 em
+  .about
     section
+      i
+        display none
+  .news
       img
-        display: none
+        display none
   .logo
     section
       column(12)
 
-@media screen and (min-width: 768px) and (max-width: 1023px)
-  .rds section
-    column(12)
+// medium
+@media screen and (min-width: 768px) and (max-width: 1219px)
+  html
+    font-size 56%
+  h1
+    font-size $s5 rem
+  h2
+    font-size $s4 rem
+  p, li
+    font-size $s3 rem
+  header 
+    figure img, nav ul
+        height $s7 rem
+  nav
+    li
+      font-size $s3 rem
   .about 
+    h1
+      column(12)
+      font-size $s5 rem
     section
-      p, i
-        column(12)
+      column(4)
+      i
+        //font-size $s9 rem
+        display none
+      p
+        margin-top $s1 rem
+        text-align left
+  .rds
+    :>all
+      clearfix()
+    .regions ul li
+      column(4)
+      h2
+        font-size $s3 rem
+    .directors ul li
+      column(4)
+      img
+        width 80%
+        border-radius(80%)
   .news
     section
-      p, h2
+      h2, p
         column(6)
-  h1
-    font-size: $2 rem
-  h2
-    font-size: $1 + $phi rem
-  p, li
-    font-size: $0 * (2 - $phi) rem
 
-
+// small
 @media screen and (max-width: 767px)
-  .hero 
-    display: none
-  .about section, .news section
-    column(12)
-
-@media screen and (min-width: 600px) and (max-width: 767px)
-  .about
-    h1
-      font-size: $3 rem
+  html
+    font-size 8px
   h1
-    font-size: $3 rem
+    font-size $s5 rem
   h2
-    font-size: $2 + (1 - $phi) rem
+    font-size $s4 rem
   p, li
-    font-size: $1 + (1 - $phi) rem
-
-@media screen and (min-width: 500px) and (max-width: 599px)
+    font-size $s3 rem
+  header, footer, body>section
+    width 100%
+    max-width 480px
+    padding-left ($s4 rem)
+    padding-right ($s4 rem)
+  header
+    figure img, nav ul
+        height $s8 rem
+  nav
+    li
+      font-size $s3 rem
+      text-align right
+      width 100%
+      height 100%
+      width auto
+  body>section h1,
+  header figure, nav,
+  .about h1, .about section,
+  .rds .directors h2,
+  .news section,
+  .logo section,
+  footer p, footer ul
+    margin-left 100% * (gutter-width * 0.5 / _gridsystem-width)
+    *margin-left 100% * (gutter-width * 0.5 / _gridsystem-width) - correction
+    margin-right 100% * (gutter-width * 0.5 / _gridsystem-width)
+    *margin-left 100% * (gutter-width * 0.5 / _gridsystem-width) - correction
+    width 100%
   .about
+    text-align left
     h1
-      font-size: $3 rem
-  h1
-    font-size: $3 rem
-  h2
-    font-size: $2 + $phi rem
-  p, li
-    font-size: $1 + $phi rem
+      font-size $s5 rem
+    section p
+  .rds
+    .regions ul li, .directors ul li
+      //column(6)
+      width 100% * ((((gutter-width + column-width ) * 6) - gutter-width) / _gridsystem-width)
+      margin 0 100% * (gutter-width * 0.5 / _gridsystem-width)
+      *width 100% * ((((gutter-width + column-width ) * 6) - gutter-width) / _gridsystem-width) - correction
+      *margin 0 100% * (gutter-width * 0.5 / _gridsystem-width)-  correction
+      h2
+        font-size $s3 rem
 
-@media screen and (max-width: 499px)
-  .about
-    h1
-      font-size: $3 + $phi rem
-  h1
-    font-size: $3 + $phi rem
-  h2
-    font-size: $3 rem
-  p, li
-    font-size: $2 rem
