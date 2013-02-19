@@ -30,7 +30,7 @@ h2 {
 h1 {
   margin: 0;
   padding: 0 0 2.6180339999999998rem;
-  color: #094fb2;
+  color: #007cc2;
   font-weight: 400;
   font-size: 2.236068rem;
   line-height: 1.2em;
@@ -44,6 +44,9 @@ h2 {
 }
 ul {
   padding: 0;
+}
+li {
+  list-style: none outside none;
 }
 p,
 li {
@@ -103,19 +106,20 @@ header section>* {
 }
 header h1 a {
   font-weight: 900;
-  color: #094fb2;
+  color: #007cc2;
 }
-header figure {
+header figure img {
   width: 18rem;
 }
 nav a {
-  color: #094fb2;
+  color: #007cc2;
 }
 nav a:hover {
-  color: #063373;
+  color: #004973;
 }
-@media screen and (min-width: 600px) {
-  header h1 {
+@media screen and (min-width: 500px) {
+  header h1,
+  header figure {
     display: inline-block;
     float: left;
     overflow: hidden;
@@ -136,15 +140,15 @@ nav a:hover {
   }
   nav li {
     display: inline-block;
-    list-style: none outside none;
     padding: 0 3.2360679999999995rem 0 0;
   }
   nav li:last-child {
     padding-right: 0;
   }
 }
-@media screen and (max-width: 599px) {
-  header h1 {
+@media screen and (max-width: 499px) {
+  header h1,
+  header figure {
     display: inline-block;
     float: left;
     overflow: hidden;
@@ -165,7 +169,6 @@ nav a:hover {
   }
   nav li {
     display: inline-block;
-    list-style: none outside none;
     padding: 0 0 0 4.2360679999999995rem;
   }
   nav li:first-child {
@@ -186,12 +189,15 @@ body>section h1 {
   padding-top: 1.618034rem;
 }
 .about h1 {
-  color: #5c6573;
+  color: #5c6a73;
   text-align: center;
   font-size: 3rem;
   line-height: 1.2em;
   padding: 1.618034rem 0 4.854101999999999rem;
   font-weight: 300;
+}
+.hero {
+  display: none;
 }
 .hero figure {
   display: inline-block;
@@ -201,6 +207,57 @@ body>section h1 {
   margin: 0 0.75rem;
   *width: 70.5rem -correction;
   *margin: 0 0.75rem -correction;
+  background: #004973;
+  position: relative;
+}
+.hero figure .region-image {
+  opacity: 0.5;
+}
+.hero figure .profile {
+  width: 100%;
+  position: absolute;
+  bottom: 1.618034rem;
+  color: #fff;
+}
+.hero figure .profile .profile-avatar {
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+  width: 10.5rem;
+  margin: 0 0.75rem;
+  *width: 10.5rem -correction;
+  *margin: 0 0.75rem -correction;
+  margin-left: 12.75rem;
+}
+.hero figure .profile .profile-avatar img {
+  width: 7rem;
+  -webkit-border-radius: 3.5rem;
+  -moz-border-radius: 3.5rem;
+  border-radius: 3.5rem;
+  float: right;
+}
+.hero figure .profile .profile-info {
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+  width: 34.5rem;
+  margin: 0 0.75rem;
+  *width: 34.5rem -correction;
+  *margin: 0 0.75rem -correction;
+}
+.hero figure .profile .name,
+.hero figure .profile .location {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+.hero figure .profile .name {
+  color: #fff;
+  font-size: 3.2360679999999995rem;
+}
+.hero figure .profile .location {
+  color: #bbb;
+  font-size: 1.618034rem;
 }
 .rds h1 {
   display: inline-block;
@@ -211,7 +268,7 @@ body>section h1 {
   *width: 70.5rem -correction;
   *margin: 0 0.75rem -correction;
 }
-.regions-list {
+.rds .regions ul li {
   display: inline-block;
   float: left;
   overflow: hidden;
@@ -219,30 +276,68 @@ body>section h1 {
   margin: 0 0.75rem;
   *width: 16.5rem -correction;
   *margin: 0 0.75rem -correction;
+  font-size: 1.618034rem;
+  background: #eee;
+  color: #777;
+  padding: 0 0.618034rem;
+  margin-bottom: 1.5rem;
 }
-.regions-content {
+.rds .regions ul li:hover {
+  background: #5c6a73;
+  cursor: pointer;
+}
+.rds .regions ul li h2 {
+  font-size: 1.3rem;
+  padding-bottom: 0;
+}
+.rds .regions ul li h2:hover {
+  color: #fff;
+}
+.rds .directors h2 {
   display: inline-block;
   float: left;
   overflow: hidden;
-  width: 52.5rem;
+  width: 70.5rem;
   margin: 0 0.75rem;
-  *width: 52.5rem -correction;
+  *width: 70.5rem -correction;
   *margin: 0 0.75rem -correction;
+  padding: 2.6180339999999998rem 0;
+  color: #5c6a73;
+}
+.rds .directors ul li {
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+  width: 16.5rem;
+  margin: 0 0.75rem;
+  *width: 16.5rem -correction;
+  *margin: 0 0.75rem -correction;
+  text-align: center;
+}
+.rds .directors ul li img {
+  width: 10.5rem;
+  -webkit-border-radius: 5.75rem;
+  -moz-border-radius: 5.75rem;
+  border-radius: 5.75rem;
+  margin-top: 1rem;
+}
+.rds .directors ul li .name,
+.rds .directors ul li .location {
+  font-family: inherit;
+  padding: 0;
+}
+.rds .directors ul li .name {
+  margin-top: 1rem;
+  color: #007cc2;
+}
+.rds .directors ul li .location {
+  color: #bbb;
 }
 .news section img {
   margin: 0 0 1rem;
 }
-.logo section {
-  display: inline-block;
-  float: left;
-  overflow: hidden;
-  width: 34.5rem;
-  margin: 0 0.75rem;
-  *width: 34.5rem -correction;
-  *margin: 0 0.75rem -correction;
-}
 .container {
-  background: #5c6573;
+  background: #5c6a73;
   padding: 4.2360679999999995rem 0;
   margin-top: 4.2360679999999995rem;
 }
@@ -268,7 +363,7 @@ footer p {
     font-size: 5px;
   }
 }
-@media screen and (min-width: 410px) and (max-width:451px) {
+@media screen and (min-width: 410px) and (max-width:449px) {
   html {
     font-size: 5.5px;
   }
@@ -334,15 +429,32 @@ footer p {
     *width: 22.5rem -correction;
     *margin: 0 0.75rem -correction;
   }
+  .logo section {
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    width: 34.5rem;
+    margin: 0 0.75rem;
+    *width: 34.5rem -correction;
+    *margin: 0 0.75rem -correction;
+  }
 }
 @media screen and (max-width: 1023px) {
   .news section img {
     display: none;
   }
+  .logo section {
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    width: 70.5rem;
+    margin: 0 0.75rem;
+    *width: 70.5rem -correction;
+    *margin: 0 0.75rem -correction;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .rds section,
-  .logo section {
+  .rds section {
     display: inline-block;
     float: left;
     overflow: hidden;
@@ -382,7 +494,7 @@ footer p {
     font-size: 1.381966rem;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .hero {
     display: none;
   }
@@ -396,6 +508,8 @@ footer p {
     *width: 70.5rem -correction;
     *margin: 0 0.75rem -correction;
   }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
   .about h1 {
     font-size: 4.2360679999999995rem;
   }
@@ -410,20 +524,7 @@ footer p {
     font-size: 2rem;
   }
 }
-@media screen and (max-width: 599px) {
-  .hero {
-    display: none;
-  }
-  .about section,
-  .news section {
-    display: inline-block;
-    float: left;
-    overflow: hidden;
-    width: 70.5rem;
-    margin: 0 0.75rem;
-    *width: 70.5rem -correction;
-    *margin: 0 0.75rem -correction;
-  }
+@media screen and (min-width: 500px) and (max-width: 599px) {
   .about h1 {
     font-size: 4.2360679999999995rem;
   }
@@ -436,5 +537,20 @@ footer p {
   p,
   li {
     font-size: 2.236068rem;
+  }
+}
+@media screen and (max-width: 499px) {
+  .about h1 {
+    font-size: 4.854101999999999rem;
+  }
+  h1 {
+    font-size: 4.854101999999999rem;
+  }
+  h2 {
+    font-size: 4.2360679999999995rem;
+  }
+  p,
+  li {
+    font-size: 2.6180339999999998rem;
   }
 }

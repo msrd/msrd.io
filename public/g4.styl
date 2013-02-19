@@ -5,12 +5,13 @@
 $fontsize = 14pt
 $bodypadding = 2rem
 
-$blue = #094FB2
-$darkblue = #063373
-$bluegray = #5C6573
+$blue = #007CC2
+$darkblue = #004973
+$bluegray = #5C6A73
 $gray = #777
 $lightgray = #bbb
 $white = #fff
+$whiteish = #eee
 
 $phi = 0.618034
 $0 = 1.0
@@ -22,9 +23,6 @@ $4 = $2 + $3        // 6.8750
 // main
 *
   box-sizing: border-box
-//  -webkit-transition: all 0.05s linear
-//  -moz-transition: all 0.05s linear
-//  transition: all 0.05s linear
 
 html
   font: 400 100%/$1 em 'Roboto', sans-serif
@@ -56,6 +54,9 @@ h2
 
 ul
   padding: 0
+
+li
+  list-style: none outside none
 
 p, li
   margin: 0
@@ -109,7 +110,8 @@ header
       font-weight: 900
       color: $blue
   figure
-    width: 18rem
+    img
+      width: 18rem
 
 nav
   a
@@ -117,30 +119,28 @@ nav
     &:hover
       color: $darkblue
 
-@media screen and (min-width: 600px)
+@media screen and (min-width: 500px)
   header
-    h1
+    h1, figure
       column(4)
   nav
     column(8)
     text-align: right
     li
       display: inline-block
-      list-style: none outside none
       padding: 0 ($2 + $phi rem) 0 0
       &:last-child
         padding-right: 0
 
-@media screen and (max-width: 599px)
+@media screen and (max-width: 499px)
   header
-    h1
+    h1, figure
       column(12)
   nav
     column(12)
     text-align: left
     li
       display: inline-block
-      list-style: none outside none
       padding: 0 0 0 ($3 rem)
       &:first-child
         padding-left: 0
@@ -164,19 +164,82 @@ body>section
 
 // hero section
 .hero 
+  display: none
   figure
     column(12)
+    background: $darkblue
+    position: relative
+    .region-image
+      opacity: 0.5
+    .profile
+      width: 100%
+      position: absolute
+      bottom: $1 rem
+      color: $white
+      .profile-avatar
+        column(2)
+        offset(2)
+        img
+          width: 7rem
+          -webkit-border-radius: 3.5rem
+          -moz-border-radius: 3.5rem
+          border-radius: 3.5rem
+          float: right
+      .profile-info
+        column(6)
+      .name, .location
+        margin: 0
+        padding: 0
+        font-family: inherit
+      .name
+        color: $white
+        font-size: $2 + $phi rem
+      .location
+        color: $lightgray
+        font-size: $1 rem
 
 // directors section
-.rds h1
-  column(12)
-
-// change later!
-.regions-list 
-  column(3)
-
-.regions-content
-  column(9)
+.rds 
+  h1
+    column(12)
+  .regions
+    ul li
+      column(3)
+      font-size: $1 rem
+      background: $whiteish
+      color: $gray
+      padding: 0 ($phi rem)
+      margin-bottom: 1.5rem
+      &:hover
+        background: $bluegray
+        cursor: pointer
+      h2
+        font-size: 1.3rem
+        padding-bottom: 0
+        &:hover
+          color: $white
+  .directors
+    h2
+      column(12)
+      padding: ($2 rem) 0
+      color: $bluegray
+    ul li
+      column(3)
+      text-align: center
+      img
+        width: 10.5rem
+        -webkit-border-radius: 5.75rem
+        -moz-border-radius: 5.75rem
+        border-radius: 5.75rem
+        margin-top: $0 rem
+      .name, .location
+        font-family: inherit
+        padding: 0
+      .name
+        margin-top: $0 rem
+        color: $blue
+      .location
+        color: $lightgray
 
 // news section
 .news
@@ -185,9 +248,6 @@ body>section
       margin: 0 0 ($0 rem)
 
 // logo section
-.logo
-  section
-    column(6)
 
 // footer
 .container
@@ -223,7 +283,7 @@ footer
 @media screen and (min-width: 320px) and (max-width:409px)
   html
     font-size: 5px
-@media screen and (min-width: 410px) and (max-width:451px)
+@media screen and (min-width: 410px) and (max-width:449px)
   html
     font-size: 5.5px
 
@@ -264,15 +324,21 @@ footer
 @media screen and (min-width: 1024px)
   .about section, .news section
     column(4)
+  .logo
+    section
+      column(6)
 
 @media screen and (max-width: 1023px)
   .news
     section
       img
         display: none
+  .logo
+    section
+      column(12)
 
 @media screen and (min-width: 768px) and (max-width: 1023px)
-  .rds section, .logo section
+  .rds section
     column(12)
   .about 
     section
@@ -289,11 +355,14 @@ footer
   p, li
     font-size: $0 * (2 - $phi) rem
 
-@media screen and (min-width: 600px) and (max-width: 767px)
+
+@media screen and (max-width: 767px)
   .hero 
     display: none
   .about section, .news section
     column(12)
+
+@media screen and (min-width: 600px) and (max-width: 767px)
   .about
     h1
       font-size: $3 rem
@@ -304,11 +373,7 @@ footer
   p, li
     font-size: $1 + (1 - $phi) rem
 
-@media screen and (max-width: 599px)
-  .hero 
-    display: none
-  .about section, .news section
-    column(12)
+@media screen and (min-width: 500px) and (max-width: 599px)
   .about
     h1
       font-size: $3 rem
@@ -318,3 +383,14 @@ footer
     font-size: $2 + $phi rem
   p, li
     font-size: $1 + $phi rem
+
+@media screen and (max-width: 499px)
+  .about
+    h1
+      font-size: $3 + $phi rem
+  h1
+    font-size: $3 + $phi rem
+  h2
+    font-size: $3 rem
+  p, li
+    font-size: $2 rem
