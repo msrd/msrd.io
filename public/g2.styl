@@ -1,62 +1,78 @@
-// @import 'nib/gradients'
-// @import 'nib/vendor'
-// @import 'buttons/buttons.styl'
-
-
 // grid
 @import grid
-columns = 12
-total-width=100%
 
 // variables
-$padding = 2em
-$maxwidth = 1200px
-$fontsize = 12pt
-$bluegray = #5C6573
-$blue = #094FB2
-$darkblue = #063373
-$gray = #444
-$lightgray = #aaa
+$fontsize = 14pt
+$bodypadding = 2rem
 
-$phi = 0.6250
+$blue = #007CC2
+$darkblue = #004973
+$bluegray = #5C6A73
+$darkgray = #333
+$gray = #777
+$lightgray = #bbb
+$white = #fff
+$whiteish = #eee
+$green = #0ACFAC
+$red = #D55340
+
+$phi = 0.618034
 $0 = 1.0
 $1 = $phi + $0      // 1.6250
 $2 = $0 + $1        // 2.6250
 $3 = $1 + $2        // 4.2500
 $4 = $2 + $3        // 6.8750
+$5 = $3 + $4
 
 // main
 *
   box-sizing: border-box
 
+html
+  font: 400 100%/$1 em 'Roboto', sans-serif
+
 body
-  max-width: $maxwidth
-  margin: 0 auto
-  padding: 0 $padding
-  font: 400 $fontsize/1.5em 'Open Sans', 'Roboto', sans-serif
+  margin: 0
+  width: 100%
   color: $gray
+
+h1, h2
   -webkit-font-smoothing: antialiased
   font-smoothing: antialiased
   text-rendering: optimizeLegibility
 
 h1
+  margin: 0
+  padding: 0 0 ($2 rem)
   color: $blue
   font-weight: 400
-  margin: 0 0 $2 em
-  font-size: 2em
-  line-height: 1.5em
-  padding-bottom: 1em
+  font-size: $1 + $phi rem
+  line-height: 1.2em
 
 h2
+  margin: 0
+  padding: 0 0 ($phi rem)
   font-weight: 400
-  margin: 0 0 $2 em
+  font-size: $1 rem
   color: $lightgray
 
-p
-  padding: 0 0 1em
+ul
+  padding: 0
 
-header, footer, section
-  row(12)
+li
+  list-style: none outside none
+
+p, li
+  margin: 0
+  padding: 0 0 ($1 rem)
+  font-size: $0 rem
+  color: $gray
+
+p
+  font-family: georgia, serif
+
+a
+  text-decoration: none
 
 img
   max-width: 100%
@@ -66,173 +82,290 @@ img
   border: 0
   -ms-interpolation-mode: bicubic
 
-// header and nav
-header
-  margin-top: 1.5em
-  margin-bottom: $3 em
-  vertical-align: middle
+figure
+  margin: 0
 
-header figure, header h1
-  column(6)
+// containers
+header, footer, body>section
+  row(12)
+  margin: 0 auto
 
-header figure img
-  width: 18em
-
-nav
-  column(6)
-  text-align: right
-  font-size: 0.8em
-  text-transform: uppercase
-  color: $blue
-  font-weight: 400
-
-nav
-  li
-    display: inline-block
-    list-style: none outside none
-    padding-right: $1 em
-    &:last-child
-      padding-right: 0
-
-// sections
-section
-  padding: 3em 0 4.5em
-
-section:before, section:after
+// clear floats
+header:before, header:after, 
+footer:before, footer:after, 
+body>section:before, body>section:after
   display: table
   content: ""
   line-height: 0
 
-section:after
+header:after, 
+footer:after, 
+body>section:after
   clear: both
 
-section h1
-  column(12)
+// header and nav
+header
+  vertical-align: middle
+  padding: (3rem) 0 (1rem)
+  section>*
+    padding: 0
+  h1
+    a
+      font-weight: 900
+      color: $blue
+  figure
+    img
+      width: 18rem
 
-.about 
-  text-align: center
+nav
+  a
+    color: $blue
+    &:hover
+      color: $darkblue
 
-.about h1
-  color: $bluegray
-  text-align: center
-  padding: 1em 0
-  font-weight: 300
-  font-size: $2 em
-  line-height: 1.2em
+@media screen and (min-width: 500px)
+  header
+    h1, figure
+      column(4)
+  nav
+    column(8)
+    text-align: right
+    li
+      display: inline-block
+      padding: 0 ($2 + $phi rem) 0 0
+      &:last-child
+        padding-right: 0
 
-.subheading
-  column(4)
-
-.rds h1
-  column(12)
-
-.regions-list
-  column(3)
-
-.regions-content
-  column(9)
-
-.news-post
-  column(4)
-
-.logo p
-  column(6)
-
-.hero figure
-  column(12)
-
-@media screen and (max-width: 767px)
-  .subheading, .news-post, .logo p
+@media screen and (max-width: 499px)
+  header
+    h1, figure
+      column(12)
+  nav
     column(12)
+    text-align: left
+    li
+      display: inline-block
+      padding: 0 0 0 ($3 rem)
+      &:first-child
+        padding-left: 0
+
+// sections
+body>section
+  padding: ($2 rem) 0
+  h1
+    column(12)
+    padding-top: $1 rem
+
+// about section
+.about 
+  h1
+    color: $bluegray
+    text-align: center
+    font-size: 3rem
+    line-height: 1.2em
+    padding: ($1 rem) 0 ($3 + $phi rem)
+    font-weight: 300
+  section
+    text-align: center
+  i
+    font-size: $4 + $phi rem
+    line-height: 1.5em
+  // change these icon colors later
+  .icon-headphones
+    color: $green
+  .icon-comments
+    color: #008EDC
+  .icon-heart
+    color: $red
+
+// directors section
+.rds 
+  h1
+    column(12)
+  .regions
+    ul li
+      column(3)
+      font-size: $1 rem
+      background: $whiteish
+      padding: 0 ($phi rem)
+      margin-bottom: 1.5rem
+      &:hover
+        background: $bluegray
+        cursor: pointer
+      h2
+        color: $gray
+        font-size: 1.3rem
+        padding-bottom: 0
+        &:hover
+          color: $white
+  .directors
+    h2
+      column(12)
+      padding: ($2 rem) 0
+      color: $bluegray
+    ul li
+      column(3)
+      text-align: center
+      img
+        width: 10.5rem
+        -webkit-border-radius: 5.75rem
+        -moz-border-radius: 5.75rem
+        border-radius: 5.75rem
+        margin-top: $0 rem
+      .name, .location
+        font-family: inherit
+        padding: 0
+      .name
+        margin-top: $0 rem
+        color: $blue
+      .location
+        color: $lightgray
+
+// news section
+.news
+  section
+    img
+      margin: 0 0 ($0 rem)
+
+// logo section
 
 // footer
-footer p
-  column(12)
-  font-size: 0.8em
-  color: $lightgray
+.container
+  background: $bluegray
+  padding: ($3 rem) 0
+  margin-top: $3 rem
 
-// html
-//   background url(/images/debut_light.png) 
-// 
-// body
-//   font          1.0rem/1.5 sans-serif
-//   width         42em
-//   margin        0 auto
-//   color         $blackish
-//   // background    $whiteish
-//   // background    url('http://www.baselineme.com/24') center top repeat
-//   // background url(/images/24.svg) center top repeat
-// 
-// article
-//   max-width     944px
-//   margin        auto
-// 
-// h1
-//   font-size     6.8750 rem
-//   line-height   7.5 rem
-//   margin-top    1.5 rem
-//   margin-bottom 3.0 rem
-//   margin-left  -0.3 rem
-//   letter-spacing -2px
-//   text-rendering optimizelegibility
-//   color rgb(9,79,178)
-// 
-//   span
-//     color lightGray
-// 
-// p.slug
-//   font-weight bold
-//   //font-variant small-caps
-//   margin-top -3.0 rem
-//   //margin-bottom -1.5 rem
-//   color rgb(255, 85, 64)
-// 
-// span.invert
-//   color $blackish
-//   background-color: rgb(87, 193, 233)
-//   padding: 4px
-// 
-// a:visited, a:link
-//   color hsl(205, 20%, 50%)
-//   text-decoration none
-//   border-bottom 1px solid #F2ECDA
-// 
-// a:active, a:hover
-//   border-bottom 1px solid #999
-// 
-// figure
-//   a:active, a:hover, a:visited, a:link
-//     border-bottom 0px
-// 
-// figcaption
-//   font-variant small-caps
-//   margin-top    0rem
-//   margin-bottom 1.5rem
-//   color darkGray
-// 
-// h2
-//   color rgb(9,79,178)
-//   font-size     2.6250 rem
-//   line-height   3.0000 rem
-//   margin-top    3.0 rem
-//   margin-bottom 1.5 rem
-//   // See http://➡.ws/border-top
-//   background url('/images/1x1.svg') top left repeat-x
-// 
-// h3
-//   font-size     1.6250 rem
-//   line-height   3.0 rem
-//   margin-top    1.5 rem
-//   margin-bottom 0 rem
-//   color rgb(9,79,178)
-// 
-// p, ul, ol
-//   margin-top    0rem
-//   margin-bottom 1.5rem
-// 
-// aside
-//   font-size     0.6250rem
-//   float right
-//   padding 0 0 0 1.5em
-//   margin 0 0 0 1em
-//   max-width 20em
+footer
+  p, ul
+    column(12)
+  p
+    color: $lightgray
+    font-family: inherit
+    padding: 0
+  ul
+    margin-bottom: $0 rem
+  li, li a
+    color: $white
+    padding: 0 ($phi rem) 0 0
+    display: inline
+    &:first-child
+      padding-left: 0
+
+// shitload of media queries, will reduce to three in later version
+@media screen and (max-width: 319px)
+  html
+    font-size: 4px
+@media screen and (min-width: 320px) and (max-width:409px)
+  html
+    font-size: 5px
+@media screen and (min-width: 410px) and (max-width:449px)
+  html
+    font-size: 5.5px
+
+@media screen and (min-width: 450px) and (max-width: 499px)
+  html
+    font-size: 6px
+@media screen and (min-width: 500px) and (max-width: 529px)
+  html
+    font-size: 6.5px
+@media screen and (min-width: 530px) and (max-width: 599px)
+  html
+    font-size: 7px
+
+@media screen and (min-width: 600px) and (max-width: 679px)
+  html
+    font-size: 8px
+@media screen and (min-width: 680px) and (max-width: 767px)
+  html
+    font-size: 9px
+
+@media screen and (min-width: 768px) and (max-width: 899px)
+  html
+    font-size: 64%
+@media screen and (min-width: 900px) and (max-width: 1023px)
+  html
+    font-size: 73%
+
+@media screen and (min-width: 1024px) and (max-width: 1123px)
+  html
+    font-size: 87%
+@media screen and (min-width: 1124px) and (max-width: 1223px)
+  html
+    font-size: 92%
+@media screen and (min-width: 1224px)
+  html
+    font-size: 92%
+
+@media screen and (min-width: 1024px)
+  .about section, .news section
+    column(4)
+  .logo
+    section
+      column(6)
+
+@media screen and (max-width: 1023px)
+  .news
+    section
+      img
+        display: none
+  .logo
+    section
+      column(12)
+
+@media screen and (min-width: 768px) and (max-width: 1023px)
+  .rds section
+    column(12)
+  .about 
+    section
+      p, h2
+        column(6)
+  .news
+    section
+      p, h2
+        column(6)
+  h1
+    font-size: $2 rem
+  h2
+    font-size: $1 + $phi rem
+  p, li
+    font-size: $0 * (2 - $phi) rem
+
+
+@media screen and (max-width: 767px)
+  .hero 
+    display: none
+  .about section, .news section
+    column(12)
+
+@media screen and (min-width: 600px) and (max-width: 767px)
+  .about
+    h1
+      font-size: $3 rem
+  h1
+    font-size: $3 rem
+  h2
+    font-size: $2 + (1 - $phi) rem
+  p, li
+    font-size: $1 + (1 - $phi) rem
+
+@media screen and (min-width: 500px) and (max-width: 599px)
+  .about
+    h1
+      font-size: $3 rem
+  h1
+    font-size: $3 rem
+  h2
+    font-size: $2 + $phi rem
+  p, li
+    font-size: $1 + $phi rem
+
+@media screen and (max-width: 499px)
+  .about
+    h1
+      font-size: $3 + $phi rem
+  h1
+    font-size: $3 + $phi rem
+  h2
+    font-size: $3 rem
+  p, li
+    font-size: $2 rem
