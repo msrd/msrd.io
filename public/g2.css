@@ -433,13 +433,13 @@ footer li a:first-child {
     *margin: 0 0.75rem -correction;
   }
   .about section p,
-  .about section h2 {
+  .about section i {
     display: inline-block;
     float: left;
     overflow: hidden;
-    width: 34.5rem;
+    width: 70.5rem;
     margin: 0 0.75rem;
-    *width: 34.5rem -correction;
+    *width: 70.5rem -correction;
     *margin: 0 0.75rem -correction;
   }
   .news section p,
