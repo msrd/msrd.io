@@ -373,6 +373,7 @@ footer li a:hover {
     *width: 70.5rem -correction;
     *margin: 0 0.75rem -correction;
     font-size: 3.2308rem;
+    padding: 1em 0 1.6154em;
   }
   .about section {
     display: inline-block;
