@@ -308,7 +308,7 @@ footer li:hover,
 footer li a:hover {
   color: #fff;
 }
-@media screen and (min-width: 1220px) {
+@media screen and (min-width: 1216px) {
   html {
     font-size: 92%;
   }
@@ -323,12 +323,9 @@ footer li a:hover {
     *margin: 0 0.75rem -correction;
   }
 }
-@media screen and (max-width: 1219px) {
+@media screen and (max-width: 1215px) {
   header {
     padding-top: 4.2308em;
-  }
-  .about section i {
-    display: none;
   }
   .news img {
     display: none;
@@ -343,7 +340,7 @@ footer li a:hover {
     *margin: 0 0.75rem -correction;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1219px) {
+@media screen and (min-width: 768px) and (max-width: 1215px) {
   html {
     font-size: 56%;
   }
@@ -376,20 +373,38 @@ footer li a:hover {
     padding: 1em 0 1.6154em;
   }
   .about section {
+    *zoom: 1;
+  }
+  .about section:before,
+  .about section:after {
+    content: "";
+    display: table;
+    line-height: 0;
+  }
+  .about section:after {
+    clear: both;
+  }
+  .about section i {
     display: inline-block;
     float: left;
     overflow: hidden;
-    width: 22.5rem;
+    width: 10.5rem;
     margin: 0 0.75rem;
-    *width: 22.5rem -correction;
+    *width: 10.5rem -correction;
     *margin: 0 0.75rem -correction;
-  }
-  .about section i {
-    display: none;
+    margin-left: 6.75rem;
+    line-height: 1em;
   }
   .about section p {
     margin-top: 1.2308rem;
     text-align: left;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    width: 46.5rem;
+    margin: 0 0.75rem;
+    *width: 46.5rem -correction;
+    *margin: 0 0.75rem -correction;
   }
   .rds :>all {
     *zoom: 1;
@@ -496,6 +511,7 @@ footer li a:hover {
   }
   .about h1 {
     font-size: 3.2308rem;
+    padding-bottom: 1.6154em;
   }
   .rds .regions ul li,
   .rds .directors ul li {
@@ -507,5 +523,8 @@ footer li a:hover {
   .rds .regions ul li h2,
   .rds .directors ul li h2 {
     font-size: 2rem;
+  }
+  .about section i {
+    display: none;
   }
 }

@@ -237,22 +237,17 @@ footer
       color $white
 
 // media queries
-
 // large
-@media screen and (min-width: 1220px)
+@media screen and (min-width: 1216px)
   html
     font-size 92%
   .about section, .news section
     column(4)
 
 // small and medium
-@media screen and (max-width: 1219px)
+@media screen and (max-width: 1215px)
   header
     padding-top $s6 em
-  .about
-    section
-      i
-        display none
   .news
       img
         display none
@@ -261,7 +256,7 @@ footer
       column(12)
 
 // medium
-@media screen and (min-width: 768px) and (max-width: 1219px)
+@media screen and (min-width: 768px) and (max-width: 1215px)
   html
     font-size 56%
   h1
@@ -282,13 +277,15 @@ footer
       font-size $s5 rem
       padding ($s0 em) 0 ($s2 em)
     section
-      column(4)
+      clearfix()
       i
-        //font-size $s9 rem
-        display none
+        column(2)
+        offset(1)
+        line-height: $s0 em
       p
         margin-top $s1 rem
         text-align left
+        column(8)
   .rds
     :>all
       clearfix()
@@ -347,6 +344,7 @@ footer
     text-align left
     h1
       font-size $s5 rem
+      padding-bottom $s2 em
     section p
   .rds
     .regions ul li, .directors ul li
@@ -357,4 +355,8 @@ footer
       *margin 0 100% * (gutter-width * 0.5 / _gridsystem-width)-  correction
       h2
         font-size $s3 rem
+  .about
+    section
+      i
+        display none
 
