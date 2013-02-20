@@ -8,6 +8,12 @@ border-radius(n)
   -moz-border-radius n
   border-radius n
 
+transition(n, t, func)
+  -webkit-transition: n t func;
+  -moz-transition: n t func;
+  -o-transition: n t func;
+  transition: n t func;
+
 // variables
 $blue = #007CC2
 $darkblue = #004973
@@ -45,7 +51,7 @@ body
   margin 0
   width 100%
   color $gray
-  border-top 5px solid $lightgray
+  border-top 5px solid $blue
 
 h1, h2
   -webkit-font-smoothing antialiased
@@ -78,7 +84,7 @@ li
 
 p, li
   margin 0
-  padding 0 0 ($s3 em)
+  padding 0 0 ($s2 em)
   color $gray
   font-size $s0 rem
 
@@ -131,9 +137,9 @@ nav
     &:last-child
       padding-right 0
   a
-    color $gray
+    color $blue
     &:hover
-      color $blue
+      color $darkblue
 
 // sections
 body>section
@@ -235,13 +241,20 @@ footer
     &:hover
       color $white
 
-// media queries
 // large
 @media screen and (min-width: 1216px)
   html
     font-size 92%
   .about section, .news section
     column(4)
+  .rds .directors ul li
+    clearfix()
+    margin-top 5px
+    margin-bottom 0
+    transition(all, 200ms, ease-in-out)
+    &:hover
+      margin-top 0
+      margin-bottom 5px
 
 // small and medium
 @media screen and (max-width: 1215px)
@@ -257,7 +270,7 @@ footer
 // medium
 @media screen and (min-width: 768px) and (max-width: 1215px)
   html
-    font-size 56%
+    font-size 50%
   h1
     font-size $s5 rem
   h2
@@ -272,9 +285,11 @@ footer
       font-size $s3 rem
   .about 
     h1
-      column(12)
-      font-size $s5 rem
-      padding ($s0 em) 0 ($s2 em)
+      column(9)
+      offset(1.5)
+      text-align center
+      font-size $s6 rem
+      padding ($sn3 em) 0 ($s0 em)
     section
       clearfix()
       i

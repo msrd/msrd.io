@@ -21,7 +21,7 @@ body {
   margin: 0;
   width: 100%;
   color: #7e898f;
-  border-top: 5px solid #b2bcc2;
+  border-top: 5px solid #007cc2;
 }
 h1,
 h2 {
@@ -56,7 +56,7 @@ li {
 p,
 li {
   margin: 0;
-  padding: 0 0 2em;
+  padding: 0 0 1.6154em;
   color: #7e898f;
   font-size: 1rem;
 }
@@ -148,10 +148,10 @@ nav li:last-child {
   padding-right: 0;
 }
 nav a {
-  color: #7e898f;
+  color: #007cc2;
 }
 nav a:hover {
-  color: #007cc2;
+  color: #004973;
 }
 body>section {
   padding: 1.6154rem 0;
@@ -322,6 +322,28 @@ footer li a:hover {
     *width: 22.5rem -correction;
     *margin: 0 0.75rem -correction;
   }
+  .rds .directors ul li {
+    *zoom: 1;
+    margin-top: 5px;
+    margin-bottom: 0;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+  }
+  .rds .directors ul li:before,
+  .rds .directors ul li:after {
+    content: "";
+    display: table;
+    line-height: 0;
+  }
+  .rds .directors ul li:after {
+    clear: both;
+  }
+  .rds .directors ul li:hover {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
 }
 @media screen and (max-width: 1215px) {
   header {
@@ -342,7 +364,7 @@ footer li a:hover {
 }
 @media screen and (min-width: 768px) and (max-width: 1215px) {
   html {
-    font-size: 56%;
+    font-size: 50%;
   }
   h1 {
     font-size: 3.2308rem;
@@ -365,12 +387,14 @@ footer li a:hover {
     display: inline-block;
     float: left;
     overflow: hidden;
-    width: 70.5rem;
+    width: 52.5rem;
     margin: 0 0.75rem;
-    *width: 70.5rem -correction;
+    *width: 52.5rem -correction;
     *margin: 0 0.75rem -correction;
-    font-size: 3.2308rem;
-    padding: 1em 0 1.6154em;
+    margin-left: 9.75rem;
+    text-align: center;
+    font-size: 4.2308rem;
+    padding: 0.4615em 0 1em;
   }
   .about section {
     *zoom: 1;
