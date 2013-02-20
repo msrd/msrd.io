@@ -201,6 +201,12 @@ body>section h1 {
 .about .icon-bullhorn {
   color: #b2bcc2;
 }
+.about .icon-twitter {
+  color: #fff;
+}
+.about .icon-github-sign {
+  color: #fff;
+}
 .rds .regions ul li {
   display: inline-block;
   float: left;
