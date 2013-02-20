@@ -28,12 +28,12 @@ h2 {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-weight: 400;
 }
 h1 {
   margin: 0;
   padding: 0 0 0.7692em;
   color: #007cc2;
-  font-weight: 400;
   font-size: 2rem;
   line-height: 1.6154em;
 }
@@ -41,7 +41,6 @@ h2 {
   margin: 0;
   padding: 0 0 0.7692rem;
   color: #b2bcc2;
-  font-weight: 400;
   font-size: 1.6154rem;
   line-height: 1.6154em;
 }
@@ -178,7 +177,7 @@ body>section h1 {
   *width: 58.5rem -correction;
   *margin: 0 0.75rem -correction;
   margin-left: 6.75rem;
-  padding: 0.4615em 0 1em;
+  padding: 0.4615em 0 0.6154em;
   color: #5c6a73;
   font-weight: 300;
   font-size: 2.6154rem;
@@ -186,7 +185,7 @@ body>section h1 {
 }
 .about i {
   font-size: 6.8462rem;
-  line-height: 1.2308em;
+  line-height: 1.6154em;
 }
 .about .icon-headphones {
   color: #0acfac;
@@ -251,19 +250,22 @@ body>section h1 {
   -moz-border-radius: 70%;
   border-radius: 70%;
   margin-top: 1rem;
-  opacity: 0.6;
 }
 .rds .directors ul li .name,
 .rds .directors ul li .location {
-  font-family: inherit;
   padding: 0;
+  font-family: inherit;
 }
 .rds .directors ul li .name {
+  font-size: 1.2308rem;
   margin-top: 1rem;
-  color: #5c6a73;
+  color: #7e898f;
 }
 .rds .directors ul li .location {
   color: #b2bcc2;
+}
+.rds .directors ul li:hover .name {
+  color: #004973;
 }
 .news section img {
   margin: 0 0 1rem;
@@ -386,7 +388,8 @@ footer li a:hover {
   header nav ul {
     height: 5.2308rem;
   }
-  nav li {
+  nav li,
+  .rds .directors ul li .name {
     font-size: 2rem;
   }
   .about h1 {
@@ -552,6 +555,9 @@ footer li a:hover {
   }
   .rds .regions ul li h2,
   .rds .directors ul li h2 {
+    font-size: 2rem;
+  }
+  .rds .directors ul li .name {
     font-size: 2rem;
   }
   .about section i {

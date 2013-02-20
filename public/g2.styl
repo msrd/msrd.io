@@ -1,7 +1,6 @@
 // grid
 @import grid
 
-
 // mixins
 border-radius(n)
   -webkit-border-radius n
@@ -40,12 +39,16 @@ $s7 = 5.2308
 $s8 = 6.8462
 $s9 = 8.4616
 
+// fonts
+$sans = 'Roboto'
+$serif = georgia
+
 // main
 *
   box-sizing border-box
 
 html
-  font 400 100%/$s2 em 'Roboto', sans-serif
+  font 400 100%/$s2 em $sans, sans-serif
 
 body
   margin 0
@@ -57,12 +60,12 @@ h1, h2
   -webkit-font-smoothing antialiased
   font-smoothing antialiased
   text-rendering optimizeLegibility
+  font-weight 400
 
 h1
   margin 0
   padding 0 0 ($sn1 em)
   color $blue
-  font-weight 400
   font-size $s3 rem
   line-height $s2 em
 
@@ -70,7 +73,6 @@ h2
   margin 0
   padding 0 0 ($sn1 rem)
   color $lightgray
-  font-weight 400
   font-size $s2 rem
   line-height $s2 em
 
@@ -89,7 +91,7 @@ p, li
   font-size $s0 rem
 
 p
-  font-family georgia, serif
+  font-family $serif, serif
 
 a
   text-decoration none
@@ -154,14 +156,14 @@ body>section
   h1
     column(10)
     offset(1)
-    padding ($sn3 em) 0 ($s0 em)
+    padding ($sn3 em) 0 ($sn2 em)
     color $bluegray
     font-weight 300
     font-size $s4 rem
     line-height $s1 em
   i
     font-size $s8 rem
-    line-height $s1 em
+    line-height $s2 em
   .icon-headphones
     color $green
   .icon-comments
@@ -199,15 +201,17 @@ body>section
         width 70%
         border-radius(70%)
         margin-top $s0 rem
-        opacity 0.6
       .name, .location
-        font-family inherit
         padding 0
+        font-family inherit
       .name
+        font-size $s1 rem
         margin-top $s0 rem
-        color $bluegray
+        color $gray
       .location
         color $lightgray
+      &:hover .name
+        color $darkblue
 
 // news section
 .news
@@ -283,8 +287,7 @@ footer
   header 
     figure img, nav ul
         height $s7 rem
-  nav
-    li
+  nav li, .rds .directors ul li .name
       font-size $s3 rem
   .about 
     h1
@@ -372,6 +375,8 @@ footer
       *margin 0 100% * (gutter-width * 0.5 / _gridsystem-width)-  correction
       h2
         font-size $s3 rem
+    .directors ul li .name
+      font-size $s3 rem
   .about
     section
       i
