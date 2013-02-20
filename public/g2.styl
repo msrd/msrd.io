@@ -9,10 +9,10 @@ border-radius(n)
   border-radius n
 
 transition(n, t, func)
-  -webkit-transition: n t func;
-  -moz-transition: n t func;
-  -o-transition: n t func;
-  transition: n t func;
+  -webkit-transition n t func;
+  -moz-transition n t func;
+  -o-transition n t func;
+  transition n t func;
 
 // variables
 $blue = #007CC2
@@ -161,16 +161,18 @@ body>section
     line-height $s1 em
   i
     font-size $s8 rem
-    line-height $s2 em
+    line-height $s1 em
   .icon-headphones
     color $green
   .icon-comments
     color $blue
   .icon-bullhorn
     color $red
+  .icon-headphones, .icon-comments, .icon-bullhorn
+    color $lightgray
 
 // directors section
-.rds 
+.rds
   .regions
     ul li
       column(2)
@@ -197,6 +199,7 @@ body>section
         width 70%
         border-radius(70%)
         margin-top $s0 rem
+        opacity 0.6
       .name, .location
         font-family inherit
         padding 0

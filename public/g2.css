@@ -186,7 +186,7 @@ body>section h1 {
 }
 .about i {
   font-size: 6.8462rem;
-  line-height: 1.6154em;
+  line-height: 1.2308em;
 }
 .about .icon-headphones {
   color: #0acfac;
@@ -196,6 +196,11 @@ body>section h1 {
 }
 .about .icon-bullhorn {
   color: #d55340;
+}
+.about .icon-headphones,
+.about .icon-comments,
+.about .icon-bullhorn {
+  color: #b2bcc2;
 }
 .rds .regions ul li {
   display: inline-block;
@@ -246,6 +251,7 @@ body>section h1 {
   -moz-border-radius: 70%;
   border-radius: 70%;
   margin-top: 1rem;
+  opacity: 0.6;
 }
 .rds .directors ul li .name,
 .rds .directors ul li .location {
