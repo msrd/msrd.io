@@ -20,8 +20,8 @@ html {
 body {
   margin: 0;
   width: 100%;
-  color: #777;
-  border-top: 5px solid #5c6a73;
+  color: #7e898f;
+  border-top: 5px solid #7e898f;
 }
 h1,
 h2 {
@@ -40,7 +40,7 @@ h1 {
 h2 {
   margin: 0;
   padding: 0 0 0.7692rem;
-  color: #bbb;
+  color: #b2bcc2;
   font-weight: 400;
   font-size: 1.6154rem;
   line-height: 1.6154em;
@@ -57,7 +57,7 @@ p,
 li {
   margin: 0;
   padding: 0 0 2em;
-  color: #777;
+  color: #7e898f;
   font-size: 1rem;
 }
 p {
@@ -148,7 +148,7 @@ nav li:last-child {
   padding-right: 0;
 }
 nav a {
-  color: #777;
+  color: #7e898f;
 }
 nav a:hover {
   color: #007cc2;
@@ -257,7 +257,7 @@ body>section h1 {
   color: #5c6a73;
 }
 .rds .directors ul li .location {
-  color: #bbb;
+  color: #b2bcc2;
 }
 .news section img {
   margin: 0 0 1rem;
@@ -287,7 +287,7 @@ footer ul {
   *margin: 0 0.75rem -correction;
 }
 footer p {
-  color: #bbb;
+  color: #b2bcc2;
   font-family: inherit;
   padding: 0;
 }

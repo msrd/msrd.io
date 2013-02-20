@@ -15,8 +15,11 @@ $bluegray = #5C6A73
 $green = #0ACFAC
 $red = #D55340
 $darkgray = #333
+$darkgray = #39454C
 $gray = #777
+$gray = #7E898F
 $lightgray = #bbb
+$lightgray = #B2BCC2
 $white = #fff
 
 // 3:5 stranded scale
@@ -45,7 +48,7 @@ body
   margin 0
   width 100%
   color $gray
-  border-top 5px solid $bluegray
+  border-top 5px solid $gray
 
 h1, h2
   -webkit-font-smoothing antialiased
@@ -156,7 +159,6 @@ body>section
   i
     font-size $s8 rem
     line-height $s2 em
-  // change these icon colors later
   .icon-headphones
     color $green
   .icon-comments
@@ -281,7 +283,7 @@ footer
       i
         column(2)
         offset(1)
-        line-height: $s0 em
+        line-height $s0 em
       p
         margin-top $s1 rem
         text-align left
