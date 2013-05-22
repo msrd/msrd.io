@@ -1,5 +1,13 @@
 /*!! file:g.styl        */
 
+@import 'modules/rhythm'
+
+// These three constants come straight from gridlover.net
+// Ratios taken from http://lamb.cc/typograph/ (Specifically the 3:5 Fibonacci)
+body-font-size = 1.0rem
+body-line-height = 1.5
+scale-factor = 1.6250
+
 $whiteish = hsl(0, 50, 99)
 $blackish = hsl(0, 0, 7)
 $logocolor = hsl(202, 100%, 38%)
@@ -7,16 +15,6 @@ $logocolor = hsl(202, 100%, 38%)
 $redish   = spin($logocolor, 180%)
 $headercolor = $logocolor
 $linkcolor = $logocolor
-
-// Ratios taken from http://lamb.cc/typograph/
-// Specifically the 3:5 Fibonacci
-
-$phi = 0.6250       // 5/8ths
-$0 = 1.0            // maps to 1.0 rem units
-$1 = $0 + $phi      // 1.6250
-$2 = $1 + $0        // 2.6250
-$3 = $2 + $1        // 4.2500
-$4 = $3 + $2        // 6.8750
 
 $measure = 42rem
 
@@ -27,18 +25,16 @@ html
   background url(/images/debut_light.png) 
 
 body
-  font          1.0rem/1.5 sans-serif
+  rhythm(0)
+  font-family   sans-serif
   width         $measure
   margin        0 auto
   color         $blackish
-  // background url(/images/24.svg) center top repeat
+  background url(/images/24.svg) center top repeat
 
 h1
+  rhythm(4, 1, 2)
   color $headercolor
-  font-size     $4 rem
-  line-height   7.5 rem
-  margin-top    1.5 rem
-  margin-bottom 3.0 rem
   margin-left  -0.3 rem
   letter-spacing -2px
   text-rendering optimizelegibility
@@ -47,20 +43,14 @@ h1
     color lightGray
 
 h2
+  rhythm(2, 2, 1)
   color $headercolor
-  font-size     $2 rem
-  line-height   3.0 rem
-  margin-top    3.0 rem
-  margin-bottom 1.5 rem
   // See http://➡.ws/border-top
   background url('/images/1x1.svg') top left repeat-x
 
 h3
+  rhythm(1, 1, 0)
   color $headercolor
-  font-size     $1 rem
-  line-height   3.0 rem
-  margin-top    1.5 rem
-  margin-bottom 0 rem
 
 p.slug
   color $redish
@@ -85,28 +75,28 @@ a:active, a:hover
   border-bottom 1px solid darken($linkcolor, 20%)
   background lighten($linkcolor, 70%)
 
-// 20ems = 320px -  smartphone 
-@media screen and (max-width: 20em) 
-  body
-    font-size 87.5%
+// // 20ems = 320px -  smartphone 
+// @media screen and (max-width: 20em) 
+//   body
+//     font-size 87.5%
 
-// 48ems = 768px - iPad portrait
-@media screen and (min-width: 48em)
-  .medium
-    display block
+// // 48ems = 768px - iPad portrait
+// @media screen and (min-width: 48em)
+//   .medium
+//     display block
 
 
-// 64ems = 1024px - iPad landscape
-@media screen and (min-width: 64em)
-  body
-    max-width 35em
-    line-height 1.75em
-    font-size 112.5%
+// // 64ems = 1024px - iPad landscape
+// @media screen and (min-width: 64em)
+//   body
+//     max-width 35em
+//     line-height 1.75em
+//     font-size 112.5%
 
-// 100ems = 1600px - desktop
-@media screen and (min-width: 100em)
-  body
-    line-height 2em
+// // 100ems = 1600px - desktop
+// @media screen and (min-width: 100em)
+//   body
+//     line-height 2em
 
 
 
