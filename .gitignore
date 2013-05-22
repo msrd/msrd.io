@@ -1,4 +1,5 @@
 node_modules
-public/g.css
 .DS_Store
 npm-debug.log
+release
+tmp

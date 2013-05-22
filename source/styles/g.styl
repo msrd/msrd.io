@@ -1,6 +1,6 @@
-@import 'buttons/buttons.styl'
+/*!! file:g.styl        */
 
-$whiteish = hsl(0, 0, 99)
+$whiteish = hsl(0, 50, 99)
 $blackish = hsl(0, 0, 7)
 $logocolor = hsl(202, 100%, 38%)
 
@@ -18,6 +18,8 @@ $2 = $1 + $0        // 2.6250
 $3 = $2 + $1        // 4.2500
 $4 = $3 + $2        // 6.8750
 
+$measure = 42rem
+
 *
   box-sizing: border-box
 
@@ -26,7 +28,7 @@ html
 
 body
   font          1.0rem/1.5 sans-serif
-  width         42em
+  width         $measure
   margin        0 auto
   color         $blackish
   // background url(/images/24.svg) center top repeat
@@ -44,35 +46,6 @@ h1
   span
     color lightGray
 
-p.slug
-  color $redish
-  font-weight bold
-  margin-top -3.0 rem
-
-span.invert
-  color $whiteish
-  background-color: $logocolor
-  padding: 4px
-
-a:visited, a:link
-  color darken($linkcolor, 20%)
-  text-decoration none
-  border-bottom 1px solid lighten($linkcolor, 60%)
-
-a:active, a:hover
-  border-bottom 1px solid darken($linkcolor, 20%)
-  background lighten($linkcolor, 90%)
-
-figure
-  a:active, a:hover, a:visited, a:link
-    border-bottom 0px
-
-figcaption
-  color darkGray
-  font-variant small-caps
-  margin-top    0rem
-  margin-bottom 1.5rem
-
 h2
   color $headercolor
   font-size     $2 rem
@@ -89,7 +62,83 @@ h3
   margin-top    1.5 rem
   margin-bottom 0 rem
 
+p.slug
+  color $redish
+  font-weight bold
+  margin-top -3.0 rem
+
+span.invert
+  color $whiteish
+  background-color: $logocolor
+  padding: 4px
+
+.medium
+  display none
+
+// Fancy hyperlinks
+a:visited, a:link
+  color darken($linkcolor, 20%)
+  text-decoration none
+  border-bottom 1px solid lighten($linkcolor, 60%)
+
+a:active, a:hover
+  border-bottom 1px solid darken($linkcolor, 20%)
+  background lighten($linkcolor, 70%)
+
+// 20ems = 320px -  smartphone 
+@media screen and (max-width: 20em) 
+  body
+    font-size 87.5%
+
+// 48ems = 768px - iPad portrait
+@media screen and (min-width: 48em)
+  .medium
+    display block
+
+
+// 64ems = 1024px - iPad landscape
+@media screen and (min-width: 64em)
+  body
+    max-width 35em
+    line-height 1.75em
+    font-size 112.5%
+
+// 100ems = 1600px - desktop
+@media screen and (min-width: 100em)
+  body
+    line-height 2em
+
+
+
+// Scott's "house style" typography decisions:
+// Hanging puncation, squares as bullets, small roman for numbering
+// Proper abbreviations and figure captions
+
 p, ul, ol
+  margin-top    0rem
+  margin-bottom 1.5rem
+ 
+abbr
+  font-size 0.9em
+  text-transform uppercase
+  letter-spacing 0.1em
+
+ul
+  padding 0
+  list-style: square
+
+ol
+  padding 0
+  list-style: lower-roman
+
+figure
+  a:active, a:hover, a:visited, a:link
+    border-bottom 0px
+
+figcaption
+  color darkGray
+  font-variant small-caps
+  font-size 0.9em
   margin-top    0rem
   margin-bottom 1.5rem
 
