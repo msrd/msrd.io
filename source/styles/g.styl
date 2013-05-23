@@ -7,6 +7,7 @@
 body-font-size = 1.0rem
 body-line-height = 1.5
 scale-factor = 1.6250
+show-grid = true
 
 $whiteish = hsl(0, 50, 99)
 $blackish = hsl(0, 0, 7)
@@ -30,10 +31,14 @@ body
   width         $measure
   margin        0 auto
   color         $blackish
-  background url(/images/24.svg) center top repeat
+  //  background url(/images/24.svg) center top repeat
+  vertical-grid(24px)
+  measure()
+  
 
 h1
   rhythm(4, 1, 2)
+  boxy(-24px, 48px)
   color $headercolor
   margin-left  -0.3 rem
   letter-spacing -2px
@@ -44,12 +49,15 @@ h1
 
 h2
   rhythm(2, 2, 1)
+  boxy(-48px, 24px)
   color $headercolor
   // See http://➡.ws/border-top
   background url('/images/1x1.svg') top left repeat-x
 
+
 h3
   rhythm(1, 1, 0)
+  boxy(-24px, 0px)
   color $headercolor
 
 p.slug
@@ -75,28 +83,6 @@ a:active, a:hover
   border-bottom 1px solid darken($linkcolor, 20%)
   background lighten($linkcolor, 70%)
 
-// // 20ems = 320px -  smartphone 
-// @media screen and (max-width: 20em) 
-//   body
-//     font-size 87.5%
-
-// // 48ems = 768px - iPad portrait
-// @media screen and (min-width: 48em)
-//   .medium
-//     display block
-
-
-// // 64ems = 1024px - iPad landscape
-// @media screen and (min-width: 64em)
-//   body
-//     max-width 35em
-//     line-height 1.75em
-//     font-size 112.5%
-
-// // 100ems = 1600px - desktop
-// @media screen and (min-width: 100em)
-//   body
-//     line-height 2em
 
 
 
@@ -105,6 +91,7 @@ a:active, a:hover
 // Proper abbreviations and figure captions
 
 p, ul, ol
+  boxy(0px, 24px)
   margin-top    0rem
   margin-bottom 1.5rem
  
@@ -132,3 +119,27 @@ figcaption
   margin-top    0rem
   margin-bottom 1.5rem
 
+
+
+// // 20ems = 320px -  smartphone 
+// @media screen and (max-width: 20em) 
+//   body
+//     font-size 87.5%
+
+// // 48ems = 768px - iPad portrait
+// @media screen and (min-width: 48em)
+//   .medium
+//     display block
+
+
+// // 64ems = 1024px - iPad landscape
+// @media screen and (min-width: 64em)
+//   body
+//     max-width 35em
+//     line-height 1.75em
+//     font-size 112.5%
+
+// // 100ems = 1600px - desktop
+// @media screen and (min-width: 100em)
+//   body
+//     line-height 2em
