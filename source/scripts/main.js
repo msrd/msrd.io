@@ -25,9 +25,11 @@ function toggleMeasure() {
 }
 
 function toggleVerticalGrid() {
-    var lhpx = $('p').css('line-height');
-    $.rule('.vertical-grid').append('background-size: auto ' + lhpx);
+    // var lhpx = $('body').css('line-height');
+    // $.rule('.vertical-grid').append('background-size: auto ' + lhpx);
+
     $('body').toggleClass('vertical-grid');
+
 }
 
 function boxShadow(top, bottom) {

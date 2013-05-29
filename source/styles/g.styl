@@ -5,9 +5,10 @@
 // These three constants come straight from gridlover.net
 // Ratios taken originally from http://lamb.cc/typograph/ (Specifically the 3:5 Fibonacci)
 // Now adapted from http://pumpula.net/p/gridlover/beta/#font:16/line:1.500/scale:1.625/measure:960/grid:hide
-body-font-size = 1.0rem
-body-line-height = 1.5
+body-font-size = 1.00rem
+body-line-height = 1.50
 scale-factor = 1.6250
+vertical-rhythm = 24px      // default browser type (16px usually) * body-font-size * body-line-height
 show-grid = true
 
 $whiteish = hsl(0, 50, 99)
@@ -37,7 +38,7 @@ body
     measure()
 
 .vertical-grid
-    vertical-grid(24px)
+    vertical-grid(vertical-rhythm)
 
 h1
   rhythm(4, 1, 2)
@@ -63,7 +64,7 @@ h3
 p.slug
   color $redish
   font-weight bold
-  margin-top -3.0 rem
+  rhythm(0, -2, 0)
 
 span.invert
   color $whiteish
@@ -91,8 +92,7 @@ a:active, a:hover
 // Proper abbreviations and figure captions
 
 p, ul, ol
-  margin-top    0rem
-  margin-bottom 1.5rem
+  rhythm(0, 0, 1)
  
 abbr
   font-size 0.9em
