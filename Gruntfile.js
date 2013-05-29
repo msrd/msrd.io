@@ -19,6 +19,10 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         watch: {
+            javascript: { 
+                files: [c.source + "/scripts/{,*/}*.js"],
+                tasks: ["copy:debug"]
+            },
             coffee: {
                 files: [c.source + "/scripts/{,*/}*.coffee"],
                 tasks: ["coffee:debug"]
@@ -212,7 +216,7 @@ module.exports = function (grunt) {
                         dot: true,
                         cwd: c.source,
                         dest: c.release,
-                        src: ["logo/*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess"]        // don't copy CSS for release; usemin does it
+                        src: ["scripts/*.js", "logo/*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess"]        // don't copy CSS for release; usemin does it
                     },
                     {
                         expand: true,
