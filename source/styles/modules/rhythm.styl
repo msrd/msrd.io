@@ -3,7 +3,6 @@
 @import 'gradients'
 
 vertical-grid(unit, color= #ddd)
-    if show-grid
         stop= 100% - 100% / unit
         background linear-gradient(top, white stop, stop color)
         background-size auto unit
@@ -18,10 +17,10 @@ noidea()
  	background-position: top left;
  
 measure()
-    if show-grid
-        box-shadow: inset 1px 0px 0px hsla(200, 100%, 50%, .3), inset -1px 0px 0px hsla(200, 100%, 50%, .3);
-        box-shadow: inset 1px 0px 0px hsla(200, 0%, 0%, .12), inset -1px 0px 0px hsla(200, 0%, 0%, .12);
+    box-shadow: inset 1px 0px 0px hsla(200, 100%, 50%, .3), inset -1px 0px 0px hsla(200, 100%, 50%, .3);
+    box-shadow: inset 1px 0px 0px hsla(200, 0%, 0%, .12), inset -1px 0px 0px hsla(200, 0%, 0%, .12);
 
+// Boxy is replaced with runtime javascript
 boxy(before, after)
     if show-grid
         c1 = hsla(200, 100%, 50%, 1)

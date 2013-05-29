@@ -3,7 +3,8 @@
 @import 'modules/rhythm'
 
 // These three constants come straight from gridlover.net
-// Ratios taken from http://lamb.cc/typograph/ (Specifically the 3:5 Fibonacci)
+// Ratios taken originally from http://lamb.cc/typograph/ (Specifically the 3:5 Fibonacci)
+// Now adapted from http://pumpula.net/p/gridlover/beta/#font:16/line:1.500/scale:1.625/measure:960/grid:hide
 body-font-size = 1.0rem
 body-line-height = 1.5
 scale-factor = 1.6250
@@ -31,14 +32,15 @@ body
   width         $measure
   margin        0 auto
   color         $blackish
-  //  background url(/images/24.svg) center top repeat
-  vertical-grid(24px)
-  measure()
   
+.measure
+    measure()
+
+.vertical-grid
+    vertical-grid(24px)
 
 h1
   rhythm(4, 1, 2)
-  boxy(-24px, 48px)
   color $headercolor
   margin-left  -0.3 rem
   letter-spacing -2px
@@ -49,7 +51,6 @@ h1
 
 h2
   rhythm(2, 2, 1)
-  boxy(-48px, 24px)
   color $headercolor
   // See http://➡.ws/border-top
   background url('/images/1x1.svg') top left repeat-x
@@ -57,7 +58,6 @@ h2
 
 h3
   rhythm(1, 1, 0)
-  boxy(-24px, 0px)
   color $headercolor
 
 p.slug
@@ -91,7 +91,6 @@ a:active, a:hover
 // Proper abbreviations and figure captions
 
 p, ul, ol
-  boxy(0px, 24px)
   margin-top    0rem
   margin-bottom 1.5rem
  
