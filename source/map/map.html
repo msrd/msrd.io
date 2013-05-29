@@ -73,7 +73,7 @@
             var mc = new MarkerClusterer(map, markers, mcOptions);
           };
 
-		$.getJSON("location.json", parseLocation);
+		$.getJSON("/rdlist.json", parseLocation);
 
         function bindInfoWindow(marker, map, infoWindow, content) {      
           google.maps.event.addListener(marker, 'click', function() {
