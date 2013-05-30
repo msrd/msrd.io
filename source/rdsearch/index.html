@@ -1,6 +1,6 @@
  <!DOCTYPE html>
 
-<html ng-app>
+<html ng-app="msrdio">
 <head>
 	<meta charset="utf-8" />
 	<title>Flawless-Semantics | Showoff - Pixel Based Grid</title>
@@ -23,12 +23,12 @@
 		
 		<div class="intro">
 			<h3 class="show">Automatic rows</h3>
-			<code>Microsoft Regional Directors</code>	
-			<code>Search:<input ng-model="searchText" autofocus="autofocus"/></code>
+			<code>Microsoft Regional Directors - Total:{{directors.length}} | Shown:{{filteredData.length}}</code>	
+			<code>Search:<input ng-model="searchText" type="text" autofocus="autofocus"/></code>
 		</div>
 
 		<div>
-			<div ng-repeat="director in directors | filter:searchText | orderBy:'Last'" >
+			<div ng-repeat="director in filteredData | filter:searchText | orderBy:'Last'" >
 				<div class="box">
 					<code>{{director.First}} {{director.Last}}</code>
 				</div> 
