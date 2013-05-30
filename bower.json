@@ -1,0 +1,9 @@
+{
+  "name": "msrd.io",
+  "version": "0.0.0",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "angular": "~1.0.7"
+  }
+}
