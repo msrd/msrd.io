@@ -15,13 +15,10 @@ Technical details about the RD site
 
 Getting Started
 ---------------
-	% `npm install`
-	% `npm install -g bower` <-- installs the [Bower](http://bower.io)
-	client side package manager
-	% `bower install` <-- brings in local copies of needed dependencies
-	(ex: `jquery`)
-	% `grunt` <-- Builds/Compiles/MagicStuff and launches browser to
-	test site
+ - `npm install`
+ - `npm install -g bower` <-- Installs the [Bower](http://bower.io) client side package manager
+ - `bower install` <-- Brings in local copies of needed dependencies (ex: `jquery`)
+ - `grunt` <-- Builds/Compiles/MagicStuff and launches browser to test site
 
 
 Stretch goals for the site
