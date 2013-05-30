@@ -33,7 +33,7 @@
                   var latLng = new latLongFunc(latLngStr[0], latLngStr[1]);
                   var marker = new markerFunc({
                           'position': latLng,
-                          'icon': icon
+                          'icon': person.GravitarHash ? 'http://www.gravatar.com/avatar/' + person.GravitarHash : null
                       });
                   markers.push(marker);
                   var content = '<div class="info-window"><span class="director-name">' + first + ' ' + last + '</span><span class="director-location">' + city + ', ' + state + ' ' + country + '</span></div>';
