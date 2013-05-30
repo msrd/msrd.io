@@ -1,9 +1,10 @@
 {
   "name": "msrd.io",
   "version": "0.0.0",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
-    "angular": "~1.0.7"
+    "angular": "~1.0.7",
+    "jquery.rule": "https://github.com/staxmanade/jquery.rule.git",
+    "jquery": "~2.0.1"
   }
 }
