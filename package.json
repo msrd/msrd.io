@@ -26,9 +26,8 @@
     "grunt-markdown-to-json": "~0.4.1",
     "grunt-rev": "~0.1.0",
     "grunt-contrib-less": "~0.5.1",
-    "grunt-shell": "~0.2.2",
-    "require-yaml": "0.0.1",
-    "MD5": "~1.0.3"
+    "MD5": "~1.0.3",
+    "js-yaml": "~2.0.5"
   },
   "engines": {
     "node": ">=0.8.0"
