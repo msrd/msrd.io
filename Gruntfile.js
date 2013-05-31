@@ -291,7 +291,7 @@ module.exports = function (grunt) {
         "mkdir",
         "jade:release",
         "stylus:release",
-        "less:release",
+        // "less:release",
         "m2j:release",
         "compileRdListRelease",
         "copy:release",
@@ -302,7 +302,7 @@ module.exports = function (grunt) {
         "usemin"
     ]);
     grunt.registerTask("debug", ["clean:debug", "coffee", "jade:debug", 
-            "less:debug", "stylus:debug", "m2j:debug", "compileRdListDebug"]);
+            "stylus:debug", "m2j:debug", "compileRdListDebug"]);
 
     grunt.registerTask("default", ["debug-run"]);
 

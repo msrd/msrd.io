@@ -1,0 +1,30 @@
+!!! 5
+html(ng-app='msrdio')
+head
+    meta(charset='utf-8')
+    title Flawless-Semantics | Showoff - Pixel Based Grid
+    //
+       Stylesheets 
+    link(rel='stylesheet', href='search/search.less', type='text/less', media='screen')
+    //
+       Scripts 
+    script(src='search/js/less-1.3.3.min.js', type='text/javascript')
+       less = { env: "production"}; 
+    script(src='components/angular/angular.js')
+    script(src='search/js/search.js')
+    //if lt IE 9
+      script(type='text/javascript', src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
+  body
+    .page
+      section#auto
+        .first-row(ng-controller='listCtrl')
+          .intro
+            h3.show Automatic rows
+            code
+              Microsoft Regional Directors - Total:{{directors.length}} | Shown:{{filteredData.length}}
+            code
+              Search: input(ng-model='searchText', type='text', autofocus='autofocus')
+          div
+            div(ng-repeat='director in filteredData | filter:searchText | orderBy:\'Last\'')
+              .box
+                code {{director.First}} {{director.Last}}
