@@ -1,4 +1,5 @@
 (function() {
+    "use strict";
 
       function initialize() {
 
@@ -20,22 +21,31 @@
               var infoWindow = new google.maps.InfoWindow();
               var latLongFunc = google.maps.LatLng;
               var markerFunc = google.maps.Marker;
+              var marker;
               for (i = 0, peopleCount = people.length; i < peopleCount; i++) {
                   var person = people[i];
-                  last = person.Last;
-                  first = person.First;
-                  city = person.City;
-                  state = person.State;
-                  country = person.Country;
-                  icon = person.Icon;
-                  // push marker to markers array
+                  var last = person.Last;
+                  var first = person.First;
+                  var city = person.City;
+                  var state = person.State;
+                  var country = person.Country;
+                  var icon = person.Icon;
+
                   var latLngStr = person.Location.split(", ");
                   var latLng = new latLongFunc(latLngStr[0], latLngStr[1]);
-                  var marker = new markerFunc({
-                          'position': latLng,
-                          'icon': person.GravitarHash ? 'http://www.gravatar.com/avatar/' + person.GravitarHash : null
-                      });
-                  markers.push(marker);
+
+                  if(person.GravitarHash) {
+                    marker = new RichMarker({
+                            'position': latLng,
+                            'content': person.GravitarHash ? '<div class="circularIcon"><img style="border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;" src="http://www.gravatar.com/avatar/' + person.GravitarHash + '"/></div>' : null,
+                            'anchor': RichMarkerPosition.MIDDLE
+                    });
+                  } else {
+                    marker = new markerFunc({
+                        'position': latLng,
+                    });
+                 }
+                 markers.push(marker);
                   var content = '<div class="info-window"><span class="director-name">' + first + ' ' + last + '</span><span class="director-location">' + city + ', ' + state + ' ' + country + '</span></div>';
                   bindInfoWindow(marker, map, infoWindow, content);
               }
