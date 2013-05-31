@@ -301,6 +301,11 @@ module.exports = function (grunt) {
         "rev",
         "usemin"
     ]);
+
+    grunt.registerTask("ci", [
+        "release"
+    ]);
+
     grunt.registerTask("debug", ["clean:debug", "coffee", "jade:debug", 
             "stylus:debug", "m2j:debug", "compileRdListDebug"]);
 
