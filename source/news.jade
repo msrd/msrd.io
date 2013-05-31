@@ -1,0 +1,13 @@
+!!! 5
+html(ng-app='msrdio')
+head
+  meta(charset='utf-8')
+  title News
+  script(src='components/angular/angular.js')
+  script(src='js/news.js')
+body
+  div(ng-controller='newsCtrl')
+    div(ng-repeat='article in articles | orderBy:date')
+      div(ng-bind='article.title')
+      div(ng-bind='article.preview')
+
