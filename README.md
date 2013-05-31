@@ -3,6 +3,19 @@ msrd.io
 The web site for the Microsoft Regional Directors, a global community of
 independent Microsoft ambasadors.  
 
+# STOP!
+
+_May 30, 2013_
+
+We have stopped working on the Master branch. All work is
+continuing on the Static branch for now. Two reasons:
+
+1. Updates to Master get deployed immediately to www.msrd.io
+
+2. Static gets 'compiled' into a release folder, which will eventually
+   get deployed to Azure. But we haven't figured that out yet.
+
+
 Technical details about the RD site
 -----------------------------------
 - HTML5 and CSS3, naturally
