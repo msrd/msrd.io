@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = function(fromFile, toFile) {
+module.exports = function(fromFile, toFile, prettifyJson) {
     var yaml = require('js-yaml');
     var fs = require('fs');
     var md5 = require('MD5');
@@ -43,6 +43,6 @@ module.exports = function(fromFile, toFile) {
 
     }
 
-    fs.writeFileSync(toFile, JSON.stringify(rdlist), {flags:'w'});
+    fs.writeFileSync(toFile, JSON.stringify(rdlist, null, prettifyJson ? "\t" : ""), {flags:'w'});
 }
 

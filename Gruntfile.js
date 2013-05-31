@@ -49,7 +49,7 @@ module.exports = function (grunt) {
             },
             rdList: {
                 files: [c.source + "/rdlist.yaml"],
-                tasks: ["compileRdList"]
+                tasks: ["compileRdListDebug"]
             },
             livereload: {
                 files: [c.tmp + "/**/*.*", "tmp/scripts/{,*/}*.js",
@@ -256,9 +256,17 @@ module.exports = function (grunt) {
         },
     });
 
-    grunt.registerTask("compileRdList", "", function() {
-        require("./tools/rdListProcessor.js")("./source/rdlist.yaml", "./tmp/rdlist.json");
+    function compileRdList(outputDir, prettifyJson) {
+        require("./tools/rdListProcessor.js")("./source/rdlist.yaml", outputDir + "/rdlist.json", prettifyJson);
         grunt.log.writeln("recompiled rdlist");
+    }
+
+    grunt.registerTask("compileRdListRelease", "", function() {
+        compileRdList("./release", false);
+    });
+
+    grunt.registerTask("compileRdListDebug", "", function() {
+        compileRdList("./tmp", true);
     });
 
     grunt.renameTask("regarde", "watch");
@@ -285,7 +293,7 @@ module.exports = function (grunt) {
         "stylus:release",
         "less:release",
         "m2j:release",
-        "compileRdList",
+        "compileRdListRelease",
         "copy:release",
         "useminPrepare",
         "concat",
@@ -294,7 +302,7 @@ module.exports = function (grunt) {
         "usemin"
     ]);
     grunt.registerTask("debug", ["clean:debug", "coffee", "jade:debug", 
-            "less:debug", "stylus:debug", "m2j:debug", "compileRdList"]);
+            "less:debug", "stylus:debug", "m2j:debug", "compileRdListDebug"]);
 
     grunt.registerTask("default", ["debug-run"]);
 
