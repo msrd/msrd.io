@@ -34,14 +34,11 @@ module.exports = function(fromFile, toFile, prettifyJson) {
         applyGravitarHash
     ];
 
-    for(i=0, rdlistCount=rdlist.length; i < rdlistCount; i++) {
-        var item = rdlist[i];
-
-        for(j=0, recordProcessorsCount=recordProcessors.length; j < recordProcessorsCount; j++) {
-            recordProcessors[j](item);
-        }
-
-    }
+    rdlist.forEach(function(item) {
+        recordProcessors.forEach(function(processor) {
+            processor(item);
+        });
+    });
 
     fs.writeFileSync(toFile, JSON.stringify(rdlist, null, prettifyJson ? "\t" : ""), {flags:'w'});
 }
