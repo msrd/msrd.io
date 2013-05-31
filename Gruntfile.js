@@ -47,6 +47,10 @@ module.exports = function (grunt) {
                 files: [c.source + "/articles/*.md"],
                 tasks: ["m2j:debug"]
             },
+            rdList: {
+                files: [c.source + "/rdlist.yaml"],
+                tasks: ["compileRdListDebug"]
+            },
             livereload: {
                 files: [c.tmp + "/**/*.*", "tmp/scripts/{,*/}*.js",
                         c.source + "/images/{,*/}*.{png,svg,jpg,jpeg,webp}"],
@@ -252,6 +256,19 @@ module.exports = function (grunt) {
         },
     });
 
+    function compileRdList(outputDir, prettifyJson) {
+        require("./tools/rdListProcessor.js")("./source/rdlist.yaml", outputDir + "/rdlist.json", prettifyJson);
+        grunt.log.writeln("recompiled rdlist");
+    }
+
+    grunt.registerTask("compileRdListRelease", "", function() {
+        compileRdList("./release", false);
+    });
+
+    grunt.registerTask("compileRdListDebug", "", function() {
+        compileRdList("./tmp", true);
+    });
+
     grunt.renameTask("regarde", "watch");
     grunt.registerTask("mj", ["m2j"]);
     grunt.registerTask("compliment", "Treat yo\' self", function () {
@@ -276,6 +293,7 @@ module.exports = function (grunt) {
         "stylus:release",
         // "less:release",
         "m2j:release",
+        "compileRdListRelease",
         "copy:release",
         "useminPrepare",
         "concat",
@@ -284,12 +302,11 @@ module.exports = function (grunt) {
         "usemin"
     ]);
     grunt.registerTask("debug", ["clean:debug", "coffee", "jade:debug", 
-            "stylus:debug", "m2j:debug"]);
+            "stylus:debug", "m2j:debug", "compileRdListDebug"]);
 
     grunt.registerTask("default", ["debug-run"]);
 
-    grunt.registerTask("debug-run", ["clean:debug", "coffee", "jade:debug", 
-            "stylus:debug", "m2j:debug", "connect:livereload", 
+    grunt.registerTask("debug-run", ["debug", "connect:livereload", 
             "open", "livereload-start", "watch"]);
 };
 

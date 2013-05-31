@@ -1,0 +1,16 @@
+!!! 5
+html
+  head
+    meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
+
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Inconsolata:400,700')
+    link(rel='stylesheet', href='styles/map.css')
+
+    script(src='http://code.jquery.com/jquery-1.9.1.min.js')
+    script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDaRmK3DGgin3sIKuPhthWqFjIrt-WP11U&sensor=false')
+    script(type='text/javascript', src='http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer_compiled.js')
+    script(type='text/javascript', src='http://google-maps-utility-library-v3.googlecode.com/svn/trunk/styledmarker/src/StyledMarker.js')
+    script(type='text/javascript', src='http://google-maps-utility-library-v3.googlecode.com/svn/trunk/richmarker/src/richmarker-compiled.js')
+    script(type='text/javascript', src='map.js')
+  body
+    #map_canvas()
