@@ -163,7 +163,7 @@ module.exports = function (grunt) {
             }
         },
         useminPrepare: {
-            html: c.release + "/index.html",
+            html: c.release + "/*.html",
             options: {
                 dest: c.release
             }
@@ -216,7 +216,7 @@ module.exports = function (grunt) {
                         dot: true,
                         cwd: c.source,
                         dest: c.release,
-                        src: ["scripts/*.js", "logo/*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess"]        // don't copy CSS for release; usemin does it
+                        src: ["components/**/*.*", "scripts/*.js", "logo/*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess"]        // don't copy CSS for release; usemin does it
                     },
                     {
                         expand: true,
