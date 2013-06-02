@@ -1,8 +1,8 @@
 all: release 
 
-release:
+release: clean
 	@echo Building site into 'release'
-	grunt release
+	grunt clean release
 	@echo Cleaning temporary folder
 	rm -rf tmp
 
