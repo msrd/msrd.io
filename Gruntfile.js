@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 var c, lrSnippet, mountFolder;
 
@@ -19,6 +19,10 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         watch: {
+            markdown: {
+                files: ['articles/*.md'],
+                tasks: ['markdown:debug']
+            },
             javascript: { 
                 files: [c.source + "/scripts/{,*/}*.js"],
                 tasks: ["copy:debug"]
@@ -85,6 +89,7 @@ module.exports = function (grunt) {
             },
             all: ["Gruntfile.js", c.source + "/scripts/{,*/}*.js", "!" + c.source + "/scripts/vendor/*", "test/spec/{,*/}*.js"]
         },
+
         coffee: {
             release: {
                 files: [
@@ -129,6 +134,20 @@ module.exports = function (grunt) {
                     }
                 }
             }
+        },
+        markdown: {
+            options: {
+                gfm: true,
+                highlight: 'manual'
+            },
+            release: {
+                files: [ c.source + '/articles/*.md'],
+                dest:  c.release + '/articles'
+            },
+            debug: {
+                files: [ c.source + '/articles/*.md'],
+                dest:  c.tmp + '/articles'
+            },
         },
         less: {
             release: {
@@ -292,6 +311,7 @@ module.exports = function (grunt) {
         "jade:release",
         "stylus:release",
         // "less:release",
+        "markdown:release",
         "m2j:release",
         "compileRdListRelease",
         "copy:release",
@@ -302,7 +322,7 @@ module.exports = function (grunt) {
         "usemin"
     ]);
     grunt.registerTask("debug", ["clean:debug", "coffee", "jade:debug", 
-            "stylus:debug", "m2j:debug", "compileRdListDebug"]);
+            "markdown:debug", "stylus:debug", "m2j:debug", "compileRdListDebug"]);
 
     grunt.registerTask("default", ["debug-run"]);
 
