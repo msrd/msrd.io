@@ -1,10 +1,11 @@
-var app = angular.module('msrdio', [])
+angular.module('news', [])
 
-    app.controller('newsCtrl', function($scope, $http)
-    {
-        $http.get('../articles.json').success(function(callbackData)
-        {
-            $scope.articles = callbackData;
+function newsCtrl($scope, $http){
+
+    $http.get('../articles.json').success(function(callbackData){
+        
+        $scope.articles = callbackData;
             
-        });
     });
+
+}
