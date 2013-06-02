@@ -1,0 +1,19 @@
+!!! 5
+head
+    meta(charset='utf-8')
+    title News
+    link(rel='stylesheet', href='news/styles/reuze.css')
+    script(src='components/angular/angular.js')
+    script(src='news/js/news.js')
+  body
+    .ac.three-column.image-banner.image-border-dark(ng-app='news', ng-controller='newsCtrl')
+      article(ng-repeat='article in articles | orderBy:date')
+        .image-feat(style='width: 250px;')
+          a(ng-href='articles/{{article.basename}}.html')
+            img(src='http://placehold.it/250x100/efefef', alt='sample image')
+        header
+          a(ng-href='articles/{{article.basename}}.html')
+            h4.title(ng-bind='article.title')
+        .content(ng-bind='article.preview')
+        footer
+          a.rm(ng-href='articles/{{article.basename}}.html') Read More
