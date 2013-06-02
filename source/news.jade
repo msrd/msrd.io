@@ -1,11 +1,16 @@
-!!! 5
-head
-    meta(charset='utf-8')
+extends templates/h5bp
+block head
     title News
-    link(rel='stylesheet', href='news/styles/reuze.css')
+
+    // build:css(tmp) news.css
+    link(rel='stylesheet', href='styles/reuze.css')
+    // endbuild
+
     script(src='components/angular/angular.js')
-    script(src='news/js/news.js')
-  body
+    script(src='scripts/news.js')
+
+block content
+    h1 News
     .ac.three-column.image-banner.image-border-dark(ng-app='news', ng-controller='newsCtrl')
       article(ng-repeat='article in articles | orderBy:date')
         .image-feat(style='width: 250px;')
