@@ -24,11 +24,11 @@ module.exports = function (grunt) {
                 tasks: ['markdown:debug']
             },
             javascript: { 
-                files: [c.source + "/scripts/{,*/}*.js"],
+                files: [c.source + "/js/{,*/}*.js"],
                 tasks: ["copy:debug"]
             },
             coffee: {
-                files: [c.source + "/scripts/{,*/}*.coffee"],
+                files: [c.source + "/js/{,*/}*.coffee"],
                 tasks: ["coffee:debug"]
             },
             coffeeTest: {
@@ -56,7 +56,7 @@ module.exports = function (grunt) {
                 tasks: ["compileRdListDebug"]
             },
             livereload: {
-                files: [c.tmp + "/**/*.*", "tmp/scripts/{,*/}*.js",
+                files: [c.tmp + "/**/*.*", "tmp/js/{,*/}*.js",
                         c.source + "/images/{,*/}*.{png,svg,jpg,jpeg,webp}"],
                 tasks: ["livereload"]
             }
@@ -87,7 +87,7 @@ module.exports = function (grunt) {
             options: {
                 jshintrc: ".jshintrc"
             },
-            all: ["Gruntfile.js", c.source + "/scripts/{,*/}*.js", "!" + c.source + "/scripts/vendor/*", "test/spec/{,*/}*.js"]
+            all: ["Gruntfile.js", c.source + "/js/{,*/}*.js", "!" + c.source + "/js/vendor/*", "test/spec/{,*/}*.js"]
         },
 
         coffee: {
@@ -95,9 +95,9 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: c.source + "/scripts",
+                        cwd: c.source + "/js",
                         src: "*.coffee",
-                        dest: c.tmp + "/scripts",
+                        dest: c.tmp + "/js",
                         ext: ".js"
                     }
                 ]
@@ -208,8 +208,8 @@ module.exports = function (grunt) {
         },
         uglify: {
             release: {
-                src: [c.source + "/scripts/*.js", c.tmp + "/scripts/*.js"],
-                dest: c.release + "/scripts/main.js"
+                src: [c.source + "/js/*.js", c.tmp + "/js/*.js"],
+                dest: c.release + "/js/main.js"
             }
         },
         rev: {
@@ -239,7 +239,7 @@ module.exports = function (grunt) {
                         dot: true,
                         cwd: c.source,
                         dest: c.release,
-                        src: ["components/**/*.*", "scripts/*.js", "logo/*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess"]        // don't copy CSS for release; usemin does it
+                        src: ["components/**/*.*", "js/*.js", "logo/*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess"]        // don't copy CSS for release; usemin does it
                     },
                     {
                         expand: true,
