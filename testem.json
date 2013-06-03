@@ -1,0 +1,8 @@
+{
+    "framework": "mocha",
+    "src_files": [
+        "source/**/*.js",
+        "test/**/*.js"
+    ],
+    "test_page": "test/browser/index.html"
+}
