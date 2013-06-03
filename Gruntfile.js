@@ -273,7 +273,21 @@ module.exports = function (grunt) {
                 dest: c.tmp + "/articles.json"
             }
         },
+        simplemocha: {
+            options: {
+                globals: [],
+                timeout: 3000,
+                ignoreLeaks: false,
+                grep: '*-test',
+                ui: 'bdd',
+                reporter: 'tap'
+            },
+
+            all: { src: 'test/server/**/*.js' }
+        }
     });
+
+    grunt.loadNpmTasks('grunt-simple-mocha');
 
     function compileRdList(outputDir, prettifyJson) {
         require("./tools/rdListProcessor.js")("./source/rdlist.yaml", outputDir + "/rdlist.json", prettifyJson);
