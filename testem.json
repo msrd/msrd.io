@@ -4,5 +4,7 @@
         "source/**/*.js",
         "test/**/*.js"
     ],
-    "test_page": "test/browser/index.html"
+    "test_page": "test/browser/index.html",
+    "launch_in_ci": [ "PhantomJS" ],
+    "launch_in_dev": [ "Chrome", "Safari", "PhantomJS" ]
 }
