@@ -284,6 +284,11 @@ module.exports = function (grunt) {
             },
 
             all: { src: ['test/server/**/*.js'] }
+        },
+        exec: {
+            testemCITests: {
+              cmd: 'testem ci'
+            }
         }
     });
 
@@ -340,7 +345,7 @@ module.exports = function (grunt) {
         "test"
     ]);
 
-    grunt.registerTask("test", ["simplemocha:all"]);
+    grunt.registerTask("test", ["simplemocha:all", "exec:testemCITests"]);
 
     grunt.registerTask("debug", ["clean:debug", "coffee", "jade:debug", 
             "markdown:debug", "stylus:debug", "m2j:debug", "compileRdListDebug"]);
