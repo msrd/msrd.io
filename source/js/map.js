@@ -36,9 +36,10 @@
 
                   if(person.GravitarHash) {
                     marker = new RichMarker({
-                            'position': latLng,
-                            'content': person.GravitarHash ? '<div class="circularIcon"><img style="border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;" src="http://www.gravatar.com/avatar/' + person.GravitarHash + '"/></div>' : null,
-                            'anchor': RichMarkerPosition.MIDDLE
+                        'position': latLng,
+                        'content': person.GravitarHash ? '<div class="circularIcon"><img style="border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;" src="http://www.gravatar.com/avatar/' + person.GravitarHash + '"/></div>' : null,
+                        'anchor': RichMarkerPosition.MIDDLE,
+                        'flat':true
                     });
                   } else {
                     marker = new markerFunc({
