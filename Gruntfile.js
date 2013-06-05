@@ -287,7 +287,8 @@ module.exports = function (grunt) {
         },
         exec: {
             testemCITests: {
-              cmd: 'testem ci'
+                // only launch Firefox on Travis (PhantomJS hangs due to node versons? and chrome is hanging on travis) 
+                cmd: 'testem ci --launch Firefox'
             }
         }
     });
