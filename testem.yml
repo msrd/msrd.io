@@ -12,3 +12,6 @@ test_page: test/browser/index.html
 # issues with Chrome and PhantomJS
 launch_in_ci:
   - Firefox
+launch_in_dev:
+  - Firefox
+  - Chrome
