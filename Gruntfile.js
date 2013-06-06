@@ -273,7 +273,26 @@ module.exports = function (grunt) {
                 dest: c.tmp + "/articles.json"
             }
         },
+        simplemocha: {
+            options: {
+                globals: ['should'],
+                timeout: 3000,
+                ignoreLeaks: false,
+                /*grep: '*.js',*/
+                ui: 'bdd',
+                reporter: 'tap'
+            },
+
+            all: { src: ['test/server/**/*.js'] }
+        },
+        exec: {
+            testemCITests: {
+                // only launch Firefox on Travis (PhantomJS hangs due to node versons? and chrome is hanging on travis) 
+                cmd: 'testem ci'
+            }
+        }
     });
+
 
     function compileRdList(outputDir, prettifyJson) {
         require("./tools/rdListProcessor.js")("./source/rdlist.yaml", outputDir + "/rdlist.json", prettifyJson);
@@ -323,8 +342,11 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask("ci", [
-        "release"
+        "release",
+        "test"
     ]);
+
+    grunt.registerTask("test", ["simplemocha:all", "exec:testemCITests"]);
 
     grunt.registerTask("debug", ["clean:debug", "coffee", "jade:debug", 
             "markdown:debug", "stylus:debug", "m2j:debug", "compileRdListDebug"]);
