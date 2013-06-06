@@ -6,6 +6,7 @@
     State: "SYDNEY NSW"
     Location: "-33.8316338, 151.2221423"
     First: "Adam"
+    Email: "adamcogan@ssw.com.au"
   - 
     City: "Cairo"
     Last: "Bahaa Farid"
@@ -699,4 +700,5 @@
     State: "CA"
     Location: "37.9357576, -122.3477486"
     First: "Scott"
+    Email: "scott@vertigo.com"
 
