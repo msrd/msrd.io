@@ -3,10 +3,15 @@ var app = angular.module('myApp', [])
   app.factory('RdList', ['$http', function ($http) {
         return{
             get: function(callback){
-                $http.get('../test.json').success(function(item){
+                $http.get('rdlist.json').success(function(item){
                     item.forEach(function (data){
                         data.FullName = data.First + ' ' + data.Last;
-                        data.Email = 'Email@email.com';
+                        if(data.GravatarHash){
+                          data.Avatar = 'http://www.gravatar.com/avatar/' + data.GravatarHash;
+                        }
+                        else{
+                          data.Avatar = 'http://placekitten.com/g/100/100';
+                        }
                     });
                     callback(item);
                 });

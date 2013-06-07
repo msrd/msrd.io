@@ -32,7 +32,7 @@ head
                     {{item.City + ', ' + item.Country}}
               li.viewThree(ng-show='displayView == "three"', ng-repeat='item in items | filter:searchText')
                 a(href='#')
-                  img.circular(src='http://placekitten.com/g/100/100')
+                  img.circular(src='{{item.Avatar}}')
                 div
                   {{item.FullName}}
                 div
