@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = function(fromFile, toFile, prettifyJson) {
+module.exports = function (fromFile, toFile, prettifyJson) {
     var yaml = require('js-yaml');
     var fs = require('fs');
     var md5 = require('MD5');
@@ -10,21 +10,21 @@ module.exports = function(fromFile, toFile, prettifyJson) {
 
     fromFile = path.resolve(fromFile);
     toFile = path.resolve(toFile);
-    var yamlString = fs.readFileSync(fromFile, {
-        encoding:'utf8'
-    });
+
+    var yamlString = fs.readFileSync(fromFile, "utf8");
+
     var rdlist = yaml.load(yamlString, {
-        filename:fromFile
+        filename: fromFile
     });
 
-    var applyGravitarHash = function(item) {
+    var applyGravitarHash = function (item) {
 
         // Hash email with md5
         // http://en.gravatar.com/site/implement/hash/
         // http://en.gravatar.com/site/implement/images/
 
         var email = item.Email;
-        if(email) {
+        if (email) {
             item.GravitarHash = md5(email.trim().toLowerCase());
         }
         return item;
@@ -34,12 +34,12 @@ module.exports = function(fromFile, toFile, prettifyJson) {
         applyGravitarHash
     ];
 
-    rdlist.forEach(function(item) {
-        recordProcessors.forEach(function(processor) {
+    rdlist.forEach(function (item) {
+        recordProcessors.forEach(function (processor) {
             processor(item);
         });
     });
 
-    fs.writeFileSync(toFile, JSON.stringify(rdlist, null, prettifyJson ? "\t" : ""), {flags:'w'});
+    fs.writeFileSync(toFile, JSON.stringify(rdlist, null, prettifyJson ? "\t" : ""));
 }
 
