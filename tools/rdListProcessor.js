@@ -17,7 +17,7 @@ module.exports = function(fromFile, toFile, prettifyJson) {
         filename:fromFile
     });
 
-    var applyGravitarHash = function(item) {
+    var applyGravatarHash = function(item) {
 
         // Hash email with md5
         // http://en.gravatar.com/site/implement/hash/
@@ -25,13 +25,13 @@ module.exports = function(fromFile, toFile, prettifyJson) {
 
         var email = item.Email;
         if(email) {
-            item.GravitarHash = md5(email.trim().toLowerCase());
+            item.GravatarHash = md5(email.trim().toLowerCase());
         }
         return item;
     }
 
     var recordProcessors = [
-        applyGravitarHash
+        applyGravatarHash
     ];
 
     rdlist.forEach(function(item) {
