@@ -5,20 +5,8 @@ head
 
     title RD Search
 
-    style
-      .rdPills{
-        display:inline;
-        text-align:center;
-        float:left;
-        overflow:hidden;
-        width: 220px;
-        border: solid;
-        border-width:1px;
-        margin:4px;
-        }
-
     //Stylesheets
-    
+    link(rel='stylesheet', href='styles/search.css')    
     //Scripts
     script(src='components/angular/angular.js')
     script(src='js/search.js')
@@ -33,22 +21,19 @@ head
             input(type='text', ng-model='searchText', placeholder='Search Regional Directors', autofocus='autofocus')
           div
             ul
-              li.rdPills(ng-show='displayView == "one"', ng-repeat='item in items | filter:searchText')
+              li.viewOne(ng-show='displayView == "one"', ng-repeat='item in items | filter:searchText')
                 a(href='#') 
                   {{item.FullName}}
-              li.rdPills(ng-show='displayView == "two"', ng-repeat='item in items | filter:searchText')
+              li.viewTwo(ng-show='displayView == "two"', ng-repeat='item in items | filter:searchText')
                 a(href='#', style='color:blue') 
                   div
                     {{item.FullName}}
                   div
                     {{item.City + ', ' + item.Country}}
-              li.rdPills(ng-show='displayView == "three"', ng-repeat='item in items | filter:searchText')
+              li.viewThree(ng-show='displayView == "three"', ng-repeat='item in items | filter:searchText')
                 a(href='#')
-                  div
-                    img(src='http://placekitten.com/g/75/75')
-                  div
-                    {{item.FullName}}
-                  div
-                    {{item.City + ', ' + item.Country}}
-                  div
-                    {{item.Email}}
+                  img.circular(src='http://placekitten.com/g/100/100')
+                div
+                  {{item.FullName}}
+                div
+                  {{item.City + ', ' + item.Country}}

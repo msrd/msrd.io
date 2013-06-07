@@ -24,13 +24,13 @@ var app = angular.module('myApp', [])
             $scope.$watch('searchText', function(query){
                 $scope.displayedItems = $filter('filter')($scope.items, query);
 
-                if($scope.displayedItems.length >= 50){
+                if($scope.displayedItems.length >= 76){
                     $scope.displayView = 'one';
                 }
-                if($scope.displayedItems.length <= 49 && $scope.displayedItems.length >= 13){
+                if($scope.displayedItems.length <= 75 && $scope.displayedItems.length >= 21){
                     $scope.displayView = 'two';
                 }
-                if($scope.displayedItems.length <= 12){
+                if($scope.displayedItems.length <= 20){
                     $scope.displayView = 'three';
                 }
             });
