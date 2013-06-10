@@ -7,10 +7,10 @@ var app = angular.module('myApp', [])
                     item.forEach(function (data){
                         data.FullName = data.First + ' ' + data.Last;
                         if(data.GravatarHash){
-                          data.Avatar = 'http://www.gravatar.com/avatar/' + data.GravatarHash;
+                          data.Avatar = 'http://www.gravatar.com/avatar/' + data.GravatarHash + '?s=200';
                         }
                         else{
-                          data.Avatar = 'http://placekitten.com/g/218/218';
+                          data.Avatar = 'http://placekitten.com/g/200/200';
                         }
                     });
                     callback(item);
@@ -24,10 +24,10 @@ var app = angular.module('myApp', [])
 
         RdList.get(function(data){
             $scope.items = data;
+            $scope.displayeditem = data[99];
         });
-
+        
         $scope.show = function(item){
-            $scope.item = item;
-            $scope.showItem = true;
+            $scope.displayeditem = item;
         };
     });

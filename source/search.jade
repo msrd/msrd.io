@@ -18,8 +18,8 @@ head
     div.row(ng-controller='DataCtrl', style='margin-left:20px')
       div.span(style='margin-top: 30px') 
         form.form-search
-          div
-            input.search-query(type='text', ng-model='searchText', placeholder='Search Regional Directors', autofocus='autofocus')
+          div(style='margin-bottom:15px')
+            input.well.search-query(type='text', ng-model='searchText', placeholder='Search Regional Directors', autofocus='autofocus')
           div.row
             div.span9.well
               ul.nav.nav-pills
@@ -27,10 +27,10 @@ head
                   a(href='#', ng-mouseover='show(item)') 
                     {{item.FullName}}
             div.span3.well
-              div(ng-show='showItem')
+              div
                 div
-                  img.circular(src='{{item.Avatar}}')
+                  img.circular(src='{{displayeditem.Avatar}}')
                 div
-                  {{item.First}} {{item.Last}} Show Me
+                  {{displayeditem.First}} {{displayeditem.Last}}
                 div
-                  {{item.City}} {{item.Country}}
+                  {{displayeditem.City}} {{displayeditem.Country}}
