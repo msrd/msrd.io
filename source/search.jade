@@ -6,34 +6,31 @@ head
     title RD Search
 
     //Stylesheets
-    link(rel='stylesheet', href='styles/search.css')    
+    link(rel='stylesheet', href='styles/search.css')
+    link(href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css', 'rel="stylesheet')
     //Scripts
-    script(src='components/angular/angular.js')
+    script(src='http://code.angularjs.org/1.1.5/angular.js')
     script(src='js/search.js')
     //if lt IE 9
       script(type='text/javascript', src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
 
 
-    body(ng-controller='DataCtrl')
-      div(style='margin-top: 30px') 
+    div.row(ng-controller='DataCtrl', style='margin-left:20px')
+      div.span(style='margin-top: 30px') 
         form.form-search
-          div(style='display: right; margin-bottom: 5px;')
-            input(type='text', ng-model='searchText', placeholder='Search Regional Directors', autofocus='autofocus')
           div
-            ul
-              li.viewOne(ng-show='displayView == "one"', ng-repeat='item in items | filter:searchText')
-                a(href='#') 
-                  {{item.FullName}}
-              li.viewTwo(ng-show='displayView == "two"', ng-repeat='item in items | filter:searchText')
-                a(href='#', style='color:blue') 
-                  div
+            input.search-query(type='text', ng-model='searchText', placeholder='Search Regional Directors', autofocus='autofocus')
+          div.row
+            div.span9.well
+              ul.nav.nav-pills
+                li.rdpill(ng-animate='"animate"', ng-repeat='item in items | filter:searchText')
+                  a(href='#', ng-mouseover='show(item)') 
                     {{item.FullName}}
-                  div
-                    {{item.City + ', ' + item.Country}}
-              li.viewThree(ng-show='displayView == "three"', ng-repeat='item in items | filter:searchText')
-                a(href='#')
+            div.span3.well
+              div(ng-show='showItem')
+                div
                   img.circular(src='{{item.Avatar}}')
                 div
-                  {{item.FullName}}
+                  {{item.First}} {{item.Last}} Show Me
                 div
-                  {{item.City + ', ' + item.Country}}
+                  {{item.City}} {{item.Country}}

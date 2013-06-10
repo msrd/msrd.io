@@ -10,7 +10,7 @@ var app = angular.module('myApp', [])
                           data.Avatar = 'http://www.gravatar.com/avatar/' + data.GravatarHash;
                         }
                         else{
-                          data.Avatar = 'http://placekitten.com/g/100/100';
+                          data.Avatar = 'http://placekitten.com/g/218/218';
                         }
                     });
                     callback(item);
@@ -20,25 +20,14 @@ var app = angular.module('myApp', [])
     }]);
 
 
-    app.controller('DataCtrl', function($scope, RdList, $filter) {
+    app.controller('DataCtrl', function($scope, RdList) {
 
         RdList.get(function(data){
-
             $scope.items = data;
-
-            $scope.$watch('searchText', function(query){
-                $scope.displayedItems = $filter('filter')($scope.items, query);
-
-                if($scope.displayedItems.length >= 76){
-                    $scope.displayView = 'one';
-                }
-                if($scope.displayedItems.length <= 75 && $scope.displayedItems.length >= 21){
-                    $scope.displayView = 'two';
-                }
-                if($scope.displayedItems.length <= 20){
-                    $scope.displayView = 'three';
-                }
-            });
-
         });
+
+        $scope.show = function(item){
+            $scope.item = item;
+            $scope.showItem = true;
+        };
     });
