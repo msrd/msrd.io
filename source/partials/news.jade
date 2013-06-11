@@ -1,0 +1,11 @@
+section.well(ng-app='news', ng-controller='newsCtrl')
+  article(ng-repeat='article in articles | orderBy:date')
+    div.image-feat(style='width: 250px;')
+      a(ng-href='articles/{{article.basename}}.html')
+        img(src='http://placehold.it/250x100/efefef', alt='sample image')
+    header
+      a(ng-href='articles/{{article.basename}}.html')
+        h4.title(ng-bind='article.title')
+    div.content(ng-bind='article.preview')
+    footer
+      a.rm(ng-href='articles/{{article.basename}}.html') Read More
