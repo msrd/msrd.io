@@ -1,20 +1,18 @@
-section.well(ng-app='myApp')
-  div.row(ng-controller='DataCtrl')
-    div.span 
-      form.form-search
-        div
-          input.well.search-query(type='text', ng-model='searchText', placeholder='Search Regional Directors', autofocus='autofocus')
-        div.row
-          div.span9.well
-            ul.nav.nav-pills
-              li.rdpill(ng-animate='"animate"', ng-repeat='item in items | filter:searchText')
-                a(href='#', ng-mouseover='show(item)') 
-                  {{item.FullName}}
-          div.span3.well
-            div
-              div
-                img.circular(src='{{displayeditem.Avatar}}')
-              div
-                {{displayeditem.First}} {{displayeditem.Last}}
-              div
-                {{displayeditem.City}} {{displayeditem.Country}}
+section.well(ng-controller='searchCtrl')
+  div 
+    form.form-search
+      div
+        input.search-query(type='text', ng-model='searchText', placeholder='Search Regional Directors', autofocus='autofocus')
+      div.row-fluid
+        div.span9
+          ul.nav.nav-pills
+            li.rdpill(ng-animate='"animate"', ng-repeat='item in items | filter:searchText')
+              a(href='#', ng-mouseover='show(item)') 
+                {{item.FullName}}
+        div.span3
+          div
+            img.circular(src='{{displayeditem.Avatar}}')
+          div
+            {{displayeditem.First}} {{displayeditem.Last}}
+          div
+            {{displayeditem.City}} {{displayeditem.Country}}
