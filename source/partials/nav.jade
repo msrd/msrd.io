@@ -1,15 +1,15 @@
-div.navbar.navbar-fixed-top
+div#masthead.navbar.navbar-fixed-top
   div.navbar-inner
     div.container
-      button.btn.btn-navbar(type='button', data-toggle='collapse', data-target'.nav-collapse')
+      div.brand MSRDio
+     
+      a(data-toggle='collapse',data-target='.nav-collapse').btn.btn-navbar
         span.icon-bar
         span.icon-bar
         span.icon-bar
       
-      a.brand(href='#') MSRD.IO
-      
-      div.nav-collapse.collapse(style='float:right')
-        ul.nav
+      div.nav-collapse.collapse
+        ul#navbar.nav.nav-pills.pull-right
           li
             a(href='#') Home
           li
