@@ -329,7 +329,8 @@ module.exports = function (grunt) {
                 reporter: 'tap'
             },
 
-            all: { src: ['test/server/**/*.js'] }
+            all: { src: ['test/server/**/*.js'] },
+            releaseBuildVerificationTests: { src: ['test/postReleaseTests/**/*.js'] }
         },
         exec: {
             testemCITests: {
@@ -399,7 +400,8 @@ module.exports = function (grunt) {
         "concat",
         "cssmin",
         "rev",
-        "usemin"
+        "usemin",
+        "simplemocha:releaseBuildVerificationTests"
     ]);
 
 
