@@ -8,3 +8,6 @@ source/components/*
 
 # Vim on windows backup file
 *~
+
+# azure (kudu) build output
+artifacts/
