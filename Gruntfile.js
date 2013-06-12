@@ -9,13 +9,59 @@ mountFolder = function(connect, dir) {
 c = {
     source: "source",
     release: "release",
-    tmp: "tmp"
+    tmp: "tmp",
+    gitVersion: '',
+    gitVersionPretty: ''
 };
 
 module.exports = function (grunt) {
 
     // automatically load grunt plugins
     require("matchdep").filterAll('grunt-*', require('./package.json')).forEach(grunt.loadNpmTasks);
+
+    grunt.c = c;
+
+    grunt.registerTask('setupGitVersion', function(){
+        var done = this.async();
+
+        function executeGit(args, callback) {
+            grunt.util.spawn({
+                cmd: "git",
+                args: args,
+            }, function(err, result, code){
+                if(err) {
+                    grunt.log.error(err, result);
+                    done();
+                }
+                var version = new String(result);
+                callback(version);
+            });
+        }
+
+        var tasks = [
+            function(next){
+                executeGit(["rev-parse", "HEAD"], function(version) {
+                    c.gitVersion = version;
+                    grunt.log.writeln("*** git version: " + version);
+                    next();
+                });
+            },
+            function(next){
+                executeGit(["describe", "--tags", "--always", "--long", "--dirty"], function(version) {
+                    c.gitVersionPretty = version;
+                    grunt.log.writeln("*** git pretty version: " + version);
+                    next();
+                });
+            },
+        ];
+
+        grunt.util.async.forEachSeries(tasks, function(task, next) {
+            task(next);
+        }, function() {
+            done();
+        });
+
+    });
 
     grunt.initConfig({
         watch: {
@@ -290,6 +336,21 @@ module.exports = function (grunt) {
                 // only launch Firefox on Travis (PhantomJS hangs due to node versons? and chrome is hanging on travis) 
                 cmd: 'testem ci'
             }
+        },
+        replace: {
+            dist: {
+                options: {
+                    variables:{
+                        'currentGitHubCommit': '<%= grunt.c.gitVersion %>',
+                        'currentGitHubCommitPretty': '<%= grunt.c.gitVersionPretty %>'
+                    },
+                    prefix: '@@'
+                },
+                files:[
+                    {expand: true, flatten: true, src:[c.release + '/**/*.html'], dest: c.release},
+                    {expand: true, flatten: true, src:[c.tmp + '/**/*.html'], dest: c.tmp}
+                ]
+            }
         }
     });
 
@@ -325,7 +386,6 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask("releaseAzure", [
-        //"clean:release", // azure is failing on this task (not sure why)
         "mkdir",
         "jade:release",
         "stylus:release",
@@ -333,6 +393,8 @@ module.exports = function (grunt) {
         "m2j:release",
         "compileRdListRelease",
         "copy:release",
+        "setupGitVersion",
+        "replace",
         "useminPrepare",
         "concat",
         "cssmin",
@@ -343,18 +405,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask("release", [
         "clean:release",
-        "mkdir",
-        "jade:release",
-        "stylus:release",
-        "markdown:release",
-        "m2j:release",
-        "compileRdListRelease",
-        "copy:release",
-        "useminPrepare",
-        "concat",
-        "cssmin",
-        "rev",
-        "usemin"
+        "releaseAzure"
     ]);
 
     grunt.registerTask("ci", [
@@ -365,7 +416,10 @@ module.exports = function (grunt) {
     grunt.registerTask("test", ["simplemocha:all", "exec:testemCITests"]);
 
     grunt.registerTask("debug", ["clean:debug", "coffee", "jade:debug", 
-            "markdown:debug", "stylus:debug", "m2j:debug", "compileRdListDebug"]);
+            "markdown:debug", "stylus:debug", "m2j:debug", "compileRdListDebug",
+            "setupGitVersion",
+            "replace"
+ ]);
 
     grunt.registerTask("default", ["debug-run"]);
 

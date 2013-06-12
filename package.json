@@ -23,7 +23,8 @@
     "js-yaml": "~2.0.5",
     "MD5": "~1.0.3",
     "marked": "~0.2.8",
-    "matchdep": "~0.1.1"
+    "matchdep": "~0.1.1",
+    "grunt-replace": "~0.4.4"
   },
   "devDependencies": {
     "grunt-contrib-livereload": "0.1.2",
