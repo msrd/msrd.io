@@ -1,4 +1,3 @@
-@echo off
 
 :: ----------------------
 :: KUDU Deployment Script
