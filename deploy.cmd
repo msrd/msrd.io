@@ -82,20 +82,27 @@ goto :EOF
 :Deployment
 echo Handling node.js deployment.
 
-:: 1. KuduSync
-call %KUDU_SYNC_CMD% -v 50 -f "%DEPLOYMENT_SOURCE%" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
-IF !ERRORLEVEL! NEQ 0 goto error
-
-:: 2. Select node version
+:: 1. Select node version
 call :SelectNodeVersion
 
-:: 3. Install npm packages
-IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
-  pushd %DEPLOYMENT_TARGET%
-  call !NPM_CMD! install --production
-  IF !ERRORLEVEL! NEQ 0 goto error
-  popd
-)
+:: 2. Install npm packages
+call !NPM_CMD! install --production
+IF !ERRORLEVEL! NEQ 0 goto error
+
+:: 3. install grunt locally since we can't intall it globally
+call !NPM_CMD! install grunt-cli
+IF !ERRORLEVEL! NEQ 0 goto error
+
+:: 4. manually clean release folder (grunt:clean:release is failing without a reason why)
+call rmdir /Q /S release
+
+:: 5. Execute the grunt release task
+call "!NODE_EXE!" ./node_modules/grunt-cli/bin/grunt releaseAzure --no-color
+IF !ERRORLEVEL! NEQ 0 goto error
+
+:: 6. KuduSync
+call %KUDU_SYNC_CMD% -v 50 -f "release" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
+IF !ERRORLEVEL! NEQ 0 goto error
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 

@@ -2,8 +2,6 @@
 
 var c, lrSnippet, mountFolder;
 
-lrSnippet = require("grunt-contrib-livereload/lib/utils").livereloadSnippet;
-
 mountFolder = function(connect, dir) {
     return connect["static"](require("path").resolve(dir));
 };
@@ -69,7 +67,7 @@ module.exports = function (grunt) {
             livereload: {
                 options: {
                     middleware: function (connect) {
-                        return [lrSnippet, mountFolder(connect, c.tmp), mountFolder(connect, c.source)];
+                        return [require("grunt-contrib-livereload/lib/utils").livereloadSnippet, mountFolder(connect, c.tmp), mountFolder(connect, c.source)];
                     }
                 }
             }
@@ -239,7 +237,7 @@ module.exports = function (grunt) {
                         dot: true,
                         cwd: c.source,
                         dest: c.release,
-                        src: ["components/**/*.*", "js/*.js", "logo/*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess"]        // don't copy CSS for release; usemin does it
+                        src: ["components/**/*.*", "js/*.js", "logo/*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "web.config"]        // don't copy CSS for release; usemin does it
                     },
                     {
                         expand: true,
@@ -256,7 +254,7 @@ module.exports = function (grunt) {
                     dot: true,
                     cwd: c.source,
                     dest: c.tmp,
-                    src: ["logo/*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "styles/*.css"]
+                    src: ["logo/*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "styles/*.css", "web.config"]
                 }]
             }
         },
@@ -307,7 +305,6 @@ module.exports = function (grunt) {
         compileRdList("./tmp", true);
     });
 
-    grunt.renameTask("regarde", "watch");
     grunt.registerTask("mj", ["m2j"]);
     grunt.registerTask("compliment", "Treat yo\' self", function () {
         var compliments, index, mydefaults;
@@ -324,12 +321,29 @@ module.exports = function (grunt) {
             return grunt.log.writeln("Created folder: " + name);
         });
     });
+
+    grunt.registerTask("releaseAzure", [
+        //"clean:release", // azure is failing on this task (not sure why)
+        "mkdir",
+        "jade:release",
+        "stylus:release",
+        "markdown:release",
+        "m2j:release",
+        "compileRdListRelease",
+        "copy:release",
+        "useminPrepare",
+        "concat",
+        "cssmin",
+        "rev",
+        "usemin"
+    ]);
+
+
     grunt.registerTask("release", [
         "clean:release",
         "mkdir",
         "jade:release",
         "stylus:release",
-        // "less:release",
         "markdown:release",
         "m2j:release",
         "compileRdListRelease",
