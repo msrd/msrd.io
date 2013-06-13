@@ -1,16 +1,11 @@
 extends templates/h5bp
 
-html 
-  block  head
-    include partials/header
-
-  block nav
-    include partials/nav
-    include partials/hero
+html
+  block hero
+    include partials/index/hero
 
   block content
-    include partials/map
-    include partials/news
-    include partials/search
-    include partials/footer
+    include partials/index/map
+    include partials/index/news
+    include partials/index/search
 

@@ -1,4 +1,10 @@
 var app = angular.module('msrd', [])
+    // config(function($routeProvider){
+    //     $routeProvider.
+    //         when('/archive', {templateUrl:'../pages/archive.html', controller:archiveCtrl}).
+    //         when('/home', {templateUrl: '../index.html', controller:homeCtrl}).
+    //         otherwise(redirectTo:'/home'});
+    // )};
 
 app.factory('RdList', ['$http', function ($http) {
     return{
@@ -7,10 +13,10 @@ app.factory('RdList', ['$http', function ($http) {
                 item.forEach(function (data){
                     data.FullName = data.First + ' ' + data.Last;
                     if(data.GravatarHash){
-                        data.Avatar = 'http://www.gravatar.com/avatar/' + data.GravatarHash + '?s=200';
+                        data.Avatar = 'http://www.gravatar.com/avatar/' + data.GravatarHash + '?s=256';
                     }
                     else{
-                        data.Avatar = 'http://placekitten.com/g/200/200';
+                        data.Avatar = '../logo/ico/fav256.png';
                     }
                 });
                 callback(item);

@@ -227,7 +227,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background-color: #ffffff;
+  //background-color: #ffffff;
 }
 
 a {
@@ -736,11 +736,11 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 10px 0;
+  //margin: 10px 0;
   font-family: inherit;
   font-weight: bold;
   line-height: 20px;
-  color: inherit;
+  //color: inherit;
   text-rendering: optimizelegibility;
 }
 
@@ -4401,7 +4401,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar .container {
-  width: auto;
+  //width: auto;
 }
 
 .nav-collapse.collapse {
@@ -6116,16 +6116,13 @@ a.badge:focus {
 }
 
 .hero-unit {
-  padding: 60px;
+  padding: 0px;
   margin-bottom: 30px;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
   color: inherit;
   background-color: #eeeeee;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
 }
 
 .hero-unit h1 {

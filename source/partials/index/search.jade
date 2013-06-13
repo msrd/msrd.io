@@ -1,6 +1,6 @@
 section.well(ng-controller='searchCtrl')
   div 
-    form.form-search
+    form.form-search(style='height:720px')
       div
         input.search-query(type='text', ng-model='searchText', placeholder='Search Regional Directors', autofocus='autofocus')
       div.row-fluid
@@ -11,7 +11,7 @@ section.well(ng-controller='searchCtrl')
                 {{item.FullName}}
         div.span3
           div
-            img.circular(src='{{displayeditem.Avatar}}')
+            img.circular(src='{{displayeditem.Avatar}}', style='margin-bottom:10px')
           div
             {{displayeditem.First}} {{displayeditem.Last}}
           div
