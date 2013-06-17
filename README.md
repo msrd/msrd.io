@@ -3,6 +3,10 @@ msrd.io
 The web site for the Microsoft Regional Directors, a global community of
 independent Microsoft ambasadors.  
 
+[![Build
+Status](https://travis-ci.org/msrd/msrd.io.png)](https://travis-ci.org/msrd/msrd.io)
+
+
 # STOP!
 
 _May 30, 2013_
