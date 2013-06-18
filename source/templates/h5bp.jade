@@ -7,36 +7,25 @@ doctype 5
     html.no-js.lt-ie9(lang='en')
 //[if gt IE 8]><!
 html(lang='en')
-    //<![endif]
-    head
-        meta(charset='utf-8')
-        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+  //<![endif]
+    
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width')
+    include ../partials/header
+        
+  body(ng-app='msrd')
+    header
+      include ../partials/nav
+      block hero
+      
+    div.container
+      block content
+      include ../partials/footer
 
-        meta(name='description', content='')
-        meta(name='viewport', content='width=device-width')
-
-        // build:css(tmp) style.css
-        link(rel='stylesheet', href='styles/normalize.css')
-        link(rel='stylesheet', href='styles/h5bp.css')
-        link(rel='stylesheet', href='styles/g.css')
-        // endbuild
-
-        block head
-
-    body
-        //if lt IE 7
-            p.chromeframe.
-                You are using an outdated browser.
-                <a href="http://browsehappy.com/">Update today</a>
-
-        block content
-
-        script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js')
-        script
-            window.jQuery || document.write('<script src="components/jquery/jquery.min.js"><\\/script>')
-
-        // build:js js/msrd.js
-        script(src='components/jquery.rule/jquery.rule.js')
-        script(src='js/main.js')
-        // endbuild
-
+    //if lt IE 7
+      p.chromeframe.
+        You are using an outdated browser.
+          <a href="http://browsehappy.com/">Update today</a>

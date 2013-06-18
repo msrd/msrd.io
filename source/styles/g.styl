@@ -21,8 +21,8 @@ $linkcolor = $logocolor
 
 $measure = 42rem
 
-*
-  box-sizing: border-box
+//*
+// box-sizing: border-box
 
 html
   background url(/images/debut_light.png) 
@@ -30,7 +30,7 @@ html
 body
   rhythm(0)
   font-family   sans-serif
-  width         $measure
+  //width         $measure
   margin        0 auto
   color         $blackish
   
@@ -43,7 +43,7 @@ body
 h1
   rhythm(4, 1, 2)
   color $headercolor
-  margin-left  -0.3 rem
+  //margin-left  -0.3 rem
   letter-spacing -2px
   text-rendering optimizelegibility
 
@@ -54,8 +54,7 @@ h2
   rhythm(2, 2, 1)
   color $headercolor
   // See http://➡.ws/border-top
-  background url('/images/1x1.svg') top left repeat-x
-
+  //background url('/images/1x1.svg') top left repeat-x
 
 h3
   rhythm(1, 1, 0)
@@ -78,14 +77,11 @@ span.invert
 a:visited, a:link
   color darken($linkcolor, 20%)
   text-decoration none
-  border-bottom 1px solid lighten($linkcolor, 60%)
+  //border-bottom 1px solid lighten($linkcolor, 60%)
 
 a:active, a:hover
-  border-bottom 1px solid darken($linkcolor, 20%)
-  background lighten($linkcolor, 70%)
-
-
-
+  //border-bottom 1px solid darken($linkcolor, 20%)
+  //background lighten($linkcolor, 70%)
 
 // Scott's "house style" typography decisions:
 // Hanging puncation, squares as bullets, small roman for numbering
@@ -142,3 +138,68 @@ figcaption
 // @media screen and (min-width: 100em)
 //   body
 //     line-height 2em
+
+////////////////
+// Map Module //
+////////////////
+
+.mapSectionSize
+  height 400px
+
+#map_canvas
+  height 100%
+  width 100%
+
+.info-window
+  font-family sans-serif
+  color #333
+  & > *
+    display block
+
+.director-name
+  font-weight 700
+
+///////////////////
+// Search Module //
+///////////////////
+
+.rdpill
+  display inline
+  text-align left
+  float left
+  white-space nowrap
+  overflow hidden
+  width 159px
+  
+.circular
+  border-radius 50%  
+  -webkit-border-radius 50%
+  -moz-border-radius 50%
+  box shadow 0 0 2px rgba(0, 0, 0, .2)
+  -webkit-box-shadow 0 0 0 2px rgba(0, 0, 0, .2)
+  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, .2)
+  
+.animate-enter, 
+.animate-leave
+    -webkit-transition 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all
+    -moz-transition 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all
+    -ms-transition 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all
+    -o-transition 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all
+    transition 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all
+    position relative
+    display block
+ 
+
+.animate-enter.animate-enter-active, 
+.animate-leave 
+    opacity 1
+    bottom 0
+    height 30px
+
+.animate-leave.animate-leave-active,
+.animate-enter 
+    opacity 0
+    bottom -50px
+    height 0px
+
+

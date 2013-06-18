@@ -34,10 +34,10 @@
                   var latLngStr = person.Location.split(", ");
                   var latLng = new latLongFunc(latLngStr[0], latLngStr[1]);
 
-                  if(person.GravitarHash) {
+                  if(person.GravatarHash) {
                     marker = new RichMarker({
                         'position': latLng,
-                        'content': person.GravitarHash ? '<div class="circularIcon"><img style="border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;" src="http://www.gravatar.com/avatar/' + person.GravitarHash + '"/></div>' : null,
+                        'content': person.GravatarHash ? '<div class="circularIcon"><img style="border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;" src="http://www.gravatar.com/avatar/' + person.GravatarHash + '"/></div>' : null,
                         'anchor': RichMarkerPosition.MIDDLE,
                         'flat':true
                     });

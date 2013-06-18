@@ -97,7 +97,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: c.source + "/js",
                         src: "*.coffee",
-                        dest: c.tmp + "/js",
+                        dest: c.release + "/js",
                         ext: ".js"
                     }
                 ]
@@ -152,7 +152,7 @@ module.exports = function (grunt) {
         less: {
             release: {
                 src:  [ c.source + '/**/*.less'],
-                dest: c.tmp + '/styles/less.css'
+                dest: c.release + '/styles/less.css'
             },
             debug: {
                 src:  [ c.source + '/**/*.less'],
@@ -161,7 +161,7 @@ module.exports = function (grunt) {
         },
         stylus: {
             release: {
-                files: grunt.file.expandMapping(["styles/*.styl"], c.tmp + "/", {
+                files: grunt.file.expandMapping(["styles/*.styl"], c.release + "/", {
                     cwd: c.source,
                     rename: function (base, path) {
                         return base + path.replace(/\.styl$/, ".css");
@@ -208,7 +208,7 @@ module.exports = function (grunt) {
         },
         uglify: {
             release: {
-                src: [c.source + "/js/*.js", c.tmp + "/js/*.js"],
+                src: [c.source + "/js/*.js", c.release + "/js/*.js"],
                 dest: c.release + "/js/main.js"
             }
         },
@@ -245,7 +245,7 @@ module.exports = function (grunt) {
                         expand: true,
                         dot: true,
                         cwd: c.source,
-                        dest: c.tmp,
+                        dest: c.release,
                         src: ["styles/*.css"]
                     }
                 ]
