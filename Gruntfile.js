@@ -48,7 +48,7 @@ module.exports = function (grunt) {
                 tasks: ["less:debug"]
             },
             m2j: {
-                files: [c.source + "/articles/*.md"],
+                files: [c.source + "/wintersmith/contents/articles/*.md"],
                 tasks: ["m2j:debug"]
             },
             rdList: {
@@ -89,7 +89,14 @@ module.exports = function (grunt) {
             },
             all: ["Gruntfile.js", c.source + "/js/{,*/}*.js", "!" + c.source + "/js/vendor/*", "test/spec/{,*/}*.js"]
         },
-
+        wintersmith_compile: {
+            release: {
+                options: {
+                    config: c.source + "/wintersmith/config.json",
+                    output: c.release
+                }
+            }
+        },
         coffee: {
             release: {
                 files: [
@@ -141,11 +148,11 @@ module.exports = function (grunt) {
                 highlight: 'manual'
             },
             release: {
-                files: [ c.source + '/articles/*.md'],
+                files: [ c.source + '/wintersmith/contents/articles/*.md'],
                 dest:  c.release + '/articles'
             },
             debug: {
-                files: [ c.source + '/articles/*.md'],
+                files: [ c.source + '/wintersmith/contents/articles/*.md'],
                 dest:  c.tmp + '/articles'
             },
         },
@@ -265,11 +272,11 @@ module.exports = function (grunt) {
         m2j: {
             release: {
                 options: { minify: false, width: 80 },
-                src: [c.source + "/articles/*.md"],
+                src: [c.source + "/wintersmith/contents/articles/*.md"],
                 dest: c.release + "/articles.json"
             },
             debug: {
-                src: [c.source + "/articles/*.md"],
+                src: [c.source + "/wintersmith/contents/articles/*.md"],
                 dest: c.tmp + "/articles.json"
             }
         },
@@ -332,6 +339,7 @@ module.exports = function (grunt) {
         // "less:release",
         "markdown:release",
         "m2j:release",
+        "wintersmith_compile",
         "compileRdListRelease",
         "copy:release",
         "useminPrepare",

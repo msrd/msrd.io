@@ -31,7 +31,11 @@
     "grunt-markdown": "~0.2.0",
     "tap": "~0.4.3",
     "grunt-simple-mocha": "~0.4.0",
-    "grunt-exec": "~0.4.1"
+    "grunt-exec": "~0.4.1",
+    "grunt-wintersmith-compile": "~0.1.1",
+    "moment": "~2.0.0",
+    "underscore": "~1.4.4",
+    "typogr": "~0.5.2"
   },
   "engines": {
     "node": ">=0.8.0"
