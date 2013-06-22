@@ -16,7 +16,7 @@ app.factory('RdList', ['$http', function ($http) {
                         data.Avatar = 'http://www.gravatar.com/avatar/' + data.GravatarHash + '?s=256';
                     }
                     else{
-                        data.Avatar = '../logo/ico/fav256.png';
+                        data.Avatar = '../images/logo/ico/fav256.png';
                     }
                 });
                 callback(item);
