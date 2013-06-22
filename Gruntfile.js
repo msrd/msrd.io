@@ -19,10 +19,10 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         watch: {
-            markdown: {
-                files: [c.source + "contents/*.md"],
-                tasks: ['markdown:debug']
-            },
+            // markdown: {
+            //     files: [c.source + "contents/*.md"],
+            //     tasks: ['markdown:debug']
+            // },
             javascript: {
                 files: [c.source + "/js/{,*/}*.js"],
                 tasks: ["copy:debug"]
@@ -99,7 +99,7 @@ module.exports = function (grunt) {
             debug: {
                 options: {
                     config: c.source + "/config.json",
-                    output: c.source + "/views/articles"
+                    output: c.tmp + "/views/articles"
                 }
             }
         },
@@ -149,20 +149,20 @@ module.exports = function (grunt) {
             }
         },
 
-        markdown: {
-            options: {
-                gfm: true,
-                highlight: 'manual'
-            },
-            release: {
-                files: [ c.source + '/contents/*.md'],
-                dest:  c.release + '/articles'
-            },
-            debug: {
-                files: [ c.source + '/contents/*.md'],
-                dest:  c.tmp + '/articles'
-            },
-        },
+        // markdown: {
+        //     options: {
+        //         gfm: true,
+        //         highlight: 'manual'
+        //     },
+        //     release: {
+        //         files: [ c.source + '/contents/*.md'],
+        //         dest:  c.release + '/articles'
+        //     },
+        //     debug: {
+        //         files: [ c.source + '/contents/*.md'],
+        //         dest:  c.tmp + '/articles'
+        //     },
+        // },
 
         less: {
             release: {
@@ -333,7 +333,7 @@ module.exports = function (grunt) {
     });
 
     grunt.renameTask("regarde", "watch");
-    grunt.registerTask("mj", ["m2j"]);
+    grunt.registerTask("m2j", ["m2j"]);
     grunt.registerTask("compliment", "Treat yo\' self", function () {
         var compliments, index, mydefaults;
         mydefaults = ['No one cares'];
@@ -351,11 +351,11 @@ module.exports = function (grunt) {
     });
     grunt.registerTask("release", [
         "clean:release",
-        //"mkdir",
+        "mkdir",
         "jade:release",
         "stylus:release",
         // "less:release",
-        "markdown:release",
+        // "markdown:release",
         "m2j:release",
         "wintersmith_compile:release",
         "compileRdListRelease",
@@ -372,14 +372,29 @@ module.exports = function (grunt) {
         "test"
     ]);
 
-    grunt.registerTask("test", ["simplemocha:all", "exec:testemCITests"]);
+    grunt.registerTask("test", [
+        "simplemocha:all",
+        "exec:testemCITests"
+    ]);
 
-    grunt.registerTask("debug", ["clean:debug", "coffee", "jade:debug",
-            "markdown:debug", "stylus:debug", "m2j:debug", "wintersmith_compile:debug", "compileRdListDebug"]);
+    grunt.registerTask("debug", [
+        "clean:debug",
+        "coffee",
+        "jade:debug",
+        "stylus:debug",
+        "m2j:debug",
+        "wintersmith_compile:debug",
+        "compileRdListDebug"
+    ]);
 
     grunt.registerTask("default", ["debug-run"]);
 
-    grunt.registerTask("debug-run", ["debug", "connect:livereload",
-            "open", "livereload-start", "watch"]);
+    grunt.registerTask("debug-run", [
+        "debug",
+        "connect:livereload",
+        "open",
+        "livereload-start",
+        "watch"
+    ]);
 };
 
