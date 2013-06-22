@@ -4,7 +4,7 @@ var c, lrSnippet, mountFolder;
 
 lrSnippet = require("grunt-contrib-livereload/lib/utils").livereloadSnippet;
 
-mountFolder = function(connect, dir) {
+mountFolder = function (connect, dir) {
     return connect["static"](require("path").resolve(dir));
 };
 
@@ -19,10 +19,10 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         watch: {
-            markdown: {
-                files: [c.source + "contents/*.md"],
-                tasks: ['markdown:debug']
-            },
+            //markdown: {
+            //    files: [c.source + "/contents/*.md"],
+            //    tasks: ['markdown:debug']
+            //},
             javascript: {
                 files: [c.source + "/js/{,*/}*.js"],
                 tasks: ["copy:debug"]
@@ -93,13 +93,13 @@ module.exports = function (grunt) {
             release: {
                 options: {
                     config: c.source + "/config.json",
-                    output: c.release + "/views/articles"
+                    output: c.release + "/articles"
                 }
             },
             debug: {
                 options: {
                     config: c.source + "/config.json",
-                    output: c.source + "/views/articles"
+                    output: c.tmp + "/articles"
                 }
             }
         },
@@ -118,7 +118,7 @@ module.exports = function (grunt) {
         },
         jade: {
             release: {
-                files: grunt.file.expandMapping(["*.jade"], c.release + "/views", {
+                files: grunt.file.expandMapping(["*.jade"], c.release + "/", {
                     cwd: c.source,
                     rename: function (base, path) {
                         return base + path.replace(/\.jade$/, ".html");
@@ -133,7 +133,7 @@ module.exports = function (grunt) {
                 }
             },
             debug: {
-                files: grunt.file.expandMapping(["*.jade"], c.tmp + "/views", {
+                files: grunt.file.expandMapping(["*.jade"], c.tmp + "/", {
                     cwd: c.source,
                     rename: function (base, path) {
                         return base + path.replace(/\.jade$/, ".html");
@@ -149,34 +149,34 @@ module.exports = function (grunt) {
             }
         },
 
-        markdown: {
-            options: {
-                gfm: true,
-                highlight: 'manual'
-            },
-            release: {
-                files: [ c.source + '/contents/*.md'],
-                dest:  c.release + '/articles'
-            },
-            debug: {
-                files: [ c.source + '/contents/*.md'],
-                dest:  c.tmp + '/articles'
-            },
-        },
+        //markdown: {
+        //    options: {
+        //        gfm: true,
+        //        highlight: 'manual'
+        //    },
+        //    release: {
+        //        files: [c.source + '/contents/*.md'],
+        //        dest: c.release + '/articles'
+        //    },
+        //    debug: {
+        //        files: [c.source + '/contents/*.md'],
+        //        dest: c.tmp + '/articles'
+        //    },
+        //},
 
         less: {
             release: {
-                src:  [ c.source + "/**/*.less"],
+                src: [c.source + "/**/*.less"],
                 dest: c.release + "/styles/less.css"
             },
             debug: {
-                src:  [ c.source + "/**/*.less"],
+                src: [c.source + "/**/*.less"],
                 dest: c.tmp + "/styles/less.css"
             },
         },
         stylus: {
             release: {
-                files: grunt.file.expandMapping(["styles/*.styl"], c.release + "/styles", {
+                files: grunt.file.expandMapping(["styles/*.styl"], c.release + "/", {
                     cwd: c.source,
                     rename: function (base, path) {
                         return base + path.replace(/\.styl$/, ".css");
@@ -188,7 +188,7 @@ module.exports = function (grunt) {
                 }
             },
             debug: {
-                files: grunt.file.expandMapping(["styles/*.styl"], c.tmp + "/styles", {
+                files: grunt.file.expandMapping(["styles/*.styl"], c.tmp + "/", {
                     cwd: c.source,
                     rename: function (base, path) {
                         return base + path.replace(/\.styl$/, ".css");
@@ -281,7 +281,8 @@ module.exports = function (grunt) {
                     dest: c.tmp,
                     src: ["styles/*.css"]
                 }
-            ]
+                ]
+            },
         },
 
         mkdir: [c.tmp],
@@ -316,7 +317,6 @@ module.exports = function (grunt) {
                 cmd: "testem ci"
             }
         }
-      }
     });
 
     function compileRdList(outputDir, prettifyJson) {
@@ -324,11 +324,11 @@ module.exports = function (grunt) {
         grunt.log.writeln("recompiled rdlist");
     }
 
-    grunt.registerTask("compileRdListRelease", "", function() {
+    grunt.registerTask("compileRdListRelease", "", function () {
         compileRdList("./release", false);
     });
 
-    grunt.registerTask("compileRdListDebug", "", function() {
+    grunt.registerTask("compileRdListDebug", "", function () {
         compileRdList("./tmp", true);
     });
 
@@ -355,7 +355,7 @@ module.exports = function (grunt) {
         "jade:release",
         "stylus:release",
         // "less:release",
-        "markdown:release",
+        //"markdown:release",
         "m2j:release",
         "wintersmith_compile:release",
         "compileRdListRelease",
@@ -375,7 +375,7 @@ module.exports = function (grunt) {
     grunt.registerTask("test", ["simplemocha:all", "exec:testemCITests"]);
 
     grunt.registerTask("debug", ["clean:debug", "coffee", "jade:debug",
-            "markdown:debug", "stylus:debug", "m2j:debug", "wintersmith_compile:debug", "compileRdListDebug"]);
+            /*"markdown:debug", */"stylus:debug", "m2j:debug", "wintersmith_compile:debug", "compileRdListDebug"]);
 
     grunt.registerTask("default", ["debug-run"]);
 
