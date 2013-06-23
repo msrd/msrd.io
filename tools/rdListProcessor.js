@@ -42,8 +42,7 @@
         };
 
         var gpsLookup = function(item) {
-            // hardcoded for now
-            item.Location = "41.355, -72.099";
+            // skip for now
             return item;
         };
 
