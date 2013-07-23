@@ -1,0 +1,17 @@
+---
+framework: mocha
+src_files:
+  - source/**/*.js
+  - test/**/*.js
+tap:
+  command: grunt test
+  protocol: tap
+test_page: test/browser/index.html
+
+# CI only uses firefox because travis-ci was having
+# issues with Chrome and PhantomJS
+launch_in_ci:
+  - Firefox
+launch_in_dev:
+  - Firefox
+  - Chrome

@@ -1,0 +1,42 @@
+// From: // https://github.com/sevenupcan/gridlover-mixin
+
+@import 'gradients'
+
+vertical-grid(unit, color= #ddd)
+    stop= 100% - 100% / unit
+    background linear-gradient(top, white stop, stop color)
+    background-size auto unit
+
+noidea()
+ 	background: -webkit-gradient(linear, 100% 0%, 100% 100%, from(rgba(0,0,0,.12)), to(transparent), color-stop(0.1, transparent));
+ 	background: -moz-linear-gradient(center top , transparent, transparent 90%, rgba(0,0,0,.12)) repeat scroll 0 0 transparent;
+ 	background: -o-linear-gradient(center top , transparent, transparent 90%, rgba(0,0,0,.12)) repeat scroll 0 0 transparent;
+ 	background: linear-gradient(center top , transparent, transparent 90%, rgba(0,0,0,.12)) repeat scroll 0 0 transparent;
+ 	/*background-size: 100% 1em;*/
+ 	background-repeat: repeat;
+ 	background-position: top left;
+ 
+measure()
+    box-shadow: inset 1px 0px 0px hsla(200, 100%, 50%, .3), inset -1px 0px 0px hsla(200, 100%, 50%, .3);
+    box-shadow: inset 1px 0px 0px hsla(200, 0%, 0%, .12), inset -1px 0px 0px hsla(200, 0%, 0%, .12);
+
+// Boxy is replaced with runtime javascript
+boxy(before, after)
+    if show-grid
+        c1 = hsla(200, 100%, 50%, 1)
+        c2 = hsla(200, 100%, 50%, .1)
+        box-shadow inset 0px 1px 0px c1,    0px 1px 0px c1,    0px before  0px c2,    0px after 0px c2;
+
+rhythm(font-scale, margin-before = null, margin-after = null)
+	if font-scale == 0 and margin-before == null and margin-after == null
+		font-size: body-font-size
+		line-height body-font-size * body-line-height
+	else
+		if font-scale == 0
+			font-size: body-font-size
+			line-height body-font-size * body-line-height
+		else
+			font-size new-font-size = round(body-font-size * (scale-factor ** font-scale))
+			line-height ceil((new-font-size / (body-line-height * body-font-size))) * (body-line-height * body-font-size)
+		margin-top body-font-size * (body-line-height * margin-before)
+		margin-bottom body-font-size * (body-line-height * margin-after)		
