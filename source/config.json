@@ -1,0 +1,19 @@
+{
+  "locals": {
+    "owner": "Someone",
+    "description": "Ramblings of an immor(t)al demigod",
+    "url": "http://localhost:3030"
+  },
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  }
+}

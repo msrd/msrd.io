@@ -1,0 +1,4 @@
+all: release
+
+release:
+	jade 

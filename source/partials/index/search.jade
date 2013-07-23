@@ -1,0 +1,18 @@
+section.well(ng-controller='searchCtrl')
+  div 
+    form.form-search(style='height:720px')
+      div
+        input.search-query(type='text', ng-model='searchText', placeholder='Search Regional Directors', autofocus='autofocus')
+      div.row-fluid
+        div.span9
+          ul.nav.nav-pills
+            li.rdpill(ng-animate='"animate"', ng-repeat='item in items | filter:searchText')
+              a(href='#', ng-mouseover='show(item)') 
+                {{item.FullName}}
+        div.span3
+          div
+            img.circular(ng-src='{{displayeditem.Avatar}}', style='margin-bottom:10px')
+          div
+            {{displayeditem.First}} {{displayeditem.Last}}
+          div
+            {{displayeditem.City}} {{displayeditem.Country}}
