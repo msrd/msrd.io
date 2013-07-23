@@ -1,17 +1,22 @@
-@import 'nib/gradients'
-@import 'nib/vendor'
 @import 'buttons/buttons.styl'
 
-$fontsize = 16pt
 $whiteish = hsl(0, 0, 99)
 $blackish = hsl(0, 0, 7)
+$logocolor = hsl(202, 100%, 38%)
 
-$phi = 0.6250
-$0 = 1.0
-$1 = $phi + $0      // 1.6250
-$2 = $0 + $1        // 2.6250
-$3 = $1 + $2        // 4.2500
-$4 = $2 + $3        // 6.8750
+$redish   = spin($logocolor, 180%)
+$headercolor = $logocolor
+$linkcolor = $logocolor
+
+// Ratios taken from http://lamb.cc/typograph/
+// Specifically the 3:5 Fibonacci
+
+$phi = 0.6250       // 5/8ths
+$0 = 1.0            // maps to 1.0 rem units
+$1 = $0 + $phi      // 1.6250
+$2 = $1 + $0        // 2.6250
+$3 = $2 + $1        // 4.2500
+$4 = $3 + $2        // 6.8750
 
 *
   box-sizing: border-box
@@ -24,81 +29,67 @@ body
   width         42em
   margin        0 auto
   color         $blackish
-  //background    $whiteish
-  // background    url('http://www.baselineme.com/24') center top repeat
   // background url(/images/24.svg) center top repeat
 
-article
-  max-width     944px
-  margin        auto
-
 h1
-  font-size     6.8750 rem
+  color $headercolor
+  font-size     $4 rem
   line-height   7.5 rem
   margin-top    1.5 rem
   margin-bottom 3.0 rem
   margin-left  -0.3 rem
   letter-spacing -2px
   text-rendering optimizelegibility
-  color rgb(9,79,178)
 
   span
     color lightGray
 
 p.slug
+  color $redish
   font-weight bold
-  //font-variant small-caps
   margin-top -3.0 rem
-  //margin-bottom -1.5 rem
-  color rgb(255, 85, 64)
 
 span.invert
-  color $blackish
-  background-color: rgb(87, 193, 233)
+  color $whiteish
+  background-color: $logocolor
   padding: 4px
 
 a:visited, a:link
-  color hsl(205, 20%, 50%)
+  color darken($linkcolor, 20%)
   text-decoration none
-  border-bottom 1px solid #F2ECDA
+  border-bottom 1px solid lighten($linkcolor, 60%)
 
 a:active, a:hover
-  border-bottom 1px solid #999
+  border-bottom 1px solid darken($linkcolor, 20%)
+  background lighten($linkcolor, 90%)
 
 figure
   a:active, a:hover, a:visited, a:link
     border-bottom 0px
 
 figcaption
+  color darkGray
   font-variant small-caps
   margin-top    0rem
   margin-bottom 1.5rem
-  color darkGray
 
 h2
-  color rgb(9,79,178)
-  font-size     2.6250 rem
-  line-height   3.0000 rem
+  color $headercolor
+  font-size     $2 rem
+  line-height   3.0 rem
   margin-top    3.0 rem
   margin-bottom 1.5 rem
   // See http://➡.ws/border-top
   background url('/images/1x1.svg') top left repeat-x
 
 h3
-  font-size     1.6250 rem
+  color $headercolor
+  font-size     $1 rem
   line-height   3.0 rem
   margin-top    1.5 rem
   margin-bottom 0 rem
-  color rgb(9,79,178)
 
 p, ul, ol
   margin-top    0rem
   margin-bottom 1.5rem
-
-aside
-  font-size     0.6250rem
-  float right
-  padding 0 0 0 1.5em
-  margin 0 0 0 1em
-  max-width 20em
 

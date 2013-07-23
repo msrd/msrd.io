@@ -9,7 +9,6 @@
     "express": "3.0.0rc3",
     "jade": "*",
     "stylus": "*",
-    "nib": "*",
     "marked": "~0.2.6"
   }
 }

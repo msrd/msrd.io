@@ -1,17 +1,10 @@
 var express = require('express'),
     routes = require('./routes'),
     http = require('http'),
-    nib = require('nib'),
     stylus = require('stylus'),
     path = require('path');
 
 var app = express();
-
-function compile(str, path) {
-  return stylus(str)
-    .set('filename', path)
-    .use(nib());
-}
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -26,8 +19,7 @@ app.configure(function(){
   app.use(stylus.middleware({
     src: __dirname + '/public',
     dest: __dirname + '/public',
-    force: true,
-    compile: compile
+    force: true
   }));
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
