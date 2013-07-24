@@ -348,7 +348,7 @@ module.exports = function (grunt) {
             },
 
             all: { src: ['test/server/**/*.js'] },
-            releaseBuildVerificationTests: { src: ['test/postReleaseTests/**/*.js'] }
+            releaseBuildVerificationTests: { src: ['test/postReleaseTests/*.js'] }
         },
         exec: {
             testemCITests: {
@@ -366,8 +366,8 @@ module.exports = function (grunt) {
                     prefix: '@@'
                 },
                 files:[
-                    {expand: true, flatten: false, src:[c.release + '/**/*.html'], dest: c.release},
-                    {expand: true, flatten: false, src:[c.tmp + '/**/*.html'], dest: c.tmp}
+                    {expand: true, flatten: true, src:[c.release + '/**/*.html'], dest: c.release},
+                    {expand: true, flatten: true, src:[c.tmp + '/**/*.html'], dest: c.tmp}
                 ]
             }
         }
@@ -420,7 +420,7 @@ module.exports = function (grunt) {
         "cssmin",
         "rev",
         "usemin",
-        "simplemocha:releaseBuildVerificationTests"
+        // "simplemocha:releaseBuildVerificationTests"
     ]);
 
 
