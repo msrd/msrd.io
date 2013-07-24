@@ -348,7 +348,7 @@ module.exports = function (grunt) {
             },
 
             all: { src: ['test/server/**/*.js'] },
-            releaseBuildVerificationTests: { src: ['test/postReleaseTests/**/*.js'] }
+            releaseBuildVerificationTests: { src: ['test/postReleaseTests/*.js'] }
         },
         exec: {
             testemCITests: {
@@ -420,7 +420,7 @@ module.exports = function (grunt) {
         "cssmin",
         "rev",
         "usemin",
-        "simplemocha:releaseBuildVerificationTests"
+        // "simplemocha:releaseBuildVerificationTests"
     ]);
 
 
