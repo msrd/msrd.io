@@ -366,8 +366,8 @@ module.exports = function (grunt) {
                     prefix: '@@'
                 },
                 files:[
-                    {expand: true, flatten: false, src:[c.release + '/**/*.html'], dest: c.release},
-                    {expand: true, flatten: false, src:[c.tmp + '/**/*.html'], dest: c.tmp}
+                    {expand: true, flatten: true, src:[c.release + '/**/*.html'], dest: c.release},
+                    {expand: true, flatten: true, src:[c.tmp + '/**/*.html'], dest: c.tmp}
                 ]
             }
         }
