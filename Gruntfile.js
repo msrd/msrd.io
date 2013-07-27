@@ -2,8 +2,6 @@
 
 var c, lrSnippet, mountFolder;
 
-lrSnippet = require("grunt-contrib-livereload/lib/utils").livereloadSnippet;
-
 mountFolder = function(connect, dir) {
     return connect["static"](require("path").resolve(dir));
 };
@@ -11,11 +9,59 @@ mountFolder = function(connect, dir) {
 c = {
     source: "source",
     release: "release",
-    tmp: "tmp"
+    tmp: "tmp",
+    gitVersion: '',
+    gitVersionPretty: ''
 };
 
 module.exports = function (grunt) {
-    require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
+
+    // automatically load grunt plugins
+    require("matchdep").filterAll('grunt-*', require('./package.json')).forEach(grunt.loadNpmTasks);
+
+    grunt.c = c;
+
+    grunt.registerTask('setupGitVersion', function(){
+        var done = this.async();
+
+        function executeGit(args, callback) {
+            grunt.util.spawn({
+                cmd: "git",
+                args: args,
+            }, function(err, result, code){
+                if(err) {
+                    grunt.log.error(err, result);
+                    done();
+                }
+                var version = new String(result);
+                callback(version);
+            });
+        }
+
+        var tasks = [
+            function(next){
+                executeGit(["rev-parse", "HEAD"], function(version) {
+                    c.gitVersion = version;
+                    grunt.log.writeln("*** git version: " + version);
+                    next();
+                });
+            },
+            function(next){
+                executeGit(["describe", "--tags", "--always", "--long", "--dirty"], function(version) {
+                    c.gitVersionPretty = version;
+                    grunt.log.writeln("*** git pretty version: " + version);
+                    next();
+                });
+            },
+        ];
+
+        grunt.util.async.forEachSeries(tasks, function(task, next) {
+            task(next);
+        }, function() {
+            done();
+        });
+
+    });
 
     grunt.initConfig({
         watch: {
@@ -69,7 +115,7 @@ module.exports = function (grunt) {
             livereload: {
                 options: {
                     middleware: function (connect) {
-                        return [lrSnippet, mountFolder(connect, c.tmp), mountFolder(connect, c.source)];
+                        return [require("grunt-contrib-livereload/lib/utils").livereloadSnippet, mountFolder(connect, c.tmp), mountFolder(connect, c.source)];
                     }
                 }
             }
@@ -93,13 +139,13 @@ module.exports = function (grunt) {
             release: {
                 options: {
                     config: c.source + "/config.json",
-                    output: c.release + "/views/articles"
+                    output: c.release + "/articles"
                 }
             },
             debug: {
                 options: {
                     config: c.source + "/config.json",
-                    output: c.tmp + "/views/articles"
+                    output: c.tmp + "/articles"
                 }
             }
         },
@@ -110,7 +156,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: c.source + "/js",
                         src: "*.coffee",
-                        dest: c.tmp + "/js",
+                        dest: c.release + "/js",
                         ext: ".js"
                     }
                 ]
@@ -118,7 +164,7 @@ module.exports = function (grunt) {
         },
         jade: {
             release: {
-                files: grunt.file.expandMapping(["*.jade"], c.release + "/views", {
+                files: grunt.file.expandMapping(["*.jade"], c.release + "/", {
                     cwd: c.source,
                     rename: function (base, path) {
                         return base + path.replace(/\.jade$/, ".html");
@@ -133,7 +179,7 @@ module.exports = function (grunt) {
                 }
             },
             debug: {
-                files: grunt.file.expandMapping(["*.jade"], c.tmp + "/views", {
+                files: grunt.file.expandMapping(["*.jade"], c.tmp + "/", {
                     cwd: c.source,
                     rename: function (base, path) {
                         return base + path.replace(/\.jade$/, ".html");
@@ -163,20 +209,19 @@ module.exports = function (grunt) {
         //         dest:  c.tmp + '/articles'
         //     },
         // },
-
         less: {
             release: {
-                src:  [ c.source + "/**/*.less"],
-                dest: c.release + "/styles/less.css"
+                src:  [ c.source + '/**/*.less'],
+                dest: c.release + '/styles/less.css'
             },
             debug: {
-                src:  [ c.source + "/**/*.less"],
+                src: [c.source + "/**/*.less"],
                 dest: c.tmp + "/styles/less.css"
             },
         },
         stylus: {
             release: {
-                files: grunt.file.expandMapping(["styles/*.styl"], c.release + "/styles", {
+                files: grunt.file.expandMapping(["styles/*.styl"], c.release + "/", {
                     cwd: c.source,
                     rename: function (base, path) {
                         return base + path.replace(/\.styl$/, ".css");
@@ -188,7 +233,7 @@ module.exports = function (grunt) {
                 }
             },
             debug: {
-                files: grunt.file.expandMapping(["styles/*.styl"], c.tmp + "/styles", {
+                files: grunt.file.expandMapping(["styles/*.styl"], c.tmp + "/", {
                     cwd: c.source,
                     rename: function (base, path) {
                         return base + path.replace(/\.styl$/, ".css");
@@ -223,7 +268,7 @@ module.exports = function (grunt) {
         },
         uglify: {
             release: {
-                src: [c.source + "/js/*.js", c.tmp + "/js/*.js"],
+                src: [c.source + "/js/*.js", c.release + "/js/*.js"],
                 dest: c.release + "/js/main.js"
             }
         },
@@ -254,7 +299,7 @@ module.exports = function (grunt) {
                         dot: true,
                         cwd: c.source,
                         dest: c.release,
-                        src: ["components/**/*.*", "js/*.js", "images/{,*/}*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess"]
+                        src: ["components/**/*.*", "js/*.js", "images/{,*/}*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "web.config"]        // don't copy CSS for release; usemin does it
                     },
                     {
                         expand: true,
@@ -272,16 +317,9 @@ module.exports = function (grunt) {
                     dot: true,
                     cwd: c.source,
                     dest: c.tmp,
-                    src: ["images/{,*/}*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "styles/*.css"]
-                },
-                {
-                    expand: true,
-                    dot: true,
-                    cwd: c.source,
-                    dest: c.tmp,
-                    src: ["styles/*.css"]
-                }
-            ]
+                    src: ["images/{,*/}*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "styles/*.css", "web.config"]
+                }]
+            }
         },
 
         mkdir: [c.tmp],
@@ -308,15 +346,30 @@ module.exports = function (grunt) {
                 reporter: "tap"
             },
 
-            all: { src: ["test/server/**/*.js"] }
+            all: { src: ['test/server/**/*.js'] },
+            releaseBuildVerificationTests: { src: ['test/postReleaseTests/**/*.js'] }
         },
         exec: {
             testemCITests: {
                 // only launch Firefox on Travis (PhantomJS hangs due to node versons? and chrome is hanging on travis) 
                 cmd: "testem ci"
             }
+        },
+        replace: {
+            dist: {
+                options: {
+                    variables:{
+                        'currentGitHubCommit': '<%= grunt.c.gitVersion %>',
+                        'currentGitHubCommitPretty': '<%= grunt.c.gitVersionPretty %>'
+                    },
+                    prefix: '@@'
+                },
+                files:[
+                    {expand: true, flatten: false, src:[c.release + '/**/*.html'], dest: c.release},
+                    {expand: true, flatten: false, src:[c.tmp + '/**/*.html'], dest: c.tmp}
+                ]
+            }
         }
-      }
     });
 
     function compileRdList(outputDir, prettifyJson) {
@@ -324,16 +377,15 @@ module.exports = function (grunt) {
         grunt.log.writeln("recompiled rdlist");
     }
 
-    grunt.registerTask("compileRdListRelease", "", function() {
+    grunt.registerTask("compileRdListRelease", "", function () {
         compileRdList("./release", false);
     });
 
-    grunt.registerTask("compileRdListDebug", "", function() {
+    grunt.registerTask("compileRdListDebug", "", function () {
         compileRdList("./tmp", true);
     });
 
-    grunt.renameTask("regarde", "watch");
-    grunt.registerTask("m2j", ["m2j"]);
+    grunt.registerTask("mj", ["m2j"]);
     grunt.registerTask("compliment", "Treat yo\' self", function () {
         var compliments, index, mydefaults;
         mydefaults = ['No one cares'];
@@ -349,22 +401,31 @@ module.exports = function (grunt) {
             return grunt.log.writeln("Created folder: " + name);
         });
     });
-    grunt.registerTask("release", [
-        "clean:release",
-        "mkdir",
+
+    grunt.registerTask("releaseAzure", [
+        //"mkdir",
         "jade:release",
         "stylus:release",
         // "less:release",
-        // "markdown:release",
+        //"markdown:release",
         "m2j:release",
         "wintersmith_compile:release",
         "compileRdListRelease",
         "copy:release",
+        "setupGitVersion",
+        "replace",
         "useminPrepare",
         "concat",
         "cssmin",
         "rev",
-        "usemin"
+        "usemin",
+        // "simplemocha:releaseBuildVerificationTests"
+    ]);
+
+
+    grunt.registerTask("release", [
+        "clean:release",
+        "releaseAzure"
     ]);
 
     grunt.registerTask("ci", [

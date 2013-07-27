@@ -11,7 +11,7 @@ section.well(ng-controller='searchCtrl')
                 {{item.FullName}}
         div.span3
           div
-            img.circular(src='{{displayeditem.Avatar}}', style='margin-bottom:10px')
+            img.circular(ng-src='{{displayeditem.Avatar}}', style='margin-bottom:10px')
           div
             {{displayeditem.First}} {{displayeditem.Last}}
           div
