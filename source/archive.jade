@@ -1,9 +1,10 @@
 extends templates/h5bp
 
 block content
-  h1 msrd
-    span .io
-  p Some stuff will go here
-  p some more stuff here
-  p and then some more stuff
-
+  section(ng-controller='newsCtrl')
+    div.row-fluid
+      article(ng-repeat='article in articles | orderBy:date')
+        div
+          a(href='/articles/{{article.basename}}.html')
+            h2 {{article.title}}
+          p {{article.preview}}

@@ -65,11 +65,11 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         watch: {
-            markdown: {
-                files: ['articles/*.md'],
-                tasks: ['markdown:debug']
-            },
-            javascript: { 
+            // markdown: {
+            //     files: [c.source + "contents/*.md"],
+            //     tasks: ['markdown:debug']
+            // },
+            javascript: {
                 files: [c.source + "/js/{,*/}*.js"],
                 tasks: ["copy:debug"]
             },
@@ -94,7 +94,7 @@ module.exports = function (grunt) {
                 tasks: ["less:debug"]
             },
             m2j: {
-                files: [c.source + "/articles/*.md"],
+                files: [c.source + "/contents/*.md"],
                 tasks: ["m2j:debug"]
             },
             rdList: {
@@ -135,7 +135,20 @@ module.exports = function (grunt) {
             },
             all: ["Gruntfile.js", c.source + "/js/{,*/}*.js", "!" + c.source + "/js/vendor/*", "test/spec/{,*/}*.js"]
         },
-
+        wintersmith_compile: {
+            release: {
+                options: {
+                    config: c.source + "/config.json",
+                    output: c.release + "/articles"
+                }
+            },
+            debug: {
+                options: {
+                    config: c.source + "/config.json",
+                    output: c.tmp + "/articles"
+                }
+            }
+        },
         coffee: {
             release: {
                 files: [
@@ -181,28 +194,29 @@ module.exports = function (grunt) {
                 }
             }
         },
-        markdown: {
-            options: {
-                gfm: true,
-                highlight: 'manual'
-            },
-            release: {
-                files: [ c.source + '/articles/*.md'],
-                dest:  c.release + '/articles'
-            },
-            debug: {
-                files: [ c.source + '/articles/*.md'],
-                dest:  c.tmp + '/articles'
-            },
-        },
+
+        // markdown: {
+        //     options: {
+        //         gfm: true,
+        //         highlight: 'manual'
+        //     },
+        //     release: {
+        //         files: [ c.source + '/contents/*.md'],
+        //         dest:  c.release + '/articles'
+        //     },
+        //     debug: {
+        //         files: [ c.source + '/contents/*.md'],
+        //         dest:  c.tmp + '/articles'
+        //     },
+        // },
         less: {
             release: {
                 src:  [ c.source + '/**/*.less'],
                 dest: c.release + '/styles/less.css'
             },
             debug: {
-                src:  [ c.source + '/**/*.less'],
-                dest: c.tmp + '/styles/less.css'
+                src: [c.source + "/**/*.less"],
+                dest: c.tmp + "/styles/less.css"
             },
         },
         stylus: {
@@ -219,7 +233,7 @@ module.exports = function (grunt) {
                 }
             },
             debug: {
-                files: grunt.file.expandMapping(["styles/*styl"], c.tmp + "/", {
+                files: grunt.file.expandMapping(["styles/*.styl"], c.tmp + "/", {
                     cwd: c.source,
                     rename: function (base, path) {
                         return base + path.replace(/\.styl$/, ".css");
@@ -261,7 +275,7 @@ module.exports = function (grunt) {
         rev: {
             release: {
                 files: {
-                    src: [c.release + '**/*.{js,css,png,jpg,gif}']
+                    src: [c.release + "**/*.{js,css,png,jpg,gif}"]
                 }
             }
         },
@@ -285,7 +299,7 @@ module.exports = function (grunt) {
                         dot: true,
                         cwd: c.source,
                         dest: c.release,
-                        src: ["components/**/*.*", "js/*.js", "logo/*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "web.config"]        // don't copy CSS for release; usemin does it
+                        src: ["components/**/*.*", "js/*.js", "images/{,*/}*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "web.config"]        // don't copy CSS for release; usemin does it
                     },
                     {
                         expand: true,
@@ -297,36 +311,39 @@ module.exports = function (grunt) {
                 ]
             },
             debug: {
-                files: [{
+                files: [
+                {
                     expand: true,
                     dot: true,
                     cwd: c.source,
                     dest: c.tmp,
-                    src: ["logo/*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "styles/*.css", "web.config"]
+                    src: ["images/{,*/}*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "styles/*.css", "web.config"]
                 }]
             }
         },
-        compliment: ['You are so awesome', 'You are handsome', 'You are witty'],
+
         mkdir: [c.tmp],
+
         m2j: {
             release: {
                 options: { minify: false, width: 80 },
-                src: [c.source + "/articles/*.md"],
+                src: [c.source + "/contents/*.md"],
                 dest: c.release + "/articles.json"
             },
             debug: {
-                src: [c.source + "/articles/*.md"],
+                src: [c.source + "/contents/*.md"],
                 dest: c.tmp + "/articles.json"
-            }
+            },
         },
+
         simplemocha: {
             options: {
-                globals: ['should'],
+                globals: ["should"],
                 timeout: 3000,
                 ignoreLeaks: false,
                 /*grep: '*.js',*/
-                ui: 'bdd',
-                reporter: 'tap'
+                ui: "bdd",
+                reporter: "tap"
             },
 
             all: { src: ['test/server/**/*.js'] },
@@ -335,9 +352,10 @@ module.exports = function (grunt) {
         exec: {
             testemCITests: {
                 // only launch Firefox on Travis (PhantomJS hangs due to node versons? and chrome is hanging on travis) 
-                cmd: 'testem ci'
+                cmd: "testem ci"
             }
         },
+
         replace: {
             dist: {
                 options: {
@@ -355,17 +373,16 @@ module.exports = function (grunt) {
         }
     });
 
-
     function compileRdList(outputDir, prettifyJson) {
         require("./tools/rdListProcessor.js")("./source/rdlist.yaml", outputDir + "/rdlist.json", prettifyJson);
         grunt.log.writeln("recompiled rdlist");
     }
 
-    grunt.registerTask("compileRdListRelease", "", function() {
+    grunt.registerTask("compileRdListRelease", "", function () {
         compileRdList("./release", false);
     });
 
-    grunt.registerTask("compileRdListDebug", "", function() {
+    grunt.registerTask("compileRdListDebug", "", function () {
         compileRdList("./tmp", true);
     });
 
@@ -379,7 +396,7 @@ module.exports = function (grunt) {
     });
     grunt.registerTask("mkdir", "Make a new directory", function () {
         var dirs;
-        dirs = grunt.config('mkdir');
+        dirs = grunt.config("mkdir");
         return dirs.forEach(function (name) {
             grunt.file.mkdir(name);
             return grunt.log.writeln("Created folder: " + name);
@@ -387,21 +404,23 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask("releaseAzure", [
-        "mkdir",
+        //"mkdir",
         "jade:release",
         "stylus:release",
-        "markdown:release",
+        // "less:release",
+        //"markdown:release",
         "m2j:release",
+        "wintersmith_compile:release",
         "compileRdListRelease",
         "copy:release",
         "setupGitVersion",
-        "replace",
+        // "replace",
         "useminPrepare",
         "concat",
         "cssmin",
         "rev",
         "usemin",
-        "simplemocha:releaseBuildVerificationTests"
+        // "simplemocha:releaseBuildVerificationTests"
     ]);
 
 
@@ -415,17 +434,29 @@ module.exports = function (grunt) {
         "test"
     ]);
 
-    grunt.registerTask("test", ["simplemocha:all", "exec:testemCITests"]);
+    grunt.registerTask("test", [
+        "simplemocha:all",
+        "exec:testemCITests"
+    ]);
 
-    grunt.registerTask("debug", ["clean:debug", "coffee", "jade:debug", 
-            "markdown:debug", "stylus:debug", "m2j:debug", "compileRdListDebug",
-            "setupGitVersion",
-            "replace"
- ]);
+    grunt.registerTask("debug", [
+        "clean:debug",
+        "coffee",
+        "jade:debug",
+        "stylus:debug",
+        "m2j:debug",
+        "wintersmith_compile:debug",
+        "compileRdListDebug"
+    ]);
 
     grunt.registerTask("default", ["debug-run"]);
 
-    grunt.registerTask("debug-run", ["debug", "connect:livereload", 
-            "open", "livereload-start", "watch"]);
+    grunt.registerTask("debug-run", [
+        "debug",
+        "connect:livereload",
+        "open",
+        "livereload-start",
+        "watch"
+    ]);
 };
 

@@ -46,7 +46,9 @@ describe("when looking at the release folder", function(){
 
             htmlFiles.forEach(function(fileName){
                 var data = new String(fs.readFileSync(fileName));
-                expect(data).to.not.have.string("@@currentGitHubCommit", "file: " + fileName);
+                if(data.indexOf("@@currentGitHubCommit") >= 0) {
+                    throw "should not have found @@currentGitHubCommit in file: " + fileName;
+                }
             });
 
             done();

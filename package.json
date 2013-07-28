@@ -26,6 +26,11 @@
     "matchdep": "~0.1.1",
     "grunt-replace": "~0.4.4",
     "grunt-simple-mocha": "~0.4.0",
+    "grunt-exec": "~0.4.1",
+    "grunt-wintersmith-compile": "~0.1.1",
+    "moment": "~2.0.0",
+    "underscore": "~1.4.4",
+    "typogr": "~0.5.2",
     "walk": "~2.2.1",
     "chai": "~1.6.1"
   },
