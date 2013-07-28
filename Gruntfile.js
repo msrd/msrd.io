@@ -355,6 +355,7 @@ module.exports = function (grunt) {
                 cmd: "testem ci"
             }
         },
+
         replace: {
             dist: {
                 options: {
@@ -413,7 +414,7 @@ module.exports = function (grunt) {
         "compileRdListRelease",
         "copy:release",
         "setupGitVersion",
-        "replace",
+        // "replace",
         "useminPrepare",
         "concat",
         "cssmin",
