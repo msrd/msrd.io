@@ -5,6 +5,6 @@ block content
     div.row-fluid
       article(ng-repeat='article in articles | orderBy:date')
         div
-          a(href='contents/{{article.basename}}.html')
+          a(href='/articles/{{article.basename}}.html')
             h2 {{article.title}}
           p {{article.preview}}
