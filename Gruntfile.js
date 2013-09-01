@@ -97,10 +97,6 @@ module.exports = function (grunt) {
                 files: [c.source + "/contents/*.md"],
                 tasks: ["m2j:debug"]
             },
-            rdList: {
-                files: [c.source + "/rdlist.yaml"],
-                tasks: ["compileRdListDebug"]
-            },
             livereload: {
                 files: [c.tmp + "/**/*.*", "tmp/js/{,*/}*.js",
                         c.source + "/images/{,*/}*.{png,svg,jpg,jpeg,webp}"],
@@ -372,11 +368,6 @@ module.exports = function (grunt) {
             }
         }
     });
-
-    function compileRdList(outputDir, prettifyJson) {
-        require("./tools/rdListProcessor.js")("./source/rdlist.yaml", outputDir + "/rdlist.json", prettifyJson);
-        grunt.log.writeln("recompiled rdlist");
-    }
 
     grunt.registerTask("compileRdListRelease", "", function () {
         compileRdList("./release", false);
