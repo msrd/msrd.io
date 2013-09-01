@@ -32,7 +32,8 @@
     "underscore": "~1.4.4",
     "typogr": "~0.5.2",
     "walk": "~2.2.1",
-    "chai": "~1.6.1"
+    "chai": "~1.6.1",
+    "async": "~0.2.9"
   },
   "devDependencies": {
     "grunt-contrib-livereload": "0.1.2",
