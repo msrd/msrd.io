@@ -75,7 +75,8 @@
 		"City": "Diessen",
 		"State": "Bavaria",
 		"Country": "DEU",
-		"Email": null,
+		"Email": "awechsler@wechsler-consulting.de",
+		"GravatarHash": "cf9e8c2e7c3c5e5b1eadec548e68aea8",
 		"_placename": "Diessen, Bavaria DEU",
 		"_fullname": "alexander_wechsler",
 		"_location": {
@@ -113,7 +114,8 @@
 		"City": "New York",
 		"State": "NY",
 		"Country": "USA",
-		"Email": null,
+		"Email": "andrew.brust@bluebadgeinsights.com",
+		"GravatarHash": "b96aff01402bf8ef497ae0f57d5dcc10",
 		"_placename": "New York, NY USA",
 		"_fullname": "andrew_brust",
 		"_location": {
@@ -141,7 +143,8 @@
 		"City": "Toronto",
 		"State": "ON",
 		"Country": "CAN",
-		"Email": null,
+		"Email": "bgervin@gervin.com",
+		"GravatarHash": "a6f79886d241b88ecc8b5a78fda516e2",
 		"_placename": "Toronto, ON CAN",
 		"_fullname": "barry_gervin",
 		"_location": {
@@ -169,7 +172,8 @@
 		"City": "Ann Arbor",
 		"State": "MI",
 		"Country": "USA",
-		"Email": null,
+		"Email": "bill.w.wagner@outlook.com",
+		"GravatarHash": "810cc26c65707ffd2c6275b2a32345c2",
 		"_placename": "Ann Arbor, MI USA",
 		"_fullname": "bill_wagner",
 		"_location": {
@@ -197,7 +201,8 @@
 		"City": "Alexandria",
 		"State": "VA",
 		"Country": "USA",
-		"Email": null,
+		"Email": "brian.noyes@gmail.com",
+		"GravatarHash": "2ff0e157710db84f98de469cdd330ca8",
 		"_placename": "Alexandria, VA USA",
 		"_fullname": "brian_noyes",
 		"_location": {
@@ -223,10 +228,11 @@
 		"First": "Carlos R.",
 		"Last": "Guevara L.",
 		"City": "Panamá",
-		"State": null,
+		"State": "Panama",
 		"Country": "PAN",
-		"Email": null,
-		"_placename": "Panamá, PAN",
+		"Email": "cguevara@velu.com",
+		"GravatarHash": "02131af399753ab3f41f31926a1d4ef1",
+		"_placename": "Panamá, Panama PAN",
 		"_fullname": "carlos_r._guevara_l.",
 		"_location": {
 			"lat": 8.537981,
@@ -236,15 +242,16 @@
 	{
 		"First": "Chris",
 		"Last": "Auld",
-		"City": "Wellington",
-		"State": "Wellington",
+		"City": "Rotorua",
+		"State": "Bay of Plenty",
 		"Country": "NZL",
-		"Email": null,
-		"_placename": "Wellington, Wellington NZL",
+		"Email": "chris.auld@intergen.co.nz",
+		"GravatarHash": "9904ea3186754e510aceae95982f0912",
+		"_placename": "Rotorua, Bay of Plenty NZL",
 		"_fullname": "chris_auld",
 		"_location": {
-			"lat": -41.2904059,
-			"lng": 174.7815662
+			"lat": -38.1368478,
+			"lng": 176.2497461
 		}
 	},
 	{
@@ -253,7 +260,8 @@
 		"City": "Redmond",
 		"State": "WA",
 		"Country": "USA",
-		"Email": null,
+		"Email": "chris@kinsman.net",
+		"GravatarHash": "b30a78e7f591f4fc616dc36e22d3049e",
 		"_placename": "Redmond, WA USA",
 		"_fullname": "chris_kinsman",
 		"_location": {
@@ -267,7 +275,8 @@
 		"City": "Guntramsdorf",
 		"State": "AUSTRIA",
 		"Country": "AUT",
-		"Email": null,
+		"Email": "Christian.Nagel@cninnovation.com",
+		"GravatarHash": "cd9b520fdb41c22d70bf8bd78fa00c65",
 		"_placename": "Guntramsdorf, AUSTRIA AUT",
 		"_fullname": "christian_nagel",
 		"_location": {
@@ -281,7 +290,8 @@
 		"City": "Neustadt am Main",
 		"State": "Bayern",
 		"Country": "DEU",
-		"Email": null,
+		"Email": "christian.weyer@thinktecture.com",
+		"GravatarHash": "2d0baf0672a24d3e3642ff48671a8b38",
 		"_placename": "Neustadt am Main, Bayern DEU",
 		"_fullname": "christian_weyer",
 		"_location": {
@@ -309,7 +319,8 @@
 		"City": "Timisoara",
 		"State": "Timis",
 		"Country": "ROU",
-		"Email": null,
+		"Email": "ciprian.jichici@genisoft.eu",
+		"GravatarHash": "2c6a5d06be92ce6424407a64ce396290",
 		"_placename": "Timisoara, Timis ROU",
 		"_fullname": "ciprian_jichici",
 		"_location": {
@@ -320,16 +331,13 @@
 	{
 		"First": "Colin",
 		"Last": "Melia",
-		"City": "Ottawa",
-		"State": "Ontario",
+		"City": null,
+		"State": null,
 		"Country": "CAN",
-		"Email": null,
-		"_placename": "Ottawa, Ontario CAN",
-		"_fullname": "colin_melia",
-		"_location": {
-			"lat": 45.4035383,
-			"lng": -75.6189441
-		}
+		"Email": "colinizer@live.com",
+		"GravatarHash": "0cc4bf9f23bfefb35d2e6fdc16894c5a",
+		"_placename": "null, CAN",
+		"_fullname": "colin_melia"
 	},
 	{
 		"First": "Damir",
@@ -351,7 +359,8 @@
 		"City": "Chandler",
 		"State": "AZ",
 		"Country": "USA",
-		"Email": null,
+		"Email": "dwahlin@thewahlingroup.com",
+		"GravatarHash": "401ef8320d19de055ba40f1d8acf9d2d",
 		"_placename": "Chandler, AZ USA",
 		"_fullname": "dan_wahlin",
 		"_location": {
@@ -362,15 +371,16 @@
 	{
 		"First": "Daniel",
 		"Last": "Tizon",
-		"City": "Plan-les-Ouates",
+		"City": "Les Acacias - Genève",
 		"State": "SWITZERLAND",
 		"Country": "CHE",
-		"Email": null,
-		"_placename": "Plan-les-Ouates, SWITZERLAND CHE",
+		"Email": "daniel.tizon@outlook.com",
+		"GravatarHash": "24f173ba7fe3ef5bd582d8a0806b485f",
+		"_placename": "Les Acacias - Genève, SWITZERLAND CHE",
 		"_fullname": "daniel_tizon",
 		"_location": {
-			"lat": 46.168,
-			"lng": 6.118399999999999
+			"lat": 46.18313610000001,
+			"lng": 6.1398674
 		}
 	},
 	{
@@ -379,7 +389,8 @@
 		"City": "Rionero in Vulture",
 		"State": null,
 		"Country": "ITA",
-		"Email": null,
+		"Email": "daniele@bochicchio.com",
+		"GravatarHash": "95e29295ad9ac507be050f1142aef5a6",
 		"_placename": "Rionero in Vulture, ITA",
 		"_fullname": "daniele_bochicchio",
 		"_location": {
@@ -393,7 +404,8 @@
 		"City": "Istanbul",
 		"State": null,
 		"Country": "TUR",
-		"Email": null,
+		"Email": "daron@yondem.com",
+		"GravatarHash": "017286889e25c87cb44b20ceca2d1d79",
 		"_placename": "Istanbul, TUR",
 		"_fullname": "daron_yondem",
 		"_location": {
@@ -404,15 +416,16 @@
 	{
 		"First": "Dave",
 		"Last": "Ward",
-		"City": "Roswell",
+		"City": "Atlanta",
 		"State": "GA",
 		"Country": "USA",
-		"Email": null,
-		"_placename": "Roswell, GA USA",
+		"Email": "dave@encosia.com",
+		"GravatarHash": "755e1277329df9e6b7e6685b21108ee6",
+		"_placename": "Atlanta, GA USA",
 		"_fullname": "dave_ward",
 		"_location": {
-			"lat": 34.02315530000001,
-			"lng": -84.3615928
+			"lat": 33.7489954,
+			"lng": -84.3879824
 		}
 	},
 	{
@@ -421,7 +434,8 @@
 		"City": "Colorado Springs",
 		"State": "CO",
 		"Country": "USA",
-		"Email": null,
+		"Email": "dyack@coloradotc.com",
+		"GravatarHash": "7c640c763b82993b700878cf1a520a91",
 		"_placename": "Colorado Springs, CO USA",
 		"_fullname": "david_yack",
 		"_location": {
@@ -435,7 +449,8 @@
 		"City": "Quito",
 		"State": "Pichincha",
 		"Country": "ECU",
-		"Email": null,
+		"Email": "edgar.sanchez@logicstudio.net",
+		"GravatarHash": "6b40dc025b09dc865db4d543145b6dec",
 		"_placename": "Quito, Pichincha ECU",
 		"_fullname": "edgar_sánchez",
 		"_location": {
@@ -446,15 +461,16 @@
 	{
 		"First": "Elijah",
 		"Last": "Manor",
-		"City": null,
-		"State": null,
+		"City": "Nashville",
+		"State": "TN",
 		"Country": "USA",
-		"Email": null,
-		"_placename": "null, USA",
+		"Email": "elijah.manor@gmail.com",
+		"GravatarHash": "fc7253276960c6f0718688e330bca47f",
+		"_placename": "Nashville, TN USA",
 		"_fullname": "elijah_manor",
 		"_location": {
-			"lat": 44.5165325,
-			"lng": -67.584481
+			"lat": 36.1666667,
+			"lng": -86.7833333
 		}
 	},
 	{
@@ -491,7 +507,8 @@
 		"City": "Santiago de Chile",
 		"State": "Las Condes",
 		"Country": "CHL",
-		"Email": null,
+		"Email": "gabrielcor@hotmail.com",
+		"GravatarHash": "d07d7ae140f81eb9f1d80da99fae4678",
 		"_placename": "Santiago de Chile, Las Condes CHL",
 		"_fullname": "gabriel_cor",
 		"_location": {
@@ -505,7 +522,8 @@
 		"City": "Tienen",
 		"State": "Vlaams-Brabant",
 		"Country": "BEL",
-		"Email": null,
+		"Email": "gill@snowball.be",
+		"GravatarHash": "21b36e9278dd30e5c580cc758e1e311b",
 		"_placename": "Tienen, Vlaams-Brabant BEL",
 		"_fullname": "gill_cleeren",
 		"_location": {
@@ -519,7 +537,8 @@
 		"City": "SANTERAMO IN COLLE (BA)",
 		"State": "BA",
 		"Country": "ITA",
-		"Email": null,
+		"Email": "gdimauro@libero.it",
+		"GravatarHash": "df80dc323221ba35930c607ddf8cf5f6",
 		"_placename": "SANTERAMO IN COLLE (BA), BA ITA",
 		"_fullname": "giuseppe_dimauro",
 		"_location": {
@@ -530,15 +549,16 @@
 	{
 		"First": "Gøran",
 		"Last": "Hansen",
-		"City": "TILLER",
-		"State": "Sør-Trøndelag",
-		"Country": "NOR",
-		"Email": null,
-		"_placename": "TILLER, Sør-Trøndelag NOR",
+		"City": "Trondheim",
+		"State": null,
+		"Country": "Norway",
+		"Email": "mail@goeran.no",
+		"GravatarHash": "0ca33046e6ce8c5d3a2d18c35db2e5cd",
+		"_placename": "Trondheim, Norway",
 		"_fullname": "gøran_hansen",
 		"_location": {
-			"lat": 63.4073536,
-			"lng": 10.4720883
+			"lat": 63.4305149,
+			"lng": 10.3950528
 		}
 	},
 	{
@@ -561,7 +581,8 @@
 		"City": "Melbourne",
 		"State": "VIC",
 		"Country": "AUS",
-		"Email": null,
+		"Email": "greg@greglow.com",
+		"GravatarHash": "5804600a24fc99c3dee574feba102fc6",
 		"_placename": "Melbourne, VIC AUS",
 		"_fullname": "greg_low",
 		"_location": {
@@ -582,12 +603,17 @@
 	{
 		"First": "Guy",
 		"Last": "Barrette",
-		"City": "LaSalle",
+		"City": "Montreal",
 		"State": "QC",
 		"Country": "CAN",
-		"Email": null,
-		"_placename": "LaSalle, QC CAN",
-		"_fullname": "guy_barrette"
+		"Email": "guy@guybarrette.com",
+		"GravatarHash": "f3b4d933ca7cd52e5643f280b7b24a29",
+		"_placename": "Montreal, QC CAN",
+		"_fullname": "guy_barrette",
+		"_location": {
+			"lat": 45.5086699,
+			"lng": -73.55399249999999
+		}
 	},
 	{
 		"First": "György",
@@ -595,7 +621,8 @@
 		"City": "Budapest",
 		"State": null,
 		"Country": "HUN",
-		"Email": null,
+		"Email": "balassy@aut.bme.hu",
+		"GravatarHash": "af7967c74f1f0d4be6eb3bdc2372a0ab",
 		"_placename": "Budapest, HUN",
 		"_fullname": "györgy_balássy",
 		"_location": {
@@ -620,26 +647,28 @@
 	{
 		"First": "Henrik Lykke",
 		"Last": "Nielsen",
-		"City": "Aarhus C",
+		"City": "Aarhus",
 		"State": null,
 		"Country": "DNK",
-		"Email": null,
-		"_placename": "Aarhus C, DNK",
+		"Email": "lykke@captator.dk",
+		"GravatarHash": "39f6380c2bce2516672c50197037aac1",
+		"_placename": "Aarhus, DNK",
 		"_fullname": "henrik_lykke_nielsen",
 		"_location": {
-			"lat": 55.9148268,
-			"lng": 10.6597981
+			"lat": 56.162939,
+			"lng": 10.203921
 		}
 	},
 	{
-		"First": "Istvan",
-		"Last": "Novak",
+		"First": "István",
+		"Last": "Novák",
 		"City": "Dunakeszi",
 		"State": null,
 		"Country": "HUN",
-		"Email": null,
+		"Email": "inovak@grepton.hu",
+		"GravatarHash": "3cea96236332ffd3b7bd2c8ecf7edeba",
 		"_placename": "Dunakeszi, HUN",
-		"_fullname": "istvan_novak",
+		"_fullname": "istván_novák",
 		"_location": {
 			"lat": 47.63438439999999,
 			"lng": 19.1397121
@@ -651,7 +680,8 @@
 		"City": "Wellington",
 		"State": "NZ",
 		"Country": "NZL",
-		"Email": null,
+		"Email": "jeremy@mindscape.co.nz",
+		"GravatarHash": "857a9414910d0128b69aebcddbc81e0f",
 		"_placename": "Wellington, NZ NZL",
 		"_fullname": "jeremy_boyd",
 		"_location": {
@@ -665,7 +695,8 @@
 		"City": "Raleigh",
 		"State": "NC",
 		"Country": "USA",
-		"Email": null,
+		"Email": "jduffy@takenote.com",
+		"GravatarHash": "769612366eb5975746973e9a658e6c53",
 		"_placename": "Raleigh, NC USA",
 		"_fullname": "jim_duffy",
 		"_location": {
@@ -679,7 +710,8 @@
 		"City": "Boca Raton",
 		"State": "FL",
 		"Country": "USA",
-		"Email": null,
+		"Email": "joe@homnick.com",
+		"GravatarHash": "fbd42c7b81d42bdb71d62b7f8795bf9e",
 		"_placename": "Boca Raton, FL USA",
 		"_fullname": "joe_homnick",
 		"_location": {
@@ -704,15 +736,16 @@
 	{
 		"First": "John",
 		"Last": "Alexander",
-		"City": "Blue Springs",
+		"City": "Kansas City",
 		"State": "MO",
 		"Country": "USA",
-		"Email": null,
-		"_placename": "Blue Springs, MO USA",
+		"Email": "john@ajisoftware.com",
+		"GravatarHash": "855e45d635208f912d7321a63abf66a5",
+		"_placename": "Kansas City, MO USA",
 		"_fullname": "john_alexander",
 		"_location": {
-			"lat": 39.0169509,
-			"lng": -94.2816148
+			"lat": 39.0997265,
+			"lng": -94.5785667
 		}
 	},
 	{
@@ -777,7 +810,8 @@
 		"City": "Pontypool",
 		"State": "Ontario",
 		"Country": "CAN",
-		"Email": null,
+		"Email": "kate@gregcons.com",
+		"GravatarHash": "1b9f56786ceba3c57d0d2fe56182a4d3",
 		"_placename": "Pontypool, Ontario CAN",
 		"_fullname": "kate_gregory",
 		"_location": {
@@ -816,11 +850,12 @@
 	{
 		"First": "Khaled",
 		"Last": "Chebat",
-		"City": "Beirut Central District",
-		"State": "Beirut",
+		"City": "Beirut",
+		"State": null,
 		"Country": "LBN",
-		"Email": null,
-		"_placename": "Beirut Central District, Beirut LBN",
+		"Email": "KhaledChebat@hotmail.com",
+		"GravatarHash": "42d3f1fc38a7dd29b21daaa5c681bb13",
+		"_placename": "Beirut, LBN",
 		"_fullname": "khaled_chebat",
 		"_location": {
 			"lat": 33.8886289,
@@ -847,12 +882,28 @@
 		"City": "Montreal",
 		"State": "QC",
 		"Country": "CAN",
-		"Email": null,
+		"Email": "laurent@ldex.ca",
+		"GravatarHash": "70566d8aa6397c2d6db15c6a51fec3a6",
 		"_placename": "Montreal, QC CAN",
 		"_fullname": "laurent_duveau",
 		"_location": {
 			"lat": 45.5086699,
 			"lng": -73.55399249999999
+		}
+	},
+	{
+		"First": "Laurent",
+		"Last": "Bugnion",
+		"City": "Zurich",
+		"State": "ZH",
+		"Country": "SWI",
+		"Email": "laurent@galasoft.ch",
+		"GravatarHash": "749bf0fc447ba1650d2e7e273c6a73c9",
+		"_placename": "Zurich, ZH SWI",
+		"_fullname": "laurent_bugnion",
+		"_location": {
+			"lat": 47.3686444,
+			"lng": 8.5314296
 		}
 	},
 	{
@@ -875,7 +926,8 @@
 		"City": "St-Nicolas",
 		"State": "QC",
 		"Country": "CAN",
-		"Email": null,
+		"Email": "l.gauthier@hotmail.com",
+		"GravatarHash": "2c69e767624cf0e0919b8cce42441582",
 		"_placename": "St-Nicolas, QC CAN",
 		"_fullname": "luc_gauthier",
 		"_location": {
@@ -914,15 +966,16 @@
 	{
 		"First": "Marcel",
 		"Last": "de Vries",
-		"City": "Veenendaal",
-		"State": "Utrecht",
+		"City": "Zuthpen",
+		"State": null,
 		"Country": "NLD",
-		"Email": null,
-		"_placename": "Veenendaal, Utrecht NLD",
+		"Email": "marcelv@infosupport.com",
+		"GravatarHash": "e2b757c7381f713ca84f7a4e5685647b",
+		"_placename": "Zuthpen, NLD",
 		"_fullname": "marcel_de_vries",
 		"_location": {
-			"lat": 52.0263009,
-			"lng": 5.5544309
+			"lat": 52.142736,
+			"lng": 6.196058400000001
 		}
 	},
 	{
@@ -931,7 +984,8 @@
 		"City": "Cumming",
 		"State": "GA",
 		"Country": "USA",
-		"Email": null,
+		"Email": "mark@dunntraining.com",
+		"GravatarHash": "2ff557f8ea5fd0d3bff6f2705747ba3c",
 		"_placename": "Cumming, GA USA",
 		"_fullname": "mark_dunn",
 		"_location": {
@@ -945,7 +999,8 @@
 		"City": "Spokane Valley",
 		"State": "WA",
 		"Country": "USA",
-		"Email": null,
+		"Email": "mark@michaelis.net",
+		"GravatarHash": "29ab4e8a80a816ddba865da55934295c",
 		"_placename": "Spokane Valley, WA USA",
 		"_fullname": "mark_michaelis",
 		"_location": {
@@ -997,13 +1052,14 @@
 	},
 	{
 		"First": "Mauro",
-		"Last": "SantAnna",
+		"Last": "Sant'Anna",
 		"City": "Sao Paulo",
 		"State": "SP",
 		"Country": "BRA",
-		"Email": null,
+		"Email": "mauro@mas.com.br",
+		"GravatarHash": "80eec27b3f1ae23ccdfc009a05298984",
 		"_placename": "Sao Paulo, SP BRA",
-		"_fullname": "mauro_santanna",
+		"_fullname": "mauro_sant'anna",
 		"_location": {
 			"lat": -23.5489433,
 			"lng": -46.6388182
@@ -1068,29 +1124,31 @@
 	{
 		"First": "Neil",
 		"Last": "Roodyn",
-		"City": "Dee Why",
+		"City": "Sydney",
 		"State": "NSW",
 		"Country": "AUS",
-		"Email": null,
-		"_placename": "Dee Why, NSW AUS",
+		"Email": "dr.neil@nsquaredsolutions.com",
+		"GravatarHash": "c2fd10953ce115bf533229274b2d907f",
+		"_placename": "Sydney, NSW AUS",
 		"_fullname": "neil_roodyn",
 		"_location": {
-			"lat": -33.7535622,
-			"lng": 151.2861399
+			"lat": -33.8674869,
+			"lng": 151.2069902
 		}
 	},
 	{
 		"First": "Nicolas",
-		"Last": "CLERC",
-		"City": "Lyon Cedex 3",
-		"State": "Rhone",
+		"Last": "Clerc",
+		"City": "Lyon",
+		"State": "France",
 		"Country": "FRA",
-		"Email": null,
-		"_placename": "Lyon Cedex 3, Rhone FRA",
+		"Email": "nclerc@quidmind.com",
+		"GravatarHash": "b550a250192f5ab860a8a53225a7e078",
+		"_placename": "Lyon, France FRA",
 		"_fullname": "nicolas_clerc",
 		"_location": {
-			"lat": 45.7212445,
-			"lng": 4.8907262
+			"lat": 45.764043,
+			"lng": 4.835659
 		}
 	},
 	{
@@ -1169,7 +1227,8 @@
 		"City": "Tustin",
 		"State": "CA",
 		"Country": "USA",
-		"Email": null,
+		"Email": "PSheriff@pdsa.com",
+		"GravatarHash": "321de36758e289ee82541d26b807185d",
 		"_placename": "Tustin, CA USA",
 		"_fullname": "paul_sheriff",
 		"_location": {
@@ -1211,7 +1270,8 @@
 		"City": "Bangalore",
 		"State": "Karnataka",
 		"Country": "IND",
-		"Email": null,
+		"Email": "srivatsa.praveen@asthrasoft.com",
+		"GravatarHash": "7f23080d621c6f63029ef4875f6fe5fc",
 		"_placename": "Bangalore, Karnataka IND",
 		"_fullname": "praveen_srivatsa",
 		"_location": {
@@ -1222,12 +1282,17 @@
 	{
 		"First": "Rames",
 		"Last": "Gantanant",
-		"City": "Klongsarn",
-		"State": "Bangkok",
+		"City": "Bangkok",
+		"State": null,
 		"Country": "THA",
-		"Email": null,
-		"_placename": "Klongsarn, Bangkok THA",
-		"_fullname": "rames_gantanant"
+		"Email": "ramesg@puumsoft.co.th",
+		"GravatarHash": "84cac310be8e2ceb4a81bf270681c12d",
+		"_placename": "Bangkok, THA",
+		"_fullname": "rames_gantanant",
+		"_location": {
+			"lat": 13.7644145,
+			"lng": 100.6236559
+		}
 	},
 	{
 		"First": "Ricardo",
@@ -1235,7 +1300,8 @@
 		"City": "Bogota",
 		"State": "DC",
 		"Country": "COL",
-		"Email": null,
+		"Email": "rgonzalez@mvps.org",
+		"GravatarHash": "0d7e010f0a971b956908f3f893248789",
 		"_placename": "Bogota, DC COL",
 		"_fullname": "ricardo_gonzalez_vargas",
 		"_location": {
@@ -1263,7 +1329,8 @@
 		"City": "Boise",
 		"State": "ID",
 		"Country": "USA",
-		"Email": null,
+		"Email": "richard@accentient.com",
+		"GravatarHash": "3f9fa5cba6b8bf8b52f342aed6c62e11",
 		"_placename": "Boise, ID USA",
 		"_fullname": "richard_hundhausen",
 		"_location": {
@@ -1277,7 +1344,8 @@
 		"City": "Eden Prairie",
 		"State": "MN",
 		"Country": "USA",
-		"Email": null,
+		"Email": "rocky@lhotka.net",
+		"GravatarHash": "80d61a979d1a75716fa4555ed9cd5c09",
 		"_placename": "Eden Prairie, MN USA",
 		"_fullname": "rockford_lhotka",
 		"_location": {
@@ -1329,25 +1397,12 @@
 	},
 	{
 		"First": "Scott",
-		"Last": "Howlett",
-		"City": "Toronto",
-		"State": "ON",
-		"Country": "CAN",
-		"Email": null,
-		"_placename": "Toronto, ON CAN",
-		"_fullname": "scott_howlett",
-		"_location": {
-			"lat": 43.6705767,
-			"lng": -79.3818208
-		}
-	},
-	{
-		"First": "Scott",
 		"Last": "Cate",
 		"City": "Chandler",
 		"State": "AZ",
 		"Country": "USA",
-		"Email": null,
+		"Email": "me@scottcate.com",
+		"GravatarHash": "3f1ea02fe9aa1d7c51712b1f20507730",
 		"_placename": "Chandler, AZ USA",
 		"_fullname": "scott_cate",
 		"_location": {
@@ -1387,25 +1442,27 @@
 	{
 		"First": "Sean",
 		"Last": "Gerety",
-		"City": "Powder Springs",
+		"City": "Atlanta",
 		"State": "GA",
 		"Country": "USA",
-		"Email": null,
-		"_placename": "Powder Springs, GA USA",
+		"Email": "sean.gerety@gmail.com",
+		"GravatarHash": "6e91ab45c29c23951a6e22f5da910f86",
+		"_placename": "Atlanta, GA USA",
 		"_fullname": "sean_gerety",
 		"_location": {
-			"lat": 33.8595491,
-			"lng": -84.683824
+			"lat": 33.7489954,
+			"lng": -84.3879824
 		}
 	},
 	{
 		"First": "Sergey",
 		"Last": "Bereznikov",
 		"City": "Saint-Petersburg",
-		"State": "NW",
+		"State": null,
 		"Country": "RUS",
-		"Email": null,
-		"_placename": "Saint-Petersburg, NW RUS",
+		"Email": "sergey@digdes.com",
+		"GravatarHash": "c637480d7d544b08385f8999b89c787d",
+		"_placename": "Saint-Petersburg, RUS",
 		"_fullname": "sergey_bereznikov",
 		"_location": {
 			"lat": 59.9342802,
@@ -1443,15 +1500,16 @@
 	{
 		"First": "Sondre",
 		"Last": "Bjellås",
-		"City": "Oslo",
-		"State": "Oslo",
+		"City": "Kristiansand",
+		"State": "Vest Agder",
 		"Country": "NOR",
-		"Email": null,
-		"_placename": "Oslo, Oslo NOR",
+		"Email": "pixelworld@hotmail.com",
+		"GravatarHash": "5569a985681b28d99f13b9673d179250",
+		"_placename": "Kristiansand, Vest Agder NOR",
 		"_fullname": "sondre_bjellås",
 		"_location": {
-			"lat": 59.91621079999999,
-			"lng": 10.7376067
+			"lat": 58.1475779,
+			"lng": 7.996626699999999
 		}
 	},
 	{
@@ -1483,14 +1541,15 @@
 		}
 	},
 	{
-		"First": "Steven",
+		"First": "Steve",
 		"Last": "Smith",
 		"City": "Kent",
 		"State": "OH",
 		"Country": "USA",
-		"Email": null,
+		"Email": "steve@kentsmiths.com",
+		"GravatarHash": "4ace570c8e5735cf9d99505e376f2997",
 		"_placename": "Kent, OH USA",
-		"_fullname": "steven_smith",
+		"_fullname": "steve_smith",
 		"_location": {
 			"lat": 41.1536674,
 			"lng": -81.3578859
@@ -1516,7 +1575,8 @@
 		"City": "Krakow",
 		"State": "Malopolska",
 		"Country": "POL",
-		"Email": null,
+		"Email": "tadeusz.golonka@bpd.pl",
+		"GravatarHash": "8b0ee86060ab36ae6a390b256ba676de",
 		"_placename": "Krakow, Malopolska POL",
 		"_fullname": "tadeusz_golonka",
 		"_location": {
@@ -1558,7 +1618,8 @@
 		"City": "Roswell",
 		"State": "GA",
 		"Country": "USA",
-		"Email": null,
+		"Email": "toddf@wintellect.com",
+		"GravatarHash": "c441d368948c6ab3cce38645089b8210",
 		"_placename": "Roswell, GA USA",
 		"_fullname": "todd_fine",
 		"_location": {
@@ -1572,7 +1633,8 @@
 		"City": "Chennai",
 		"State": "Tamilnadu",
 		"Country": "IND",
-		"Email": null,
+		"Email": "venkat@venkatarangan.com",
+		"GravatarHash": "3c9cb546adce0f20386fef2688928175",
 		"_placename": "Chennai, Tamilnadu IND",
 		"_fullname": "venkatarangan_thirumalai",
 		"_location": {
@@ -1586,7 +1648,8 @@
 		"City": "Gurgaon",
 		"State": "Haryana",
 		"Country": "IND",
-		"Email": null,
+		"Email": "vinod@enterpriseinfotech.com",
+		"GravatarHash": "a61119d3559c700aadf1fbef50ae1c0a",
 		"_placename": "Gurgaon, Haryana IND",
 		"_fullname": "vinod_unny",
 		"_location": {
@@ -1600,7 +1663,8 @@
 		"City": "Reston",
 		"State": "VA",
 		"Country": "USA",
-		"Email": null,
+		"Email": "vishwas.lele@appliedis.com",
+		"GravatarHash": "56b1dc9f8bb5c60bff5afdf52f81c8d9",
 		"_placename": "Reston, VA USA",
 		"_fullname": "vishwas_lele",
 		"_location": {
