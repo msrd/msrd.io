@@ -27,23 +27,21 @@ html(lang='en')
 	body(ng-app='msrd')
 		header
 			include ../partials/nav
-			block header
+			block hero
 			
 		div#content.container
 			block content
 
 		footer
-			hr
-
 			// p
 			//   | Deployed version: 
 			//   a(href='https://github.com/msrd/msrd.io/commit/@@currentGitHubCommit') @@currentGitHubCommitPretty
 
 
 		script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js')
-		script
-			window.jQuery || document.write('<script src="components/jquery/jquery.min.js"><\\/script>')
-		script(type='text/javascript', src='/js/bootstrap-collapse.js')  
+		// script
+		// 	window.jQuery || document.write('<script src="components/jquery/jquery.min.js"><\\/script>')
+		script(type='text/javascript', src='/js/bootstrap-collapse.js')
 		script(type='text/javascript', src='/js/bootstrap-transition.js')
 		script(type='text/javascript', src='http://code.angularjs.org/1.1.5/angular.js')
 		script(type='text/javascript', src='/js/controller.js')

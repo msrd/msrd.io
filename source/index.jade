@@ -1,55 +1,55 @@
 extends templates/h5bp
 
 html
-	block header
+	block hero
 
 		// Hero image
 		div.container-fluid
 			div.center.hero-unit
-			div.container
-				img(src='../images/logo/msrd-logo-192px-alpha.png')
+				div.container
+					img(src='../images/logo/msrd-logo-192px-alpha.png')
 
 	block content
 		// MAP: I'm the map, I'm the map
 		//
 		section.well.mapSectionSize
-		#map_canvas()
+			#map_canvas()
 
 		// NEWS
 		//
 		section.well(ng-controller='newsCtrl')
-		div.row-fluid
-			article.span4(ng-repeat='article in articles | orderBy:date')
-			div
-				a(ng-href='articles/{{article.basename}}.html')
-				img(src='../images/logo/msrd-logo-384px.png', alt='sample image', style='width:100%')
-			header
-				a(ng-href='articles/{{article.basename}}.html')
-				h4(ng-bind='article.title')
-			div(ng-bind='article.preview')
-			footer
-				a(ng-href='articles/{{article.basename}}.html') Read More
+			div.row-fluid
+				article.span4(ng-repeat='article in articles | orderBy:date')
+					div
+						a(ng-href='articles/{{article.basename}}.html')
+						img(src='../images/logo/msrd-logo-384px.png', alt='sample image', style='width:100%')
+					header
+						a(ng-href='articles/{{article.basename}}.html')
+						h4(ng-bind='article.title')
+					div(ng-bind='article.preview')
+					footer
+						a(ng-href='articles/{{article.basename}}.html') Read More
 
 
 		// SEARCH
 		//
 		section.well(ng-controller='searchCtrl')
-		div 
-			form.form-search(style='height:720px')
-			div
-				input.search-query(type='text', ng-model='searchText', placeholder='Search Regional Directors', autofocus='autofocus')
-			div.row-fluid
-				div.span9
-				ul.nav.nav-pills
-					li.rdpill(ng-animate='"animate"', ng-repeat='item in items | filter:searchText')
-					a(href='#', ng-mouseover='show(item)') 
-						{{item.FullName}}
-				div.span3
-				div
-					img.circular(ng-src='{{displayeditem.Avatar}}', style='margin-bottom:10px')
-				div
-					{{displayeditem.First}} {{displayeditem.Last}}
-				div
-					{{displayeditem.City}} {{displayeditem.Country}}
+			div 
+				form.form-search(style='height:720px')
+					div
+						input.search-query(type='text', ng-model='searchText', placeholder='Search Regional Directors', autofocus='autofocus')
+					div.row-fluid
+						div.span9
+							ul.nav.nav-pills
+								li.rdpill(ng-animate='"animate"', ng-repeat='item in items | filter:searchText')
+								a(href='#', ng-mouseover='show(item)') 
+									{{item.FullName}}
+						div.span3
+							div
+								img.circular(ng-src='{{displayeditem.Avatar}}', style='margin-bottom:10px')
+							div
+								{{displayeditem.First}} {{displayeditem.Last}}
+							div
+								{{displayeditem.City}} {{displayeditem.Country}}
 
 
