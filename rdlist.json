@@ -1398,16 +1398,16 @@
 	{
 		"First": "Scott",
 		"Last": "Cate",
-		"City": "Chandler",
+		"City": "Scottsdale",
 		"State": "AZ",
 		"Country": "USA",
 		"Email": "me@scottcate.com",
 		"GravatarHash": "3f1ea02fe9aa1d7c51712b1f20507730",
-		"_placename": "Chandler, AZ USA",
+		"_placename": "Scottsdale, AZ USA",
 		"_fullname": "scott_cate",
 		"_location": {
-			"lat": 33.3061605,
-			"lng": -111.8412502
+			"lat": 33.596423,
+			"lng": -111.976347
 		}
 	},
 	{
