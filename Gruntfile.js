@@ -332,11 +332,12 @@ module.exports = function (grunt) {
 
         m2j: {
             release: {
-                options: { minify: false, width: 80 },
+                options: { minify: false, width: 180 },
                 src: [c.source + "/contents/*.md"],
                 dest: c.release + "/articles.json"
             },
             debug: {
+                options: { minify: false, width: 180 },
                 src: [c.source + "/contents/*.md"],
                 dest: c.tmp + "/articles.json"
             },

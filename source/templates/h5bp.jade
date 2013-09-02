@@ -25,12 +25,15 @@ html(lang='en')
       block content
       include ../partials/footer
 
+    footer
+      hr
+
         //if lt IE 7
             p.chromeframe.
                 You are using an outdated browser.
                 <a href="http://browsehappy.com/">Update today</a>
 
-        p
-          | Deployed version: 
-          a(href='https://github.com/msrd/msrd.io/commit/@@currentGitHubCommit') @@currentGitHubCommitPretty
+        // p
+        //   | Deployed version: 
+        //   a(href='https://github.com/msrd/msrd.io/commit/@@currentGitHubCommit') @@currentGitHubCommitPretty
 
