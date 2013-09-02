@@ -259,7 +259,7 @@ module.exports = function (grunt) {
         },
         concat: {
             options: {
-                banner: '/*! Minification on <%= grunt.template.today("yyyy-mm-dd") %> */'
+                banner: '/*! Minification on <%= grunt.template.today("yyyy-mm-dd") %> */ \n '
             }
         },
         uglify: {
@@ -271,7 +271,7 @@ module.exports = function (grunt) {
         rev: {
             release: {
                 files: {
-                    src: [c.release + "**/*.{js,css,png,jpg,gif}"]
+                    src: [c.release + "**/*.{js,css,png,jpg,gif}", "release/js/msrd.js"]
                 }
             }
         },
