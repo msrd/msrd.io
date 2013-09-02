@@ -18,6 +18,9 @@ deploy: release
 clean:
 	grunt clean
 
+debug:
+	grunt debug-run
+
 ls:
 	s3cmd ls s3://vertigo-test1
 
