@@ -37,20 +37,25 @@
                   var country = person.Country;
                   var icon = person.Icon;
 
-                  if(person.GravatarHash) {
-                    marker = new RichMarker({
-                        'position': latLng,
-                        'content': person.GravatarHash ? '<div class="circularIcon"><img style="border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;" src="http://www.gravatar.com/avatar/' + person.GravatarHash + '"/></div>' : null,
-                        'anchor': RichMarkerPosition.MIDDLE,
-                        'flat':true
-                    });
-                  } else {
                     marker = new markerFunc({
-                        'position': latLng,
+                     'position': latLng,
                     });
-                 }
+
+                  // if(person.GravatarHash) {
+                  //   marker = new RichMarker({
+                  //       'position': latLng,
+                  //       'content': person.GravatarHash ? '<div class="circularIcon"><img style="border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;" src="http://www.gravatar.com/avatar/' + person.GravatarHash + '"/></div>' : null,
+                  //       'anchor': RichMarkerPosition.MIDDLE,
+                  //       'flat':true
+                  //   });
+                  // } else {
+                  //   marker = new markerFunc({
+                  //       'position': latLng,
+                  //   });
+                 // }
+
                  markers.push(marker);
-                  var content = '<div class="info-window"><span class="director-name">' + first + ' ' + last + '</span><span class="director-location">' + city + ', ' + state + ' ' + country + '</span></div>';
+                  var content = '<div class="info-window"><span class="director-name">' + first + ' ' + last + '</span><span class="director-location">' + city + ', ' + state + ' ' + country + '</span> <div class="circularIcon"><img style="border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;" src="http://www.gravatar.com/avatar/' + person.GravatarHash + '"/></div>    </div>';
                   bindInfoWindow(marker, map, infoWindow, content);
               }
               var mc = new MarkerClusterer(map, markers, mcOptions);
