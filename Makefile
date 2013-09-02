@@ -1,5 +1,8 @@
 all: release 
 
+rdlist: source/rdlist.yaml
+	node tools/rdlist.js
+
 release: clean
 	@echo Building site into 'release'
 	grunt clean release
@@ -18,3 +21,4 @@ ls:
 	s3cmd ls s3://vertigo-test1
 
 .PHONY: all
+

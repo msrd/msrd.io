@@ -24,15 +24,18 @@
               var marker;
               for (i = 0, peopleCount = people.length; i < peopleCount; i++) {
                   var person = people[i];
+
+                  // If there's no location, can't map: move to next person
+                  if (!person.hasOwnProperty('_location'))
+                      continue;
+                  var latLng = new latLongFunc(person._location.lat, person._location.lng);
+
                   var last = person.Last;
                   var first = person.First;
                   var city = person.City;
                   var state = person.State;
                   var country = person.Country;
                   var icon = person.Icon;
-
-                  var latLngStr = person.Location.split(", ");
-                  var latLng = new latLongFunc(latLngStr[0], latLngStr[1]);
 
                   if(person.GravatarHash) {
                     marker = new RichMarker({

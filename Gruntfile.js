@@ -303,18 +303,28 @@ module.exports = function (grunt) {
                         cwd: c.source,
                         dest: c.release,
                         src: ["styles/*.css"]
+                    },
+                    {
+                        src: 'rdlist.json',
+                        dest: 'release/rdlist.json'
                     }
                 ]
             },
             debug: {
                 files: [
-                {
-                    expand: true,
-                    dot: true,
-                    cwd: c.source,
-                    dest: c.tmp,
-                    src: ["images/{,*/}*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "styles/*.css", "web.config"]
-                }]
+                    {
+                        expand: true,
+                        dot: true,
+                        cwd: c.source,
+                        dest: c.tmp,
+                        src: ["images/{,*/}*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "styles/*.css", "web.config"]
+                    },
+                    {
+                        src: 'rdlist.json',
+                        dest: './tmp/rdlist.json'
+                    }
+
+                ]
             }
         },
 
@@ -369,13 +379,6 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask("compileRdListRelease", "", function () {
-        compileRdList("./release", false);
-    });
-
-    grunt.registerTask("compileRdListDebug", "", function () {
-        compileRdList("./tmp", true);
-    });
 
     grunt.registerTask("mj", ["m2j"]);
     grunt.registerTask("compliment", "Treat yo\' self", function () {
@@ -402,7 +405,6 @@ module.exports = function (grunt) {
         //"markdown:release",
         "m2j:release",
         "wintersmith_compile:release",
-        "compileRdListRelease",
         "copy:release",
         "setupGitVersion",
         // "replace",
@@ -436,8 +438,7 @@ module.exports = function (grunt) {
         "jade:debug",
         "stylus:debug",
         "m2j:debug",
-        "wintersmith_compile:debug",
-        "compileRdListDebug"
+        "wintersmith_compile:debug"
     ]);
 
     grunt.registerTask("default", ["debug-run"]);
