@@ -304,10 +304,7 @@ module.exports = function (grunt) {
                         dest: c.release,
                         src: ["styles/*.css"]
                     },
-                    {
-                        src: 'rdlist.json',
-                        dest: 'release/rdlist.json'
-                    }
+                    { src: 'source/rdlist.json', dest: 'release/rdlist.json' }
                 ]
             },
             debug: {
@@ -319,11 +316,7 @@ module.exports = function (grunt) {
                         dest: c.tmp,
                         src: ["images/{,*/}*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "styles/*.css", "web.config"]
                     },
-                    {
-                        src: 'rdlist.json',
-                        dest: './tmp/rdlist.json'
-                    }
-
+                    { src: 'source/rdlist.json', dest: '.tmp/rdlist.json' }
                 ]
             }
         },
