@@ -6,8 +6,16 @@ independent Microsoft ambasadors.
 [![Build
 Status](https://travis-ci.org/msrd/msrd.io.png)](https://travis-ci.org/msrd/msrd.io)
 
+# Prototype Branch
 
-# STOP!
+This is the working branch for the first full release of the RD web
+site. It includes these features:
+
+- an interactive map of the RDs
+- a full, searchable list of RDs
+- news articles
+- logo details
+
 
 _May 30, 2013_
 
