@@ -342,15 +342,16 @@
 	{
 		"First": "Damir",
 		"Last": "Tomicic",
-		"City": "Fuerth",
+		"City": "Nuremberg",
 		"State": "Bavaria",
 		"Country": "DEU",
-		"Email": null,
-		"_placename": "Fuerth, Bavaria DEU",
+		"Email": "blog@tomicic.de",
+		"GravatarHash": "81c53b93eb5e6091c9a33eada9480c1f",
+		"_placename": "Nuremberg, Bavaria DEU",
 		"_fullname": "damir_tomicic",
 		"_location": {
-			"lat": 49.4771169,
-			"lng": 10.988667
+			"lat": 49.45203,
+			"lng": 11.07675
 		}
 	},
 	{
@@ -480,6 +481,7 @@
 		"State": "Alicante",
 		"Country": "ESP",
 		"Email": "fguerrero@solidq.com",
+		"GravatarHash": "af60069a801a31aafb22f2f32c2e2cf6",
 		"_placename": "Albatera, Alicante ESP",
 		"_fullname": "fernando_g._guerrero",
 		"_location": {
@@ -925,16 +927,16 @@
 	{
 		"First": "Luc",
 		"Last": "Gauthier",
-		"City": "St-Nicolas",
+		"City": "Quebec City",
 		"State": "QC",
 		"Country": "CAN",
 		"Email": "l.gauthier@hotmail.com",
 		"GravatarHash": "2c69e767624cf0e0919b8cce42441582",
-		"_placename": "St-Nicolas, QC CAN",
+		"_placename": "Quebec City, QC CAN",
 		"_fullname": "luc_gauthier",
 		"_location": {
-			"lat": 47.161949,
-			"lng": -70.862363
+			"lat": 46.8032826,
+			"lng": -71.242796
 		}
 	},
 	{
@@ -1259,14 +1261,15 @@
 		"First": "Peter",
 		"Last": "Himschoot",
 		"City": "Melle",
-		"State": "Oost-Vl",
+		"State": "Oost-Vlaanderen",
 		"Country": "BEL",
-		"Email": null,
-		"_placename": "Melle, Oost-Vl BEL",
+		"Email": "peter@u2u.be",
+		"GravatarHash": "e76f14845ccf2bcd2b5cf910f6cf0394",
+		"_placename": "Melle, Oost-Vlaanderen BEL",
 		"_fullname": "peter_himschoot",
 		"_location": {
-			"lat": 52.2033222,
-			"lng": 8.337266399999999
+			"lat": 51.0543564,
+			"lng": 3.7663975
 		}
 	},
 	{
@@ -1421,7 +1424,8 @@
 		"City": "Orem",
 		"State": "UT",
 		"Country": "USA",
-		"Email": null,
+		"Email": "scott_golightly@hotmail.com",
+		"GravatarHash": "e40de4843cb11483de2e3b85466fc179",
 		"_placename": "Orem, UT USA",
 		"_fullname": "scott_golightly",
 		"_location": {
@@ -1523,7 +1527,8 @@
 		"City": "Uppsala",
 		"State": null,
 		"Country": "SWE",
-		"Email": null,
+		"Email": "stens@2xsundblad.com",
+		"GravatarHash": "450ddd9589ee08055ccc7ab687f9f391",
 		"_placename": "Uppsala, SWE",
 		"_fullname": "sten_sundblad",
 		"_location": {
