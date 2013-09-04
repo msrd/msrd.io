@@ -586,8 +586,8 @@
 		"_placename": "Melbourne, VIC AUS",
 		"_fullname": "greg_low",
 		"_location": {
-			"lat": -37.8142155,
-			"lng": 144.9632307
+			"lat": -37.814107,
+			"lng": 144.96328
 		}
 	},
 	{
@@ -636,7 +636,8 @@
 		"City": "Mexico City",
 		"State": "DF",
 		"Country": "MEX",
-		"Email": null,
+		"Email": "hector.obregon@mobiik.com",
+		"GravatarHash": "b2206c5acf1ec659e285666f1e12f263",
 		"_placename": "Mexico City, DF MEX",
 		"_fullname": "hector_obregon",
 		"_location": {
@@ -685,8 +686,8 @@
 		"_placename": "Wellington, NZ NZL",
 		"_fullname": "jeremy_boyd",
 		"_location": {
-			"lat": -41.2864603,
-			"lng": 174.776236
+			"lat": -41.2904059,
+			"lng": 174.7815662
 		}
 	},
 	{
@@ -822,15 +823,16 @@
 	{
 		"First": "Ken",
 		"Last": "Spencer",
-		"City": "greensboro",
+		"City": "Sunset Beach",
 		"State": "NC",
 		"Country": "USA",
-		"Email": null,
-		"_placename": "greensboro, NC USA",
+		"Email": "kspencer@solidq.com",
+		"GravatarHash": "d88dd93f0e0760d9fb84fd4575989ec2",
+		"_placename": "Sunset Beach, NC USA",
 		"_fullname": "ken_spencer",
 		"_location": {
-			"lat": 36.0726354,
-			"lng": -79.7919754
+			"lat": 33.880728,
+			"lng": -78.512231
 		}
 	},
 	{
@@ -955,7 +957,8 @@
 		"City": "Elmshorn",
 		"State": "Schleswig Holstein",
 		"Country": "DEU",
-		"Email": null,
+		"Email": "marc.hoeppner@neogeo.com",
+		"GravatarHash": "a5fe1ecde35dc107ea36e3faa06ee35e",
 		"_placename": "Elmshorn, Schleswig Holstein DEU",
 		"_fullname": "marc_hoeppner",
 		"_location": {
@@ -1014,7 +1017,8 @@
 		"City": "Houston",
 		"State": "TX",
 		"Country": "USA",
-		"Email": null,
+		"Email": "megger@eps-software.com",
+		"GravatarHash": "a03f6222e3c5b5f0d590b9a47f0d24a8",
 		"_placename": "Houston, TX USA",
 		"_fullname": "markus_egger",
 		"_location": {
@@ -1026,14 +1030,14 @@
 		"First": "Martin",
 		"Last": "Kulov",
 		"City": "Sofia",
-		"State": "SF",
-		"Country": "BGR",
+		"State": null,
+		"Country": "BG",
 		"Email": null,
-		"_placename": "Sofia, SF BGR",
+		"_placename": "Sofia, BG",
 		"_fullname": "martin_kulov",
 		"_location": {
-			"lat": 44.8079749,
-			"lng": -68.8166829
+			"lat": 42.6978388,
+			"lng": 23.3216697
 		}
 	},
 	{
@@ -1082,15 +1086,16 @@
 	{
 		"First": "Michael",
 		"Last": "Peng",
-		"City": "Taoyuan County",
+		"City": "Taichung",
 		"State": null,
 		"Country": "TWN",
-		"Email": null,
-		"_placename": "Taoyuan County, TWN",
+		"Email": "michaelpeng@michaelpeng.idv.tw",
+		"GravatarHash": "21719ddce64613bcbd79ccbf6c722d96",
+		"_placename": "Taichung, TWN",
 		"_fullname": "michael_peng",
 		"_location": {
-			"lat": 24.9375874,
-			"lng": 121.2168466
+			"lat": 24.2332076,
+			"lng": 120.9417368
 		}
 	},
 	{
@@ -1668,8 +1673,8 @@
 		"_placename": "Reston, VA USA",
 		"_fullname": "vishwas_lele",
 		"_location": {
-			"lat": 38.99133580000001,
-			"lng": -77.3320151
+			"lat": 38.9586307,
+			"lng": -77.35700279999999
 		}
 	}
 ]
