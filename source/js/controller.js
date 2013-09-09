@@ -35,6 +35,10 @@ app.controller('searchCtrl', function($scope, RdList) {
     $scope.show = function(item){
         $scope.displayeditem = item;
     };
+
+    $scope.clear = function(){
+        $scope.searchText = null;
+    };
 });
 
 

@@ -59,8 +59,9 @@ html
 		section.well(ng-controller='searchCtrl')
 			div 
 				form.form-search()
-					div
-						input.search-query(type='text', ng-model='searchText', placeholder='Search Regional Directors', autofocus='autofocus')
+					div.input-append
+						input.span2.search-query(type='text', ng-model='searchText', placeholder='Search Regional Directors', autofocus='autofocus')	
+						button.btn(type='submit', ng-click='clear()') X
 					div.row-fluid
 						div.span9
 							ul.nav.nav-pills
