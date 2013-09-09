@@ -71,35 +71,42 @@ module.exports = function (grunt) {
             // },
             javascript: {
                 files: [c.source + "/js/{,*/}*.js"],
-                tasks: ["copy:debug"]
+                tasks: ["copy:release"]
             },
-            coffee: {
-                files: [c.source + "/js/{,*/}*.coffee"],
-                tasks: ["coffee:debug"]
-            },
-            coffeeTest: {
-                files: ["test/spec/{,*/}*.coffee"],
-                tasks: ["coffee:test"]
-            },
+            
+            // coffee: {
+            //     files: [c.source + "/js/{,*/}*.coffee"],
+            //     tasks: ["coffee:release"]
+            // },
+            
+            // coffeeTest: {
+            //     files: ["test/spec/{,*/}*.coffee"],
+            //     tasks: ["coffee:test"]
+            // },
+            
             jade: {
                 files: [c.source + "/*.jade"],
-                tasks: ["jade:debug"]
+                tasks: ["jade:release"]
             },
+            
             stylus: {
                 files: [c.source + "/**/*.styl"],
-                tasks: ["stylus:debug"]
+                tasks: ["stylus:release"]
             },
-            less: {
-                files: [c.source + "/**/*.less"],
-                tasks: ["less:debug"]
-            },
+            
+            // less: {
+            //     files: [c.source + "/**/*.less"],
+            //     tasks: ["less:release"]
+            // },
+
             m2j: {
                 files: [c.source + "/contents/*.md"],
-                tasks: ["m2j:debug"]
+                tasks: ["m2j:release"]
             },
+            
             livereload: {
                 files: [c.tmp + "/**/*.*", "tmp/js/{,*/}*.js",
-                        c.source + "/images/{,*/}*.{png,svg,jpg,jpeg,webp}"],
+                        c.source + "/**/*.*", "/images/{,*/}*.{png,svg,jpg,jpeg,webp}"],
                 tasks: ["livereload"]
             }
         },
@@ -111,7 +118,7 @@ module.exports = function (grunt) {
             livereload: {
                 options: {
                     middleware: function (connect) {
-                        return [require("grunt-contrib-livereload/lib/utils").livereloadSnippet, mountFolder(connect, c.tmp), mountFolder(connect, c.source)];
+                        return [require("grunt-contrib-livereload/lib/utils").livereloadSnippet, mountFolder(connect, c.release)];
                     }
                 }
             }
@@ -391,55 +398,73 @@ module.exports = function (grunt) {
         });
     });
 
-    grunt.registerTask("releaseAzure", [
-        //"mkdir",
+    // grunt.registerTask("releaseAzure", [
+    //     //"mkdir",
+    //     "jade:release",
+    //     "stylus:release",
+    //     // "less:release",
+    //     //"markdown:release",
+    //     "m2j:release",
+    //     "wintersmith_compile:release",
+    //     "copy:release",
+    //     "setupGitVersion",
+    //     // "replace",
+    //     "useminPrepare",
+    //     "concat",
+    //     "cssmin",
+    //     "rev",
+    //     "usemin",
+    //     // "simplemocha:releaseBuildVerificationTests"
+    // ]);
+
+
+    grunt.registerTask("release", [
+        "clean:release",
         "jade:release",
         "stylus:release",
-        // "less:release",
-        //"markdown:release",
         "m2j:release",
         "wintersmith_compile:release",
         "copy:release",
         "setupGitVersion",
-        // "replace",
         "useminPrepare",
         "concat",
         "cssmin",
         "rev",
         "usemin",
-        // "simplemocha:releaseBuildVerificationTests"
+        //"connect:livereload",
+        //"live-reload"
     ]);
 
+    // grunt.registerTask("ci", [
+    //     "release",
+    //     "test"
+    // ]);
 
-    grunt.registerTask("release", [
-        "clean:release",
-        "releaseAzure"
-    ]);
+    // grunt.registerTask("test", [
+    //     "simplemocha:all",
+    //     "exec:testemCITests"
+    // ]);
 
-    grunt.registerTask("ci", [
-        "release",
-        "test"
-    ]);
+    // grunt.registerTask("debug", [
+    //     "clean:debug",
+    //     "coffee",
+    //     "jade:debug",
+    //     "stylus:debug",
+    //     "m2j:debug",
+    //     "wintersmith_compile:debug"
+    // ]);
 
-    grunt.registerTask("test", [
-        "simplemocha:all",
-        "exec:testemCITests"
-    ]);
+    grunt.registerTask("default", ["release"]);
 
-    grunt.registerTask("debug", [
-        "clean:debug",
-        "coffee",
-        "jade:debug",
-        "stylus:debug",
-        "m2j:debug",
-        "wintersmith_compile:debug"
-    ]);
-
-    grunt.registerTask("default", ["debug-run"]);
-
-    grunt.registerTask("debug-run", [
-        "debug",
-        "connect:livereload",
+    // grunt.registerTask("debug-run", [
+    //     "debug",
+    //     "connect:livereload",
+    //     "open",
+    //     "livereload-start",
+    //     "watch"
+    // ]);
+    
+    grunt.registerTask("live-reload", [
         "open",
         "livereload-start",
         "watch"
