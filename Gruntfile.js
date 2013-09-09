@@ -435,15 +435,15 @@ module.exports = function (grunt) {
         //"live-reload"
     ]);
 
-    // grunt.registerTask("ci", [
-    //     "release",
-    //     "test"
-    // ]);
+    grunt.registerTask("ci", [
+        "release",
+        "test"
+    ]);
 
-    // grunt.registerTask("test", [
-    //     "simplemocha:all",
-    //     "exec:testemCITests"
-    // ]);
+    grunt.registerTask("test", [
+        "simplemocha:all",
+        "exec:testemCITests"
+    ]);
 
     // grunt.registerTask("debug", [
     //     "clean:debug",
