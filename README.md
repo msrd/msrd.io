@@ -8,6 +8,10 @@ Status](https://travis-ci.org/msrd/msrd.io.png)](https://travis-ci.org/msrd/msrd
 
 # Prototype Branch
 
+Latest deploy of the Prototype branch:
+http://msrdstatic1.azurewebsites.net/
+
+
 This is the working branch for the first full release of the RD web
 site. It includes these features:
 
