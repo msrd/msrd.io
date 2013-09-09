@@ -8,7 +8,6 @@ release: clean
 	@echo Building site into 'release'
 	grunt clean release
 	@echo Cleaning temporary folder
-	rm -rf tmp
 
 deploy: release
 	@echo Syncing release folder with Amazon S3
