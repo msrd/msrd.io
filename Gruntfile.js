@@ -302,7 +302,7 @@ module.exports = function (grunt) {
                         dot: true,
                         cwd: c.source,
                         dest: c.release,
-                        src: ["components/**/*.*", "js/*.js", "images/{,*/}*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "web.config"]        // don't copy CSS for release; usemin does it
+                        src: ["components/**/*.*", "js/*.js", "font/*.*",  "images/{,*/}*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "web.config"]        // don't copy CSS for release; usemin does it
                     },
                     {
                         expand: true,
@@ -321,7 +321,7 @@ module.exports = function (grunt) {
                         dot: true,
                         cwd: c.source,
                         dest: c.tmp,
-                        src: ["images/{,*/}*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "styles/*.css", "web.config"]
+                        src: ["images/{,*/}*.*", "font/*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "styles/*.css", "web.config"]
                     },
                     { src: 'source/rdlist.json', dest: '.tmp/rdlist.json' }
                 ]
