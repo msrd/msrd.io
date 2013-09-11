@@ -398,24 +398,24 @@ module.exports = function (grunt) {
         });
     });
 
-    // grunt.registerTask("releaseAzure", [
-    //     //"mkdir",
-    //     "jade:release",
-    //     "stylus:release",
-    //     // "less:release",
-    //     //"markdown:release",
-    //     "m2j:release",
-    //     "wintersmith_compile:release",
-    //     "copy:release",
-    //     "setupGitVersion",
-    //     // "replace",
-    //     "useminPrepare",
-    //     "concat",
-    //     "cssmin",
-    //     "rev",
-    //     "usemin",
-    //     // "simplemocha:releaseBuildVerificationTests"
-    // ]);
+    grunt.registerTask("releaseAzure", [
+        //"mkdir",
+        "jade:release",
+        "stylus:release",
+        // "less:release",
+        //"markdown:release",
+        "m2j:release",
+        "wintersmith_compile:release",
+        "copy:release",
+        "setupGitVersion",
+        // "replace",
+        "useminPrepare",
+        "concat",
+        "cssmin",
+        "rev",
+        "usemin",
+        // "simplemocha:releaseBuildVerificationTests"
+    ]);
 
 
     grunt.registerTask("release", [
