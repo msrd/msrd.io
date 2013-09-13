@@ -43,7 +43,15 @@
 				var icon = person.Icon;
 
 				markers.push(marker);
-				var content = '<div class="info-window"><span class="director-name">' + first + ' ' + last + '</span><span class="director-location">' + city + ', ' + state + ' ' + country + '</span> <div class="circularIcon"><img style="border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;" src="http://www.gravatar.com/avatar/' + person.GravatarHash + '"/></div>	</div>';
+                
+                var marcus = '';
+                if (state === null) {
+                    marcus = city + ' ' + country;
+                } else {
+                    marcus = city + ', ' + state + ' ' + country;
+                }
+
+				var content = '<div class="info-window"><span class="director-name">' + first + ' ' + last + '</span><span class="director-location">' + marcus + '</span> <div class="circularIcon"><img style="border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;" src="http://www.gravatar.com/avatar/' + person.GravatarHash + '"/></div>	</div>';
 				bindInfoWindow(marker, map, infoWindow, content);
 			}
 			var mc = new MarkerClusterer(map, markers, mcOptions);
