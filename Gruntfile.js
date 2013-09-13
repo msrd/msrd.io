@@ -445,24 +445,24 @@ module.exports = function (grunt) {
         "exec:testemCITests"
     ]);
 
-    // grunt.registerTask("debug", [
-    //     "clean:debug",
-    //     "coffee",
-    //     "jade:debug",
-    //     "stylus:debug",
-    //     "m2j:debug",
-    //     "wintersmith_compile:debug"
-    // ]);
+    grunt.registerTask("debug", [
+        "clean:debug",
+        "coffee",
+        "jade:debug",
+        "stylus:debug",
+        "m2j:debug",
+        "wintersmith_compile:debug"
+    ]);
 
     grunt.registerTask("default", ["release"]);
 
-    // grunt.registerTask("debug-run", [
-    //     "debug",
-    //     "connect:livereload",
-    //     "open",
-    //     "livereload-start",
-    //     "watch"
-    // ]);
+    grunt.registerTask("debug-run", [
+        "debug",
+        "connect:livereload",
+        "open",
+        "livereload-start",
+        "watch"
+    ]);
     
     grunt.registerTask("live-reload", [
         "open",
