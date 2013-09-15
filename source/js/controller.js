@@ -45,8 +45,8 @@ app.controller('searchCtrl', function($scope, RdList) {
 
 app.controller('newsCtrl', function($scope, $http){
 
-    $http.get('../articles.json').success(function(callback){
-        $scope.articles = callback;
+    $http.get('../articles.json').success(function(results){
+        $scope.articles = results;
     });
 
 });
