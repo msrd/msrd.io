@@ -141,13 +141,13 @@ module.exports = function (grunt) {
         wintersmith_compile: {
             release: {
                 options: {
-                    config: c.source + "/config.json",
+                    config: c.source + "/articles.ws.json",
                     output: c.release + "/articles"
                 }
             },
             debug: {
                 options: {
-                    config: c.source + "/config.json",
+                    config: c.source + "/articles.ws.json",
                     output: c.tmp + "/articles"
                 }
             }
@@ -333,12 +333,12 @@ module.exports = function (grunt) {
         m2j: {
             release: {
                 options: { minify: false, width: 180 },
-                src: [c.source + "/contents/*.md"],
+                src: [c.source + "/articles/*.md"],
                 dest: c.release + "/articles.json"
             },
             debug: {
                 options: { minify: false, width: 180 },
-                src: [c.source + "/contents/*.md"],
+                src: [c.source + "/articles/*.md"],
                 dest: c.tmp + "/articles.json"
             },
         },
