@@ -1,7 +1,8 @@
 {
+  "contents": "articles",
   "locals": {
-    "owner": "Someone",
-    "description": "Ramblings of an immor(t)al demigod"
+    "owner": "msrd",
+    "description": "msrd articles"
   },
   "require": {
     "moment": "moment",
