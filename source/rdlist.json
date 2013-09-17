@@ -90,7 +90,8 @@
 		"City": "Binyamina",
 		"State": null,
 		"Country": "ISR",
-		"Email": null,
+		"Email": "alonf@codevalue.net",
+		"GravatarHash": "c21910ad932023a2ea77b71c3c7cc93a",
 		"_placename": "Binyamina, ISR",
 		"_fullname": "alon_fliess"
 	},
@@ -148,8 +149,8 @@
 		"_placename": "Toronto, ON CAN",
 		"_fullname": "barry_gervin",
 		"_location": {
-			"lat": 43.6705767,
-			"lng": -79.3818208
+			"lat": 43.6331542,
+			"lng": -79.41507930000002
 		}
 	},
 	{
@@ -710,16 +711,16 @@
 	{
 		"First": "Joe",
 		"Last": "Homnick",
-		"City": "Boca Raton",
+		"City": "Miami",
 		"State": "FL",
 		"Country": "USA",
 		"Email": "joe@homnick.com",
 		"GravatarHash": "fbd42c7b81d42bdb71d62b7f8795bf9e",
-		"_placename": "Boca Raton, FL USA",
+		"_placename": "Miami, FL USA",
 		"_fullname": "joe_homnick",
 		"_location": {
-			"lat": 26.3586885,
-			"lng": -80.0830984
+			"lat": 25.7889689,
+			"lng": -80.2264393
 		}
 	},
 	{
@@ -1189,15 +1190,16 @@
 	{
 		"First": "Pablo",
 		"Last": "Pelaez",
-		"City": "Leon",
-		"State": "Leon",
+		"City": "Madrid",
+		"State": "Madrid",
 		"Country": "ESP",
-		"Email": null,
-		"_placename": "Leon, Leon ESP",
+		"Email": "pablo@plainconcepts.com",
+		"GravatarHash": "9e17c9563e43b31be93acd6f864929bc",
+		"_placename": "Madrid, Madrid ESP",
 		"_fullname": "pablo_pelaez",
 		"_location": {
-			"lat": 42.281998,
-			"lng": -78.94745
+			"lat": 44.792145,
+			"lng": -75.0302
 		}
 	},
 	{
