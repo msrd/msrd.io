@@ -105,7 +105,8 @@
 		"City": "Medellin",
 		"State": "Antioquia",
 		"Country": "COL",
-		"Email": null,
+		"Email": "andres.fontan@alcuadrado.com",
+		"GravatarHash": "e53167d265b4604c846b2a5a662f7ad4",
 		"_placename": "Medellin, Antioquia COL",
 		"_fullname": "andres_fontan",
 		"_location": {
@@ -919,8 +920,8 @@
 		"_placename": "Zurich, ZH SWI",
 		"_fullname": "laurent_bugnion",
 		"_location": {
-			"lat": 47.3686444,
-			"lng": 8.5314296
+			"lat": 47.36857330000001,
+			"lng": 8.5313473
 		}
 	},
 	{
@@ -1660,11 +1661,7 @@
 		"Email": "venkat@venkatarangan.com",
 		"GravatarHash": "3c9cb546adce0f20386fef2688928175",
 		"_placename": "Chennai, Tamilnadu IND",
-		"_fullname": "venkatarangan_thirumalai",
-		"_location": {
-			"lat": 13.0524139,
-			"lng": 80.25082460000002
-		}
+		"_fullname": "venkatarangan_thirumalai"
 	},
 	{
 		"First": "Vinod",
