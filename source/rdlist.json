@@ -771,7 +771,8 @@
 		"City": "Windermere",
 		"State": "FL",
 		"Country": "USA",
-		"Email": null,
+		"Email": "john@johnpapa.net",
+		"GravatarHash": "0d3794fe37746ea54926ca6878712721",
 		"_placename": "Windermere, FL USA",
 		"_fullname": "john_papa",
 		"_location": {
@@ -1661,7 +1662,11 @@
 		"Email": "venkat@venkatarangan.com",
 		"GravatarHash": "3c9cb546adce0f20386fef2688928175",
 		"_placename": "Chennai, Tamilnadu IND",
-		"_fullname": "venkatarangan_thirumalai"
+		"_fullname": "venkatarangan_thirumalai",
+		"_location": {
+			"lat": 13.0524139,
+			"lng": 80.25082460000002
+		}
 	},
 	{
 		"First": "Vinod",
