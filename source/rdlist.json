@@ -193,7 +193,8 @@
 		"City": "Nashville",
 		"State": "TN",
 		"Country": "USA",
-		"Email": null,
+		"Email": "billyhollis@gmail.com",
+		"GravatarHash": "c4134afc9ad30bd84b725c11ef220275",
 		"_placename": "Nashville, TN USA",
 		"_fullname": "billy_hollis",
 		"_location": {
@@ -857,13 +858,14 @@
 		"Last": "Özsü",
 		"City": "Istanbul",
 		"State": null,
-		"Country": "TUR",
-		"Email": null,
-		"_placename": "Istanbul, TUR",
+		"Country": "TR",
+		"Email": "kozsu@i-con.co",
+		"GravatarHash": "4e4dc096a33c1c7889d9a8f6008a3c48",
+		"_placename": "Istanbul, TR",
 		"_fullname": "kerem_özsü",
 		"_location": {
-			"lat": 40.99904799999999,
-			"lng": 29.03967999999999
+			"lat": 41.00527,
+			"lng": 28.97696
 		}
 	},
 	{
