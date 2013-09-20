@@ -1632,7 +1632,8 @@
 		"City": "Carlsbad",
 		"State": "CA",
 		"Country": "USA",
-		"Email": null,
+		"Email": "TimHuck@InterKnowlogy.com",
+		"GravatarHash": "33c3a737ec5d386337bc1b3ec0aadf40",
 		"_placename": "Carlsbad, CA USA",
 		"_fullname": "tim_huckaby",
 		"_location": {
