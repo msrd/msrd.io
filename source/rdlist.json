@@ -58,16 +58,13 @@
 	{
 		"First": "Alex",
 		"Last": "Thissen",
-		"City": "Tilburg",
+		"City": "Hedel",
 		"State": null,
 		"Country": "NLD",
-		"Email": null,
-		"_placename": "Tilburg, NLD",
-		"_fullname": "alex_thissen",
-		"_location": {
-			"lat": 51.560596,
-			"lng": 5.0919143
-		}
+		"Email": "athissen@killer-apps.nl",
+		"GravatarHash": "5ea1af5ae11530c2c143122600325009",
+		"_placename": "Hedel, NLD",
+		"_fullname": "alex_thissen"
 	},
 	{
 		"First": "Alexander",
