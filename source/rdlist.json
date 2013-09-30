@@ -19,7 +19,8 @@
 		"City": "Cairo",
 		"State": "Egypt",
 		"Country": "EGY",
-		"Email": null,
+		"Email": "Ahmed.Bahaa@CompuPharaohs.com",
+		"GravatarHash": "d279ad238feedc1e05aecd7022bdc2b2",
 		"_placename": "Cairo, Egypt EGY",
 		"_fullname": "ahmed_bahaa_farid",
 		"_location": {
@@ -60,11 +61,15 @@
 		"Last": "Thissen",
 		"City": "Hedel",
 		"State": null,
-		"Country": "NLD",
+		"Country": "ND",
 		"Email": "athissen@killer-apps.nl",
 		"GravatarHash": "5ea1af5ae11530c2c143122600325009",
-		"_placename": "Hedel, NLD",
-		"_fullname": "alex_thissen"
+		"_placename": "Hedel, ND",
+		"_fullname": "alex_thissen",
+		"_location": {
+			"lat": 51.7515122,
+			"lng": 5.2746352
+		}
 	},
 	{
 		"First": "Alexander",
