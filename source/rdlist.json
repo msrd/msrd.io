@@ -1226,7 +1226,8 @@
 		"City": "Derry",
 		"State": "NH",
 		"Country": "USA",
-		"Email": null,
+		"Email": "patrick@dtsnh.com",
+		"GravatarHash": "95a986e5afb23e6d2dde485dfef02c9d",
 		"_placename": "Derry, NH USA",
 		"_fullname": "patrick_hynds",
 		"_location": {
