@@ -1,70 +1,96 @@
-(function() {
-	"use strict";
+(function () {
+    "use strict";
 
-	function initialize() {
+    var gmap = null;
+    var pins = [];
+    var InfoBoxes = [];
+    var LastpinInfobox = null;
 
-		var center = new google.maps.LatLng(26.130, 14.111)
-		var options = {
-			'zoom': 2,
-			'center': center,
-			'mapTypeId': google.maps.MapTypeId.ROADMAP
-		};
-		var map = new google.maps.Map(document.getElementById('map_canvas'), options);
-		var mcOptions = {
-			gridSize: 100,
-			maxZoom: 7
-		};
+    function initialize() {
+        var map = new Microsoft.Maps.Map(document.getElementById("map_canvas"), { credentials: "At03B6phBj6FiEqWskZOWn2KaXMDBJe5Jp_nk02jszTCPxiWrg4uZpN0a-kOatvR" });
+        gmap = map;
+    }
+    function parseLocation(people) {
+        var i, peopleCount;
+        var markers = [];
 
-		function parseLocation(people) {
-			var i, peopleCount;
-			var markers = [];
-			var infoWindow = new google.maps.InfoWindow();
-			var latLongFunc = google.maps.LatLng;
-			var markerFunc = google.maps.Marker;
-			var marker;
+        var marker;
 
-			for (i = 0, peopleCount = people.length; i < peopleCount; i++) {
-				var person = people[i];
+        for (i = 0, peopleCount = people.length; i < peopleCount; i++) {
+            var person = people[i];
 
-				// If there's no location, can't map: move to next person
-				if (!person.hasOwnProperty('_location'))
-					continue;
+            // If there's no location, can't map: move to next person
+            if (!person.hasOwnProperty('_location'))
+                continue;
 
-				var latLng = new latLongFunc(person._location.lat, person._location.lng);
-				marker = new markerFunc({
-					'position': latLng,
-				});
+            var last = person.Last;
+            var first = person.First;
+            var city = person.City;
+            var state = person.State;
+            var country = person.Country;
+            var icon = person.Icon;
 
-				var last = person.Last;
-				var first = person.First;
-				var city = person.City;
-				var state = person.State;
-				var country = person.Country;
-				var icon = person.Icon;
+            markers.push(marker);
 
-				markers.push(marker);
-                
-                var marcus = '';
-                if (state === null) {
-                    marcus = city + ' ' + country;
-                } else {
-                    marcus = city + ', ' + state + ' ' + country;
-                }
+            var marcus = '';
+            if (state === null) {
+                marcus = city + ' ' + country;
+            } else {
+                marcus = city + ', ' + state + ' ' + country;
+            }
 
-				var content = '<div class="info-window"><span class="director-name">' + first + ' ' + last + '</span><span class="director-location">' + marcus + '</span> <div class="circularIcon"><img style="border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;" src="http://www.gravatar.com/avatar/' + person.GravatarHash + '"/></div>	</div>';
-				bindInfoWindow(marker, map, infoWindow, content);
-			}
-			var mc = new MarkerClusterer(map, markers, mcOptions);
-		};
 
-		$.getJSON("/rdlist.json", parseLocation);
+            // Retrieve the latitude and longitude values- normalize the longitude value
+            var latVal = parseInt(person._location.lat);
+            var longVal = Microsoft.Maps.Location.normalizeLongitude(parseInt(person._location.lng));
 
-		function bindInfoWindow(marker, map, infoWindow, content) {
-			google.maps.event.addListener(marker, 'click', function () {
-					infoWindow.setContent(content);
-					infoWindow.open(map, marker);
-				});
-		}
-	}
-	google.maps.event.addDomListener(window, 'load', initialize);
+            var latlong = new Microsoft.Maps.Location(latVal, longVal);
+            // Add a pin to the center of the map
+            var pin = new Microsoft.Maps.Pushpin(latlong, { text: '' });
+
+            // Create the infobox for the pushpin
+            var pinInfobox = new Microsoft.Maps.Infobox(pin.getLocation(),
+                { title: '<div class="info-window"><span class="director-name">' + first + ' ' + last + '</span></div>' ,
+                    description: '<div class="info-window"><span class="director-location">' + marcus + '</span> <div class="circularIcon"><img style="border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;" src="http://www.gravatar.com/avatar/' + person.GravatarHash + '"/></div>	</div>',
+                    visible: false,
+                    offset: new Microsoft.Maps.Point(0, 15)
+                });
+
+            // Add handler for the pushpin click event.
+            Microsoft.Maps.Events.addHandler(pin, 'click', displayInfobox);
+
+            // Hide the infobox when the map is moved.
+            Microsoft.Maps.Events.addHandler(gmap, 'viewchange', hideInfobox);
+
+
+            // Add the pushpin and infobox to the map
+            gmap.entities.push(pin);
+            gmap.entities.push(pinInfobox);
+
+            pins.push(pin);
+            InfoBoxes.push(pinInfobox)
+        }
+    };
+
+    function displayInfobox(e) {
+
+         if (LastpinInfobox != null) {
+            LastpinInfobox.setOptions({ visible: false });
+        }
+        var idx = pins.indexOf(e.target);
+        var pinInfobox = InfoBoxes[idx];
+        pinInfobox.setOptions({ visible: true });
+        LastpinInfobox = pinInfobox
+    }
+
+    function hideInfobox(e) {
+        if (LastpinInfobox != null) {
+            LastpinInfobox.setOptions({ visible: false });
+        }
+    }
+
+    $.getJSON("/rdlist.json", parseLocation);
+    $(function () { initialize(); })
+
+
 })();
