@@ -1,0 +1,102 @@
+extends templates/h5bp
+
+html
+	block hero
+
+		// Hero image
+		div.container-fluid
+			div.center.hero-unit
+				div.container
+					img(src='../images/logo/msrd-logo-192px-alpha.png')
+
+	block content
+		// What is a RD
+		section.well
+			.row-fluid
+				.span12.lead.text-center
+					h1.rdHero We are independent developers bringing you and Microsoft together.
+					.row-fluid
+						section.span4
+							i.icon-headphones
+							p.mission
+								strong We hear
+								|  what you love, what hurts, and what you want changed.
+						section.span4
+							i.icon-comments
+							p.mission
+								strong We share
+								|  our honest perspective with Microsoft, then amplify the latest from Redmond with the community.
+						section.span4
+							i.icon-heart-empty
+							p.mission
+								strong We act
+								|  to make the Microsoft community a happier place.
+
+
+		// MAP: I'm the map, I'm the map
+		//
+		section.well.mapSectionSize
+			#map_canvas()
+
+		// NEWS
+		//
+		section.well(ng-controller='newsCtrl')
+			div.row-fluid
+				article.span4(ng-repeat='article in articles | orderBy:date')
+					div
+						a(ng-href='articles/{{article.basename}}.html')
+						h4.bullet &bull;
+					header
+						a(ng-href='articles/{{article.basename}}.html')
+						h4(ng-bind='article.title')
+					div(ng-bind='article.preview')
+					footer
+						a(ng-href='articles/{{article.basename}}.html') Read More
+
+
+		// SEARCH
+		//
+		section.well(ng-controller='searchCtrl')
+			div 
+				form.form-search()
+					div.input-append
+						input.span2.search-query(type='text', ng-model='searchText', placeholder='search', autofocus='autofocus')	
+						button.btn(type='submit', ng-click='clear()') X
+					div.row-fluid
+						div.span9
+							ul.nav.nav-pills
+								li.rdpill(ng-animate='"animate"', ng-repeat='item in items | filter:searchText')
+									a(ng-mouseover='show(item)', ng-href='#') 
+										{{item.FullName}}
+						div.span3
+							div
+								img.circular(ng-src='{{displayeditem.Avatar}}', style='margin-bottom:10px')
+							div
+								{{displayeditem.First}} {{displayeditem.Last}}
+							div
+								{{displayeditem.City}} {{displayeditem.Country}}
+
+
+
+		section.well
+			div
+				h3 About the RD Program
+				p
+					:markdown
+						We are community.
+
+						Not only are we a close group of technology experts, we span the globe and
+						spend an excessive amount of time authoring leading technology books, articles
+						and blogs as well as speaking at events that range from the biggest conferences
+						in the industry to local user group meetings. 
+
+						We love what we do. 
+
+						The RD program is exclusive.  Having been around since 1993, Regional Directors
+						represent the best of the Microsoft Developer Community.  While we come
+						together in a Microsoft program we work on all platforms and technologies.  We
+						believe, however, in Microsoft’s commitment to the developer community and we
+						work directly with the company to help enhance their products and bring the
+						market the best of technology innovation. 
+
+

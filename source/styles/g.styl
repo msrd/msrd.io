@@ -1,0 +1,240 @@
+/*!! file:g.styl        */
+
+@import 'modules/rhythm'
+
+// These three constants come straight from gridlover.net
+// Ratios taken originally from http://lamb.cc/typograph/ (Specifically the 3:5 Fibonacci)
+// Now adapted from http://pumpula.net/p/gridlover/beta/#font:16/line:1.500/scale:1.625/measure:960/grid:hide
+body-font-size = 1.00rem
+body-line-height = 1.50
+scale-factor = 1.6250
+vertical-rhythm = 24px      // default browser type (16px usually) * body-font-size * body-line-height
+show-grid = true
+
+$whiteish = hsl(0, 50, 99)
+$blackish = hsl(0, 0, 7)
+$logocolor = hsl(202, 100%, 38%)
+
+$redish   = spin($logocolor, 180%)
+$headercolor = $logocolor
+$linkcolor = $logocolor
+
+$measure = 42rem
+
+.rdHero 
+  color #5c6a73
+  text-align center
+  font-size 3rem
+  line-height 1.2em
+  font-weight 300
+
+i
+  font-size 7.472135999999999rem
+  line-height 1.5em
+
+.icon-headphones
+  color #0acfac
+
+.icon-comments
+  color #008edc
+
+.icon-heart-empty
+  color #d55340
+
+.bullet
+    text-align center
+    font-size 2rem
+    color $redish
+
+
+  
+// Formatting for the "mission statement" where the 3 big icons go
+.mission
+  margin-top:1.5em
+  
+//*
+// box-sizing: border-box
+
+html
+  background url(/images/debut_light.png) 
+
+body
+  rhythm(0)
+  font-family   sans-serif
+  //width         $measure
+  margin        0 auto
+  color         $blackish
+  
+.measure
+    measure()
+
+.vertical-grid
+    vertical-grid(vertical-rhythm)
+
+h1
+  rhythm(4, 1, 2)
+  color $headercolor
+  //margin-left  -0.3 rem
+  letter-spacing -2px
+  text-rendering optimizelegibility
+
+  span
+    color lightGray
+
+h2
+  rhythm(2, 2, 1)
+  color $headercolor
+  // See http://➡.ws/border-top
+  //background url('/images/1x1.svg') top left repeat-x
+
+h3
+  rhythm(1, 1, 0)
+  color $headercolor
+
+h4
+  rhythm(0, 0, 0)
+
+p.slug
+  color $redish
+  font-weight bold
+  rhythm(0, -2, 0)
+
+span.invert
+  color $whiteish
+  background-color: $logocolor
+  padding: 4px
+
+.medium
+  display none
+
+// Fancy hyperlinks
+a:visited, a:link
+  color darken($linkcolor, 20%)
+  text-decoration none
+  //border-bottom 1px solid lighten($linkcolor, 60%)
+
+a:active, a:hover
+  //border-bottom 1px solid darken($linkcolor, 20%)
+  //background lighten($linkcolor, 70%)
+
+// Scott's "house style" typography decisions:
+// Hanging puncation, squares as bullets, small roman for numbering
+// Proper abbreviations and figure captions
+
+p, ul, ol
+  rhythm(0, 0, 1)
+ 
+abbr
+  font-size 0.9em
+  text-transform uppercase
+  letter-spacing 0.1em
+
+ul
+  padding 0
+  list-style: square
+
+ol
+  padding 0
+  list-style: lower-roman
+
+figure
+  a:active, a:hover, a:visited, a:link
+    border-bottom 0px
+
+figcaption
+  color darkGray
+  font-variant small-caps
+  font-size 0.9em
+  margin-top    0rem
+  margin-bottom 1.5rem
+
+
+
+// // 20ems = 320px -  smartphone 
+// @media screen and (max-width: 20em) 
+//   body
+//     font-size 87.5%
+
+// // 48ems = 768px - iPad portrait
+// @media screen and (min-width: 48em)
+//   .medium
+//     display block
+
+
+// // 64ems = 1024px - iPad landscape
+// @media screen and (min-width: 64em)
+//   body
+//     max-width 35em
+//     line-height 1.75em
+//     font-size 112.5%
+
+// // 100ems = 1600px - desktop
+// @media screen and (min-width: 100em)
+//   body
+//     line-height 2em
+
+////////////////
+// Map Module //
+////////////////
+
+.mapSectionSize
+  height 400px
+
+#map_canvas
+  height 100%
+  width 100%
+  position relative
+
+.info-window
+  font-family sans-serif
+  color #333
+  & > *
+    display block
+
+.director-name
+  font-weight 700
+
+///////////////////
+// Search Module //
+///////////////////
+
+.rdpill
+  display inline
+  text-align left
+  float left
+  white-space nowrap
+  overflow hidden
+  width 159px
+  
+.circular
+  border-radius 50%  
+  -webkit-border-radius 50%
+  -moz-border-radius 50%
+  box shadow 0 0 2px rgba(0, 0, 0, .2)
+  -webkit-box-shadow 0 0 0 2px rgba(0, 0, 0, .2)
+  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, .2)
+  
+.animate-enter, 
+.animate-leave
+    -webkit-transition 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all
+    -moz-transition 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all
+    -ms-transition 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all
+    -o-transition 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all
+    transition 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all
+    position relative
+    display block
+ 
+
+.animate-enter.animate-enter-active, 
+.animate-leave 
+    opacity 1
+    bottom 0
+    height 30px
+
+.animate-leave.animate-leave-active,
+.animate-enter 
+    opacity 0
+    bottom -50px
+    height 0px
+
+

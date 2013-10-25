@@ -1,0 +1,19 @@
+{
+  "contents": "articles",
+  "locals": {
+    "owner": "msrd",
+    "description": "msrd articles"
+  },
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  }
+}

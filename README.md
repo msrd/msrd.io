@@ -3,7 +3,23 @@ msrd.io
 The web site for the Microsoft Regional Directors, a global community of
 independent Microsoft ambasadors.  
 
-# STOP!
+[![Build
+Status](https://travis-ci.org/msrd/msrd.io.png)](https://travis-ci.org/msrd/msrd.io)
+
+# Prototype Branch
+
+Latest deploy of the Prototype branch:
+http://msrdstatic1.azurewebsites.net/
+
+
+This is the working branch for the first full release of the RD web
+site. It includes these features:
+
+- an interactive map of the RDs
+- a full, searchable list of RDs
+- news articles
+- logo details
+
 
 _May 30, 2013_
 
@@ -28,11 +44,11 @@ Technical details about the RD site
 
 Getting Started
 ---------------
-	% npm install
-	% npm install -g supervisor
-	% ./autostart
+ - `npm install`
+ - `npm install -g bower` <-- Installs the [Bower](http://bower.io) client side package manager
+ - `bower install` <-- Brings in local copies of needed dependencies (ex: `jquery`)
+ - `grunt` <-- Builds/Compiles/MagicStuff and launches browser to test site
 
-Now open http://localhost:3000 to view
 
 Stretch goals for the site
 --------------------------

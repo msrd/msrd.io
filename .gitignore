@@ -1,4 +1,13 @@
 node_modules
-public/g.css
 .DS_Store
 npm-debug.log
+release
+tmp
+source/styles/g.css
+source/components/*
+
+# Vim on windows backup file
+*~
+
+# azure (kudu) build output
+artifacts/
