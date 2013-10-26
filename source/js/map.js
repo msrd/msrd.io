@@ -41,8 +41,8 @@
 
 
             // Retrieve the latitude and longitude values- normalize the longitude value
-            var latVal = parseInt(person._location.lat);
-            var longVal = Microsoft.Maps.Location.normalizeLongitude(parseInt(person._location.lng));
+            var latVal = person._location.lat;
+            var longVal = Microsoft.Maps.Location.normalizeLongitude(person._location.lng);
 
             var latlong = new Microsoft.Maps.Location(latVal, longVal);
             // Add a pin to the center of the map
@@ -90,7 +90,7 @@
     }
 
     $.getJSON("/rdlist.json", parseLocation);
-    $(function () { initialize(); })
+    $(function () { initialize(); });
 
 
 })();
