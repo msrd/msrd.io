@@ -37,7 +37,7 @@ app.controller('searchCtrl', function($scope, RdList) {
     };
 
     $scope.clear = function(){
-        $scope.searchText = null;
+        $scope.search.FullName = null;
     };
 });
 
