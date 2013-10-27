@@ -60,12 +60,12 @@ html
 			div 
 				form.form-search()
 					div.input-append
-						input.span2.search-query(type='text', ng-model='searchText', placeholder='search', autofocus='autofocus')	
+						input.span2.search-query(type='text', ng-model='search.FullName', placeholder='search', autofocus='autofocus')	
 						button.btn(type='submit', ng-click='clear()') X
 					div.row-fluid
 						div.span9
 							ul.nav.nav-pills
-								li.rdpill(ng-animate='"animate"', ng-repeat='item in items | filter:searchText')
+								li.rdpill(ng-animate='"animate"', ng-repeat='item in items | filter:search')
 									a(ng-mouseover='show(item)', ng-href='#') 
 										{{item.FullName}}
 						div.span3
