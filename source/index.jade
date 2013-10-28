@@ -71,13 +71,12 @@ html
 						div.span3
 							div
 								img.circular(ng-src='{{displayeditem.Avatar}}', style='margin-bottom:10px')
+							div(ng-bind="displayeditem.FullName
 							div
-								{{displayeditem.First}} {{displayeditem.Last}}
-							div
-								{{displayeditem.City}} {{displayeditem.Country}}
-							div
-								{{displayeditem.Email}}
-
+								span(ng-bind="displayeditem.City")
+								&nbsp;
+								span(ng-bind="displayeditem.Country")
+							div(ng-bind="displayeditem.Email")
 
 
 		section.well
