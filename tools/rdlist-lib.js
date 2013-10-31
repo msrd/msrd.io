@@ -103,19 +103,30 @@
             // callback();
         };
 
+        var encodeEmail = function ( item ) {
+            var email = item.Email;
+            var result = [];
+            for ( var i = 0; i < email.length; i++ ) {
+                var code = email.charCodeAt( i ) + 1;
+                result.push( code );
+            }
+            item.Email = result;
+        };
+
         var counter = 0;
         var doSteps = function(item, callback) {
             console.log(counter + ':' + item.First + ' ' + item.Last);
             applyGravatarHash(item);
             concatPlaceName(item);
             makeFullName(item);
+            encodeEmail(item);
 
             setTimeout(function() {
                 gpsLookup(item, callback);
             }, request_throttle);
 
             counter++;
-        }
+        };
 
         if (simulate) {
             console.log('WARNING: In simulation mode. lat/long coordinates are hard-coded.');
