@@ -1051,9 +1051,10 @@
 		"First": "Martin",
 		"Last": "Kulov",
 		"City": "Sofia",
-		"State": null,
+		"State": "SF",
 		"Country": "BG",
-		"Email": null,
+		"Email": "martin@kulov.net",
+		"GravatarHash": "a1669d2dc65d4c6d121251226c0e48c8",
 		"_placename": "Sofia, BG",
 		"_fullname": "martin_kulov",
 		"_location": {
