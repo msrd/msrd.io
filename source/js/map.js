@@ -9,7 +9,7 @@
     function initialize() {
         var map = new Microsoft.Maps.Map(document.getElementById("map_canvas"),
             {
-                credentials: "AuY3JLz2ISjUyOUe-kbE0JO7UH14IFBWqA4hGxY-ORCu0OM1Z45GwZIllovjUjIC",
+                credentials: "Av44fMg4QsqyF21CcE8lL9ygerMqenWrwEAPRDzAEgPHtRUPqTmf6u1C2HZ6iKPT",
                 center: new Microsoft.Maps.Location(30, 0),
                 mapTypeId: Microsoft.Maps.MapTypeId.road,
                 zoom: 2
