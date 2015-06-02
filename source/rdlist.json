@@ -794,6 +794,21 @@
 		}
 	},
 	{
+		"First": "Jouni",
+		"Last": "Heikniemi",
+		"City": "Espoo",
+		"State": null,
+		"Country": "FIN",
+		"Email": "jouni@offbeat.fi",
+		"GravatarHash": "d6afb144e1063c9c9254235145af8705",
+		"_placename": "Espoo, FIN",
+		"_fullname": "jouni_heikniemi",
+		"_location": {
+			"lat": 60.1643665,
+			"lng": 24.8378191
+		}
+	},
+	{
 		"First": "Juan",
 		"Last": "Mestas",
 		"City": "Lima",
