@@ -9,8 +9,8 @@
 		"_placename": "NEUTRAL BAY, SYDNEY NSW AUS",
 		"_fullname": "adam_cogan",
 		"_location": {
-			"lat": -33.8316338,
-			"lng": 151.2221423
+			"lat": -33.8322525,
+			"lng": 151.2218552
 		}
 	},
 	{
@@ -24,8 +24,8 @@
 		"_placename": "Cairo, Egypt EGY",
 		"_fullname": "ahmed_bahaa_farid",
 		"_location": {
-			"lat": 30.0444196,
-			"lng": 31.2357116
+			"lat": 30.0649143,
+			"lng": 31.3543449
 		}
 	},
 	{
@@ -52,8 +52,8 @@
 		"_placename": "London, GBR",
 		"_fullname": "alex_norcliffe",
 		"_location": {
-			"lat": 51.51121389999999,
-			"lng": -0.1198244
+			"lat": 51.5073509,
+			"lng": -0.1277583
 		}
 	},
 	{
@@ -97,8 +97,8 @@
 		"_placename": "Binyamina-Giv'at Ada, ISR",
 		"_fullname": "alon_fliess",
 		"_location": {
-			"lat": 32.517078,
-			"lng": 34.955096
+			"lat": 32.5581437,
+			"lng": 34.9632282
 		}
 	},
 	{
@@ -112,8 +112,8 @@
 		"_placename": "Medellin, Antioquia COL",
 		"_fullname": "andres_fontan",
 		"_location": {
-			"lat": 6.235925,
-			"lng": -75.575137
+			"lat": 6.230833,
+			"lng": -75.59055599999999
 		}
 	},
 	{
@@ -127,8 +127,8 @@
 		"_placename": "New York, NY USA",
 		"_fullname": "andrew_brust",
 		"_location": {
-			"lat": 40.7143528,
-			"lng": -74.00597309999999
+			"lat": 40.7127837,
+			"lng": -74.0059413
 		}
 	},
 	{
@@ -156,8 +156,8 @@
 		"_placename": "Toronto, ON CAN",
 		"_fullname": "barry_gervin",
 		"_location": {
-			"lat": 43.6331542,
-			"lng": -79.41507930000002
+			"lat": 43.6339683,
+			"lng": -79.4124422
 		}
 	},
 	{
@@ -170,8 +170,8 @@
 		"_placename": "CRAN GEVRIER ANNECY, HAUTE SAVOIE FRA",
 		"_fullname": "bernard_fedotoff",
 		"_location": {
-			"lat": 45.9131091,
-			"lng": 6.135187699999999
+			"lat": 45.9136297,
+			"lng": 6.134792699999999
 		}
 	},
 	{
@@ -200,8 +200,8 @@
 		"_placename": "Nashville, TN USA",
 		"_fullname": "billy_hollis",
 		"_location": {
-			"lat": 36.1666667,
-			"lng": -86.7833333
+			"lat": 36.1626638,
+			"lng": -86.7816016
 		}
 	},
 	{
@@ -318,8 +318,8 @@
 		"_placename": "CRAN-GEVRIER, FRA",
 		"_fullname": "christine_dubois",
 		"_location": {
-			"lat": 45.89453899999999,
-			"lng": 6.1093581
+			"lat": 45.9136297,
+			"lng": 6.134792699999999
 		}
 	},
 	{
@@ -333,8 +333,8 @@
 		"_placename": "Timisoara, Timis ROU",
 		"_fullname": "ciprian_jichici",
 		"_location": {
-			"lat": 45.7613894,
-			"lng": 21.2007165
+			"lat": 45.759722,
+			"lng": 21.23
 		}
 	},
 	{
@@ -393,8 +393,8 @@
 		"_placename": "Les Acacias - Genève, SWITZERLAND CHE",
 		"_fullname": "daniel_tizon",
 		"_location": {
-			"lat": 46.18313610000001,
-			"lng": 6.1398674
+			"lat": 46.1904166,
+			"lng": 6.133687399999999
 		}
 	},
 	{
@@ -468,8 +468,8 @@
 		"_placename": "Quito, Pichincha ECU",
 		"_fullname": "edgar_sánchez",
 		"_location": {
-			"lat": -0.2101888,
-			"lng": -78.4915324
+			"lat": -0.2201955,
+			"lng": -78.4983377
 		}
 	},
 	{
@@ -483,8 +483,8 @@
 		"_placename": "Nashville, TN USA",
 		"_fullname": "elijah_manor",
 		"_location": {
-			"lat": 36.1666667,
-			"lng": -86.7833333
+			"lat": 36.1626638,
+			"lng": -86.7816016
 		}
 	},
 	{
@@ -498,8 +498,8 @@
 		"_placename": "Albatera, Alicante ESP",
 		"_fullname": "fernando_g._guerrero",
 		"_location": {
-			"lat": 38.1769037,
-			"lng": -0.8777482
+			"lat": 38.1770945,
+			"lng": -0.8774141
 		}
 	},
 	{
@@ -512,8 +512,8 @@
 		"_placename": "Petaling Jaya, Selangor MYS",
 		"_fullname": "fun_jin_lim",
 		"_location": {
-			"lat": 3.154613,
-			"lng": 101.594331
+			"lat": 3.1531436,
+			"lng": 101.5938377
 		}
 	},
 	{
@@ -527,8 +527,8 @@
 		"_placename": "Santiago de Chile, Las Condes CHL",
 		"_fullname": "gabriel_cor",
 		"_location": {
-			"lat": -33.4116667,
-			"lng": -70.55
+			"lat": -33.4691199,
+			"lng": -70.641997
 		}
 	},
 	{
@@ -540,11 +540,7 @@
 		"Email": "gill@snowball.be",
 		"GravatarHash": "21b36e9278dd30e5c580cc758e1e311b",
 		"_placename": "Tienen, Vlaams-Brabant BEL",
-		"_fullname": "gill_cleeren",
-		"_location": {
-			"lat": 50.88153029999999,
-			"lng": 4.8808549
-		}
+		"_fullname": "gill_cleeren"
 	},
 	{
 		"First": "Giuseppe",
@@ -630,8 +626,8 @@
 		"_placename": "Montreal, QC CAN",
 		"_fullname": "guy_barrette",
 		"_location": {
-			"lat": 45.5086699,
-			"lng": -73.55399249999999
+			"lat": 45.5001404,
+			"lng": -73.72851229999999
 		}
 	},
 	{
@@ -645,8 +641,8 @@
 		"_placename": "Budapest, HUN",
 		"_fullname": "györgy_balássy",
 		"_location": {
-			"lat": 47.5243434,
-			"lng": 19.0747056
+			"lat": 47.497912,
+			"lng": 19.040235
 		}
 	},
 	{
@@ -705,8 +701,8 @@
 		"_placename": "Wellington, NZ NZL",
 		"_fullname": "jeremy_boyd",
 		"_location": {
-			"lat": -41.2904059,
-			"lng": 174.7815662
+			"lat": -41.2904563,
+			"lng": 174.7820894
 		}
 	},
 	{
@@ -735,8 +731,8 @@
 		"_placename": "Miami, FL USA",
 		"_fullname": "joe_homnick",
 		"_location": {
-			"lat": 25.7889689,
-			"lng": -80.2264393
+			"lat": 25.7616798,
+			"lng": -80.1917902
 		}
 	},
 	{
@@ -749,8 +745,8 @@
 		"_placename": "Winnipeg, MB CAN",
 		"_fullname": "joel_semeniuk",
 		"_location": {
-			"lat": 49.959794,
-			"lng": -97.06803239999999
+			"lat": 49.959941,
+			"lng": -97.068275
 		}
 	},
 	{
@@ -807,8 +803,8 @@
 		"_placename": "Lima, LI PER",
 		"_fullname": "juan_mestas",
 		"_location": {
-			"lat": -12.0478158,
-			"lng": -77.0622028
+			"lat": -12.046374,
+			"lng": -77.0427934
 		}
 	},
 	{
@@ -910,8 +906,8 @@
 		"_placename": "Montreal, QC CAN",
 		"_fullname": "laurent_duveau",
 		"_location": {
-			"lat": 45.5086699,
-			"lng": -73.55399249999999
+			"lat": 45.5001404,
+			"lng": -73.72851229999999
 		}
 	},
 	{
@@ -925,8 +921,8 @@
 		"_placename": "Zurich, ZH SWI",
 		"_fullname": "laurent_bugnion",
 		"_location": {
-			"lat": 47.36857330000001,
-			"lng": 8.5313473
+			"lat": 47.3686498,
+			"lng": 8.539182499999999
 		}
 	},
 	{
@@ -939,8 +935,8 @@
 		"_placename": "Beijing, Beijing CHN",
 		"_fullname": "lei_xu",
 		"_location": {
-			"lat": 39.8686862,
-			"lng": 116.5003075
+			"lat": 40.00417100000001,
+			"lng": 116.353052
 		}
 	},
 	{
@@ -954,8 +950,8 @@
 		"_placename": "Quebec City, QC CAN",
 		"_fullname": "luc_gauthier",
 		"_location": {
-			"lat": 46.8032826,
-			"lng": -71.242796
+			"lat": 46.77152170000001,
+			"lng": -71.253287
 		}
 	},
 	{
@@ -996,11 +992,7 @@
 		"Email": "marcelv@infosupport.com",
 		"GravatarHash": "e2b757c7381f713ca84f7a4e5685647b",
 		"_placename": "Zuthpen, NLD",
-		"_fullname": "marcel_de_vries",
-		"_location": {
-			"lat": 52.142736,
-			"lng": 6.196058400000001
-		}
+		"_fullname": "marcel_de_vries"
 	},
 	{
 		"First": "Mark",
@@ -1043,8 +1035,8 @@
 		"_placename": "Houston, TX USA",
 		"_fullname": "markus_egger",
 		"_location": {
-			"lat": 29.7601927,
-			"lng": -95.36938959999999
+			"lat": 29.7604267,
+			"lng": -95.3698028
 		}
 	},
 	{
@@ -1057,8 +1049,8 @@
 		"_placename": "Sofia, BG",
 		"_fullname": "martin_kulov",
 		"_location": {
-			"lat": 42.6978388,
-			"lng": 23.3216697
+			"lat": 42.6977082,
+			"lng": 23.3218675
 		}
 	},
 	{
@@ -1071,8 +1063,8 @@
 		"_placename": "Ljubljana, SLO SVN",
 		"_fullname": "matevz_gacnik",
 		"_location": {
-			"lat": 46.05645089999999,
-			"lng": 14.5080702
+			"lat": 46.0569465,
+			"lng": 14.5057515
 		}
 	},
 	{
@@ -1086,8 +1078,8 @@
 		"_placename": "Sao Paulo, SP BRA",
 		"_fullname": "mauro_sant'anna",
 		"_location": {
-			"lat": -23.5489433,
-			"lng": -46.6388182
+			"lat": -23.5505199,
+			"lng": -46.63330939999999
 		}
 	},
 	{
@@ -1098,11 +1090,7 @@
 		"Country": "CHE",
 		"Email": null,
 		"_placename": "Glattbrugg, ZH CHE",
-		"_fullname": "meinrad_weiss",
-		"_location": {
-			"lat": 47.43111160000001,
-			"lng": 8.568602799999999
-		}
+		"_fullname": "meinrad_weiss"
 	},
 	{
 		"First": "Michael",
@@ -1115,8 +1103,8 @@
 		"_placename": "Taichung, TWN",
 		"_fullname": "michael_peng",
 		"_location": {
-			"lat": 24.2332076,
-			"lng": 120.9417368
+			"lat": 24.1477358,
+			"lng": 120.6736482
 		}
 	},
 	{
@@ -1201,8 +1189,8 @@
 		"_placename": "Vinnitsya, Vinnitsya UKR",
 		"_fullname": "oleksandr_krakovetskyi",
 		"_location": {
-			"lat": 49.2938889,
-			"lng": 28.0133333
+			"lat": 49.2315398,
+			"lng": 28.4429201
 		}
 	},
 	{
@@ -1216,8 +1204,8 @@
 		"_placename": "Madrid, Madrid SP",
 		"_fullname": "pablo_pelaez",
 		"_location": {
-			"lat": 40.4196647,
-			"lng": -3.7975487
+			"lat": 40.4167754,
+			"lng": -3.7037902
 		}
 	},
 	{
@@ -1319,8 +1307,8 @@
 		"_placename": "Bangkok, THA",
 		"_fullname": "rames_gantanant",
 		"_location": {
-			"lat": 13.7644145,
-			"lng": 100.6236559
+			"lat": 13.738993,
+			"lng": 100.5167804
 		}
 	},
 	{
@@ -1334,8 +1322,8 @@
 		"_placename": "Bogota, DC COL",
 		"_fullname": "ricardo_gonzalez_vargas",
 		"_location": {
-			"lat": 4.598055599999999,
-			"lng": -74.0758333
+			"lat": 4.598056000000001,
+			"lng": -74.075833
 		}
 	},
 	{
@@ -1348,8 +1336,8 @@
 		"_placename": "Coquitlam, BC CAN",
 		"_fullname": "richard_campbell",
 		"_location": {
-			"lat": 49.2311486,
-			"lng": -122.8517188
+			"lat": 49.2588766,
+			"lng": -122.8912257
 		}
 	},
 	{
@@ -1406,8 +1394,8 @@
 		"_placename": "Texcoco, Mexico MEX",
 		"_fullname": "salvador_fernandez",
 		"_location": {
-			"lat": 19.5308231,
-			"lng": -98.89418409999999
+			"lat": 19.5060382,
+			"lng": -98.8831503
 		}
 	},
 	{
@@ -1495,8 +1483,8 @@
 		"_placename": "Saint-Petersburg, RUS",
 		"_fullname": "sergey_bereznikov",
 		"_location": {
-			"lat": 59.936038,
-			"lng": 30.322952
+			"lat": 60.12804629999999,
+			"lng": 27.574952
 		}
 	},
 	{
@@ -1509,8 +1497,8 @@
 		"_placename": "Chelyabinsk, Ural RUS",
 		"_fullname": "sergey_zwezdin",
 		"_location": {
-			"lat": 55.1745331,
-			"lng": 61.42668080000001
+			"lat": 55.1644419,
+			"lng": 61.4368431
 		}
 	},
 	{
@@ -1523,8 +1511,8 @@
 		"_placename": "Boca Raton, FL USA",
 		"_fullname": "shervin_shakibi",
 		"_location": {
-			"lat": 26.3586885,
-			"lng": -80.0830984
+			"lat": 26.3683064,
+			"lng": -80.1289321
 		}
 	},
 	{
@@ -1538,8 +1526,8 @@
 		"_placename": "Kristiansand, Vest Agder NOR",
 		"_fullname": "sondre_bjellås",
 		"_location": {
-			"lat": 58.1475779,
-			"lng": 7.996626699999999
+			"lat": 58.15991189999999,
+			"lng": 8.0182064
 		}
 	},
 	{
@@ -1567,8 +1555,8 @@
 		"_placename": "New York, NY USA",
 		"_fullname": "stephen_forte",
 		"_location": {
-			"lat": 40.7143528,
-			"lng": -74.00597309999999
+			"lat": 40.7127837,
+			"lng": -74.0059413
 		}
 	},
 	{
@@ -1596,8 +1584,8 @@
 		"_placename": "Portland, OR USA",
 		"_fullname": "stuart_celarier",
 		"_location": {
-			"lat": 45.5234515,
-			"lng": -122.6762071
+			"lat": 45.5230622,
+			"lng": -122.6764816
 		}
 	},
 	{
@@ -1655,8 +1643,8 @@
 		"_placename": "Roswell, GA USA",
 		"_fullname": "todd_fine",
 		"_location": {
-			"lat": 34.02315530000001,
-			"lng": -84.3615928
+			"lat": 34.0232431,
+			"lng": -84.3615555
 		}
 	},
 	{
@@ -1670,8 +1658,8 @@
 		"_placename": "Chennai, Tamilnadu IND",
 		"_fullname": "venkatarangan_thirumalai",
 		"_location": {
-			"lat": 13.0524139,
-			"lng": 80.25082460000002
+			"lat": 13.0826802,
+			"lng": 80.2707184
 		}
 	},
 	{
@@ -1702,6 +1690,35 @@
 		"_location": {
 			"lat": 38.9586307,
 			"lng": -77.35700279999999
+		}
+	},
+	{
+		"First": "Magnus",
+		"Last": "Mårtensson",
+		"City": "Malmö",
+		"State": null,
+		"Country": "SWE",
+		"Email": "magnus@loftysoft.com",
+		"GravatarHash": "7e29b05021d6d7fbfc1f33a7010f1bff",
+		"_placename": "Malmö, SWE",
+		"_fullname": "magnus_mårtensson",
+		"_location": {
+			"lat": 55.596746,
+			"lng": 13.0022978
+		}
+	},
+	{
+		"First": "Patrik",
+		"Last": "Löwendahl",
+		"City": "Stockholm",
+		"Country": "SWE",
+		"Email": "patrik.lowendahl@avanade.com",
+		"GravatarHash": "4daff3d463970a59b66c2017adf077e0",
+		"_placename": "Stockholm, undefined SWE",
+		"_fullname": "patrik_löwendahl",
+		"_location": {
+			"lat": 59.32932349999999,
+			"lng": 18.0685808
 		}
 	}
 ]

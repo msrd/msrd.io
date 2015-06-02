@@ -817,4 +817,18 @@
   State: VA
   Country: USA
   Email: vishwas.lele@appliedis.com
+-
+  First: Magnus
+  Last: Mårtensson
+  City: Malmö
+  State:
+  Country: SWE
+  Email: magnus@loftysoft.com
+- 
+  First: Patrik
+  Last: Löwendahl
+  City: Stockholm
+  Country: SWE
+  Email: patrik.lowendahl@avanade.com
+
 
