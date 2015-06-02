@@ -461,6 +461,13 @@
   Country: CAN
   Email: l.gauthier@hotmail.com
 -
+  First: Magnus
+  Last: Mårtensson
+  City: Malmö
+  State:
+  Country: SWE
+  Email: magnus@loftysoft.com
+-
   First: Manuel
   Last: Mendez Fuentes
   City: CARACAS
@@ -593,6 +600,13 @@
   State: NH
   Country: USA
   Email: patrick@dtsnh.com
+- 
+  First: Patrik
+  Last: Löwendahl
+  City: Stockholm
+  State: 
+  Country: SWE
+  Email: patrik.lowendahl@avanade.com
 -
   First: Paul
   Last: Randal
@@ -817,18 +831,3 @@
   State: VA
   Country: USA
   Email: vishwas.lele@appliedis.com
--
-  First: Magnus
-  Last: Mårtensson
-  City: Malmö
-  State:
-  Country: SWE
-  Email: magnus@loftysoft.com
-- 
-  First: Patrik
-  Last: Löwendahl
-  City: Stockholm
-  Country: SWE
-  Email: patrik.lowendahl@avanade.com
-
-

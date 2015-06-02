@@ -970,6 +970,21 @@
 		}
 	},
 	{
+		"First": "Magnus",
+		"Last": "Mårtensson",
+		"City": "Malmö",
+		"State": null,
+		"Country": "SWE",
+		"Email": "magnus@loftysoft.com",
+		"GravatarHash": "7e29b05021d6d7fbfc1f33a7010f1bff",
+		"_placename": "Malmö, SWE",
+		"_fullname": "magnus_mårtensson",
+		"_location": {
+			"lat": 55.596746,
+			"lng": 13.0022978
+		}
+	},
+	{
 		"First": "Manuel",
 		"Last": "Mendez Fuentes",
 		"City": "CARACAS",
@@ -1236,6 +1251,21 @@
 		"_location": {
 			"lat": 42.8806437,
 			"lng": -71.3273346
+		}
+	},
+	{
+		"First": "Patrik",
+		"Last": "Löwendahl",
+		"City": "Stockholm",
+		"State": null,
+		"Country": "SWE",
+		"Email": "patrik.lowendahl@avanade.com",
+		"GravatarHash": "4daff3d463970a59b66c2017adf077e0",
+		"_placename": "Stockholm, SWE",
+		"_fullname": "patrik_löwendahl",
+		"_location": {
+			"lat": 47.0571472,
+			"lng": -68.1341815
 		}
 	},
 	{
@@ -1705,35 +1735,6 @@
 		"_location": {
 			"lat": 38.9586307,
 			"lng": -77.35700279999999
-		}
-	},
-	{
-		"First": "Magnus",
-		"Last": "Mårtensson",
-		"City": "Malmö",
-		"State": null,
-		"Country": "SWE",
-		"Email": "magnus@loftysoft.com",
-		"GravatarHash": "7e29b05021d6d7fbfc1f33a7010f1bff",
-		"_placename": "Malmö, SWE",
-		"_fullname": "magnus_mårtensson",
-		"_location": {
-			"lat": 55.596746,
-			"lng": 13.0022978
-		}
-	},
-	{
-		"First": "Patrik",
-		"Last": "Löwendahl",
-		"City": "Stockholm",
-		"Country": "SWE",
-		"Email": "patrik.lowendahl@avanade.com",
-		"GravatarHash": "4daff3d463970a59b66c2017adf077e0",
-		"_placename": "Stockholm, undefined SWE",
-		"_fullname": "patrik_löwendahl",
-		"_location": {
-			"lat": 59.32932349999999,
-			"lng": 18.0685808
 		}
 	}
 ]
