@@ -206,6 +206,21 @@
 	},
 	{
 		"First": "Brian",
+		"Last": "Bourne",
+		"City": "Toronto",
+		"State": "ON",
+		"Country": "CAN",
+		"Email": "brian@newsignature.com",
+		"GravatarHash": "fbae618cd43c3a185ffcc4cef3bed2de",
+		"_placename": "Toronto, ON CAN",
+		"_fullname": "brian_bourne",
+		"_location": {
+			"lat": 43.6339683,
+			"lng": -79.4124422
+		}
+	},
+	{
+		"First": "Brian",
 		"Last": "Noyes",
 		"City": "Alexandria",
 		"State": "VA",
