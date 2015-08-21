@@ -1,4 +1,4 @@
-doctype 5
+doctype html
 //if lt IE 7
     html.no-js.lt-ie9.lt-ie8.lt-ie7(lang='en')
 //if IE 7
@@ -55,18 +55,8 @@ html(lang='en')
         // endbuild
 
         //if lt IE 9
-            script(type='text/javascript', src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
+          script(type='text/javascript', src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
 
 
-        script
-          var _gauges = _gauges || [];
-            (function() {
-              var t   = document.createElement('script');
-              t.type  = 'text/javascript';
-              t.async = true;
-              t.id    = 'gauges-tracker';
-              t.setAttribute('data-site-id', '50cf5fd6f5a1f51568000049');
-              t.src = '//secure.gaug.es/track.js';
-              var s = document.getElementsByTagName('script')[0];
-              s.parentNode.insertBefore(t, s);
-            })();
+        script(type='text/javascript', src='/js/gauges.js')
+
