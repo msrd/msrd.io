@@ -98,6 +98,13 @@
   Email: billyhollis@gmail.com
 -
   First: Brian
+  Last: Bourne
+  City: Toronto
+  State: ON
+  Country: CAN
+  Email: brian@newsignature.com
+-
+  First: Brian
   Last: Noyes
   City: Alexandria
   State: VA
@@ -377,6 +384,13 @@
   Country: NOR
   Email: 
 -
+  First: Jouni
+  Last: Heikniemi
+  City: Espoo
+  State: 
+  Country: FIN
+  Email: jouni@offbeat.fi
+-
   First: Juan
   Last: Mestas
   City: Lima
@@ -457,8 +471,8 @@
   First: Magnus
   Last: Mårtensson
   City: Malmö
-  State: Scania
-  Country: Sweden
+  State:
+  Country: SWE
   Email: magnus@loftysoft.com
 -
   First: Manuel
@@ -593,12 +607,12 @@
   State: NH
   Country: USA
   Email: patrick@dtsnh.com
--
+- 
   First: Patrik
   Last: Löwendahl
   City: Stockholm
-  State: Södermanland
-  Country: Sweden
+  State: 
+  Country: SWE
   Email: patrik.lowendahl@avanade.com
 -
   First: Paul
@@ -810,4 +824,3 @@
   State: VA
   Country: USA
   Email: vishwas.lele@appliedis.com
-
