@@ -85,6 +85,21 @@
 			"lat": 47.9479298,
 			"lng": 11.1032858
 		}
+	},	
+	{
+		"First": "Alexey",
+		"Last": "Perezhogin",
+		"City": "Nizhny Novgorod",
+		"State": "null",
+		"Country": "RUS",
+		"Email": "perezhogin@slylamb.com",
+		"GravatarHash": "38f795ed03d177202c0f9b9da38dbc9d",
+		"_placename": "Nizhny Novgorod, RUS",
+		"_fullname": "alexey_perezhogin",
+		"_location": {
+			"lat": 56.306598,
+			"lng": 44.082694
+		}
 	},
 	{
 		"First": "Alon",
