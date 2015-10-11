@@ -1,7 +1,8 @@
 msrd.io
 =======
-The web site for the Microsoft Regional Directors, a global community of
-independent Microsoft ambasadors.  
+The web site for the Microsoft Regional Directors (MS RD), a global community of independent Microsoft ambasadors.
+
+The Microsoft Regional Directors program is an elite group of 130 technology professionals recognized worldwide by Microsoft for their leadership, presentation skills, and knowledge of emerging technologies, technology strategy and business.
 
 [![Build
 Status](https://travis-ci.org/msrd/msrd.io.png)](https://travis-ci.org/msrd/msrd.io)
@@ -49,6 +50,12 @@ Getting Started
  - `bower install` <-- Brings in local copies of needed dependencies (ex: `jquery`)
  - `grunt` <-- Builds/Compiles/MagicStuff and launches browser to test site
 
+How to update the list of RDs
+-----------------------------
+Fork the project and create a new branch for youre changes.
+Make changes in your new branch and then send a pull request to this repository.
+
+_Important: Update only the rdlist.yaml file. Don't touch rdlist.json as it is generated automatically._
 
 Stretch goals for the site
 --------------------------
@@ -69,5 +76,3 @@ Stretch goals for the site
 [5]: http://www.smashingmagazine.com/2010/02/09/applying-mathematics-to-web-design/
 [6]: http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/
 [7]: http://developer.yahoo.com/performance/rules.html
-
-
