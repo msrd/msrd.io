@@ -52,8 +52,8 @@
 		"_placename": "London, GBR",
 		"_fullname": "alex_norcliffe",
 		"_location": {
-			"lat": 51.5073509,
-			"lng": -0.1277583
+			"lat": 51.58532659999999,
+			"lng": -0.2812159
 		}
 	},
 	{
@@ -67,8 +67,8 @@
 		"_placename": "Hedel, ND",
 		"_fullname": "alex_thissen",
 		"_location": {
-			"lat": 51.7515122,
-			"lng": 5.2746352
+			"lat": 55.6376102,
+			"lng": 12.1839196
 		}
 	},
 	{
@@ -82,8 +82,23 @@
 		"_placename": "Diessen, Bavaria DEU",
 		"_fullname": "alexander_wechsler",
 		"_location": {
-			"lat": 47.9479298,
-			"lng": 11.1032858
+			"lat": 47.9479807,
+			"lng": 11.1031213
+		}
+	},
+	{
+		"First": "Alexey",
+		"Last": "Perezhogin",
+		"City": "Nizhny Novgorod",
+		"State": null,
+		"Country": "RUS",
+		"Email": "perezhogin@slylamb.com",
+		"GravatarHash": "23cc2853f422f1707eea9223e5dada93",
+		"_placename": "Nizhny Novgorod, RUS",
+		"_fullname": "alexey_perezhogin",
+		"_location": {
+			"lat": 56.31382019999999,
+			"lng": 43.8828077
 		}
 	},
 	{
@@ -112,8 +127,8 @@
 		"_placename": "Medellin, Antioquia COL",
 		"_fullname": "andres_fontan",
 		"_location": {
-			"lat": 6.230833,
-			"lng": -75.59055599999999
+			"lat": 6.253040800000001,
+			"lng": -75.5645737
 		}
 	},
 	{
@@ -156,8 +171,8 @@
 		"_placename": "Toronto, ON CAN",
 		"_fullname": "barry_gervin",
 		"_location": {
-			"lat": 43.6339683,
-			"lng": -79.4124422
+			"lat": 43.6581784,
+			"lng": -79.3990657
 		}
 	},
 	{
@@ -215,8 +230,8 @@
 		"_placename": "Toronto, ON CAN",
 		"_fullname": "brian_bourne",
 		"_location": {
-			"lat": 43.6339683,
-			"lng": -79.4124422
+			"lat": 43.6581784,
+			"lng": -79.3990657
 		}
 	},
 	{
@@ -348,8 +363,8 @@
 		"_placename": "Timisoara, Timis ROU",
 		"_fullname": "ciprian_jichici",
 		"_location": {
-			"lat": 45.759722,
-			"lng": 21.23
+			"lat": 45.76083329999999,
+			"lng": 21.2008473
 		}
 	},
 	{
@@ -400,16 +415,16 @@
 	{
 		"First": "Daniel",
 		"Last": "Tizon",
-		"City": "Les Acacias - Genève",
+		"City": "Genève",
 		"State": "SWITZERLAND",
 		"Country": "CHE",
 		"Email": "daniel.tizon@outlook.com",
 		"GravatarHash": "24f173ba7fe3ef5bd582d8a0806b485f",
-		"_placename": "Les Acacias - Genève, SWITZERLAND CHE",
+		"_placename": "Genève, SWITZERLAND CHE",
 		"_fullname": "daniel_tizon",
 		"_location": {
-			"lat": 46.1904166,
-			"lng": 6.133687399999999
+			"lat": 46.2014286,
+			"lng": 6.173014299999999
 		}
 	},
 	{
@@ -483,8 +498,8 @@
 		"_placename": "Quito, Pichincha ECU",
 		"_fullname": "edgar_sánchez",
 		"_location": {
-			"lat": -0.2201955,
-			"lng": -78.4983377
+			"lat": -0.1957352,
+			"lng": -78.4942753
 		}
 	},
 	{
@@ -513,8 +528,8 @@
 		"_placename": "Albatera, Alicante ESP",
 		"_fullname": "fernando_g._guerrero",
 		"_location": {
-			"lat": 38.1770945,
-			"lng": -0.8774141
+			"lat": 38.1769037,
+			"lng": -0.8777482
 		}
 	},
 	{
@@ -527,8 +542,8 @@
 		"_placename": "Petaling Jaya, Selangor MYS",
 		"_fullname": "fun_jin_lim",
 		"_location": {
-			"lat": 3.1531436,
-			"lng": 101.5938377
+			"lat": 3.114917,
+			"lng": 101.591293
 		}
 	},
 	{
@@ -542,8 +557,8 @@
 		"_placename": "Santiago de Chile, Las Condes CHL",
 		"_fullname": "gabriel_cor",
 		"_location": {
-			"lat": -33.4691199,
-			"lng": -70.641997
+			"lat": -33.4488897,
+			"lng": -70.6692655
 		}
 	},
 	{
@@ -551,11 +566,15 @@
 		"Last": "Cleeren",
 		"City": "Tienen",
 		"State": "Vlaams-Brabant",
-		"Country": "BEL",
+		"Country": "Belgium",
 		"Email": "gill@snowball.be",
 		"GravatarHash": "21b36e9278dd30e5c580cc758e1e311b",
-		"_placename": "Tienen, Vlaams-Brabant BEL",
-		"_fullname": "gill_cleeren"
+		"_placename": "Tienen, Vlaams-Brabant Belgium",
+		"_fullname": "gill_cleeren",
+		"_location": {
+			"lat": 50.81057,
+			"lng": 4.93622
+		}
 	},
 	{
 		"First": "Giuseppe",
@@ -641,8 +660,8 @@
 		"_placename": "Montreal, QC CAN",
 		"_fullname": "guy_barrette",
 		"_location": {
-			"lat": 45.5001404,
-			"lng": -73.72851229999999
+			"lat": 45.477098,
+			"lng": -73.616878
 		}
 	},
 	{
@@ -760,8 +779,8 @@
 		"_placename": "Winnipeg, MB CAN",
 		"_fullname": "joel_semeniuk",
 		"_location": {
-			"lat": 49.959941,
-			"lng": -97.068275
+			"lat": 49.95402199999999,
+			"lng": -97.15937799999999
 		}
 	},
 	{
@@ -819,8 +838,8 @@
 		"_placename": "Espoo, FIN",
 		"_fullname": "jouni_heikniemi",
 		"_location": {
-			"lat": 60.1643665,
-			"lng": 24.8378191
+			"lat": 60.2054911,
+			"lng": 24.6559001
 		}
 	},
 	{
@@ -829,13 +848,12 @@
 		"City": "Lima",
 		"State": "Lima",
 		"Country": "Peru",
-		"Email": "@Karlitoz007",
-		"GravatarHash": "6d67b6b6c32752000417216cc8a5b901",
-		"_placename": "Lima, Peru",
-		"_fullname": "carlos_rojas",
+		"Email": null,
+		"_placename": "Lima, Lima Peru",
+		"_fullname": "carlos_jose_rojas_reyes",
 		"_location": {
-			"lat": -12.09685,
-			"lng": -77.03705
+			"lat": -12.046374,
+			"lng": -77.0427934
 		}
 	},
 	{
@@ -893,8 +911,8 @@
 		"_placename": "Istanbul, TR",
 		"_fullname": "kerem_özsü",
 		"_location": {
-			"lat": 41.00527,
-			"lng": 28.97696
+			"lat": 41.0082376,
+			"lng": 28.9783589
 		}
 	},
 	{
@@ -908,8 +926,8 @@
 		"_placename": "Beirut, LBN",
 		"_fullname": "khaled_chebat",
 		"_location": {
-			"lat": 33.8886289,
-			"lng": 35.4954794
+			"lat": 33.8292727,
+			"lng": 35.5202733
 		}
 	},
 	{
@@ -937,8 +955,8 @@
 		"_placename": "Montreal, QC CAN",
 		"_fullname": "laurent_duveau",
 		"_location": {
-			"lat": 45.5001404,
-			"lng": -73.72851229999999
+			"lat": 45.477098,
+			"lng": -73.616878
 		}
 	},
 	{
@@ -952,8 +970,8 @@
 		"_placename": "Zurich, ZH SWI",
 		"_fullname": "laurent_bugnion",
 		"_location": {
-			"lat": 47.3686498,
-			"lng": 8.539182499999999
+			"lat": 47.3819633,
+			"lng": 8.5165268
 		}
 	},
 	{
@@ -981,8 +999,8 @@
 		"_placename": "Quebec City, QC CAN",
 		"_fullname": "luc_gauthier",
 		"_location": {
-			"lat": 46.77152170000001,
-			"lng": -71.253287
+			"lat": 46.8252631,
+			"lng": -71.2395734
 		}
 	},
 	{
@@ -996,8 +1014,8 @@
 		"_placename": "Malmö, SWE",
 		"_fullname": "magnus_mårtensson",
 		"_location": {
-			"lat": 55.596746,
-			"lng": 13.0022978
+			"lat": 54.7951676,
+			"lng": 11.9326384
 		}
 	},
 	{
@@ -1034,11 +1052,15 @@
 		"Last": "de Vries",
 		"City": "Zuthpen",
 		"State": null,
-		"Country": "NLD",
+		"Country": "Netherlands",
 		"Email": "marcelv@infosupport.com",
 		"GravatarHash": "e2b757c7381f713ca84f7a4e5685647b",
-		"_placename": "Zuthpen, NLD",
-		"_fullname": "marcel_de_vries"
+		"_placename": "Zuthpen, Netherlands",
+		"_fullname": "marcel_de_vries",
+		"_location": {
+			"lat": 52.142736,
+			"lng": 6.196058400000001
+		}
 	},
 	{
 		"First": "Mark",
@@ -1132,11 +1154,15 @@
 		"First": "Meinrad",
 		"Last": "Weiss",
 		"City": "Glattbrugg",
-		"State": "ZH",
-		"Country": "CHE",
+		"State": null,
+		"Country": "Switzerland",
 		"Email": null,
-		"_placename": "Glattbrugg, ZH CHE",
-		"_fullname": "meinrad_weiss"
+		"_placename": "Glattbrugg, Switzerland",
+		"_fullname": "meinrad_weiss",
+		"_location": {
+			"lat": 47.4336788,
+			"lng": 8.5659181
+		}
 	},
 	{
 		"First": "Michael",
@@ -1197,21 +1223,6 @@
 		}
 	},
 	{
-		"First": "Nicolas",
-		"Last": "Clerc",
-		"City": "Lyon",
-		"State": "France",
-		"Country": "FRA",
-		"Email": "nclerc@quidmind.com",
-		"GravatarHash": "b550a250192f5ab860a8a53225a7e078",
-		"_placename": "Lyon, France FRA",
-		"_fullname": "nicolas_clerc",
-		"_location": {
-			"lat": 45.764043,
-			"lng": 4.835659
-		}
-	},
-	{
 		"First": "Nobuhiko",
 		"Last": "Kishinoue",
 		"City": "Tokyo",
@@ -1221,8 +1232,8 @@
 		"_placename": "Tokyo, JPN",
 		"_fullname": "nobuhiko_kishinoue",
 		"_location": {
-			"lat": 35.6885347,
-			"lng": 139.8947838
+			"lat": 35.692722,
+			"lng": 139.696111
 		}
 	},
 	{
@@ -1235,8 +1246,8 @@
 		"_placename": "Vinnitsya, Vinnitsya UKR",
 		"_fullname": "oleksandr_krakovetskyi",
 		"_location": {
-			"lat": 49.2315398,
-			"lng": 28.4429201
+			"lat": 49.23948859999999,
+			"lng": 28.5091916
 		}
 	},
 	{
@@ -1250,8 +1261,8 @@
 		"_placename": "Madrid, Madrid SP",
 		"_fullname": "pablo_pelaez",
 		"_location": {
-			"lat": 40.4167754,
-			"lng": -3.7037902
+			"lat": 40.3913192,
+			"lng": -3.7641115
 		}
 	},
 	{
@@ -1354,8 +1365,8 @@
 		"_placename": "Bangkok, THA",
 		"_fullname": "rames_gantanant",
 		"_location": {
-			"lat": 13.738993,
-			"lng": 100.5167804
+			"lat": 13.8610771,
+			"lng": 100.647812
 		}
 	},
 	{
@@ -1369,8 +1380,8 @@
 		"_placename": "Bogota, DC COL",
 		"_fullname": "ricardo_gonzalez_vargas",
 		"_location": {
-			"lat": 4.598056000000001,
-			"lng": -74.075833
+			"lat": 4.710988599999999,
+			"lng": -74.072092
 		}
 	},
 	{
@@ -1383,8 +1394,8 @@
 		"_placename": "Coquitlam, BC CAN",
 		"_fullname": "richard_campbell",
 		"_location": {
-			"lat": 49.2588766,
-			"lng": -122.8912257
+			"lat": 49.258999,
+			"lng": -122.891911
 		}
 	},
 	{
@@ -1530,8 +1541,8 @@
 		"_placename": "Saint-Petersburg, RUS",
 		"_fullname": "sergey_bereznikov",
 		"_location": {
-			"lat": 60.12804629999999,
-			"lng": 27.574952
+			"lat": 59.73771279999999,
+			"lng": 24.1825333
 		}
 	},
 	{
@@ -1544,8 +1555,8 @@
 		"_placename": "Chelyabinsk, Ural RUS",
 		"_fullname": "sergey_zwezdin",
 		"_location": {
-			"lat": 55.1644419,
-			"lng": 61.4368431
+			"lat": 56.3965673,
+			"lng": 59.1180397
 		}
 	},
 	{
@@ -1573,8 +1584,8 @@
 		"_placename": "Kristiansand, Vest Agder NOR",
 		"_fullname": "sondre_bjellås",
 		"_location": {
-			"lat": 58.15991189999999,
-			"lng": 8.0182064
+			"lat": 58.2539814,
+			"lng": 7.964079300000001
 		}
 	},
 	{
@@ -1722,6 +1733,20 @@
 		"_location": {
 			"lat": 38.9586307,
 			"lng": -77.35700279999999
+		}
+	},
+	{
+		"First": "Philippe",
+		"Last": "Sentenac",
+		"City": "Paris",
+		"State": null,
+		"Country": "FRA",
+		"Email": null,
+		"_placename": "Paris, FRA",
+		"_fullname": "philippe_sentenac",
+		"_location": {
+			"lat": 48.8306371,
+			"lng": 2.3767675
 		}
 	}
 ]
