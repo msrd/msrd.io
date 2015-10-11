@@ -41,6 +41,13 @@
   Country: DEU
   Email: awechsler@wechsler-consulting.de
 -
+  First: Alexey
+  Last: Perezhogin
+  City: Nizhny Novgorod
+  State: 
+  Country: RUS
+  Email: perezhogin@slylamb.com
+-
   First: Alon
   Last: Fliess
   City: Binyamina-Giv'at Ada
@@ -391,12 +398,12 @@
   Country: FIN
   Email: jouni@offbeat.fi
 -
-  First: Juan
-  Last: Mestas
+  First: Carlos Jose
+  Last: Rojas Reyes
   City: Lima
-  State: LI
-  Country: PER
-  Email: 
+  State: Lima
+  Country: Peru
+  Email: @Karlitoz007
 -
   First: Juval
   Last: Lowy
@@ -572,13 +579,6 @@
   State: NSW
   Country: AUS
   Email: dr.neil@nsquaredsolutions.com
--
-  First: Nicolas
-  Last: Clerc
-  City: Lyon
-  State: France
-  Country: FRA
-  Email: nclerc@quidmind.com
 -
   First: Nobuhiko
   Last: Kishinoue
@@ -838,3 +838,10 @@
   State: VA
   Country: USA
   Email: vishwas.lele@appliedis.com
+-
+  First: Philippe
+  Last: Sentenac
+  City: Paris
+  State: 
+  Country: FRA
+  Email: 
