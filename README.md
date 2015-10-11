@@ -41,7 +41,7 @@ Technical details about the RD site
 - Content marked up as Jade (HTML), Stylus (CSS) and Markdown (text)
 - No client-side Javascript (yet)
 - Git for source control; change sets pushed to Azure via `git push`
-- Source will be on [github](http://github.com)
+- Source will be on [github](http://github.com/msrd/msrd.io)
 
 Getting Started
 ---------------
@@ -50,9 +50,9 @@ Getting Started
  - `bower install` <-- Brings in local copies of needed dependencies (ex: `jquery`)
  - `grunt` <-- Builds/Compiles/MagicStuff and launches browser to test site
 
-How to update the list of RDs
------------------------------
-Fork the project and create a new branch for youre changes.
+How-to: Update the list of RDs
+------------------------------
+Fork the project from this repository and create a new branch for your changes.
 Make changes in your new branch and then send a pull request to this repository.
 
 _Important: Update only the rdlist.yaml file. Don't touch rdlist.json as it is generated automatically._
