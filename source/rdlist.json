@@ -1314,20 +1314,6 @@
 		}
 	},
 	{
-		"First": "Per",
-		"Last": "Sundblad",
-		"City": "Uppsala",
-		"State": "Uppland",
-		"Country": "SWE",
-		"Email": null,
-		"_placename": "Uppsala, Uppland SWE",
-		"_fullname": "per_sundblad",
-		"_location": {
-			"lat": 59.85856380000001,
-			"lng": 17.6389267
-		}
-	},
-	{
 		"First": "Peter",
 		"Last": "Himschoot",
 		"City": "Melle",
@@ -1589,21 +1575,6 @@
 		"_location": {
 			"lat": 58.15991189999999,
 			"lng": 8.0182064
-		}
-	},
-	{
-		"First": "Sten",
-		"Last": "Sundblad",
-		"City": "Uppsala",
-		"State": null,
-		"Country": "SWE",
-		"Email": "stens@2xsundblad.com",
-		"GravatarHash": "450ddd9589ee08055ccc7ab687f9f391",
-		"_placename": "Uppsala, SWE",
-		"_fullname": "sten_sundblad",
-		"_location": {
-			"lat": 59.85856380000001,
-			"lng": 17.6389267
 		}
 	},
 	{
