@@ -264,6 +264,21 @@
 		}
 	},
 	{
+		"First": "Carlos Jose",
+		"Last": "Rojas Reyes",
+		"City": "Lima",
+		"State": "Lima",
+		"Country": "Peru",
+		"Email": "c.rojas@outlook.com",
+		"GravatarHash": "ee0cd0b5ba91bf166eb41edda9dcfc57",
+		"_placename": "Lima, Lima Peru",
+		"_fullname": "carlos_jose_rojas_reyes",
+		"_location": {
+			"lat": -12.046374,
+			"lng": -77.0427934
+		}
+	},
+	{
 		"First": "Carlos R.",
 		"Last": "Guevara L.",
 		"City": "Panamá",
@@ -840,20 +855,6 @@
 		"_location": {
 			"lat": 60.2054911,
 			"lng": 24.6559001
-		}
-	},
-	{
-		"First": "Carlos Jose",
-		"Last": "Rojas Reyes",
-		"City": "Lima",
-		"State": "Lima",
-		"Country": "Peru",
-		"Email": null,
-		"_placename": "Lima, Lima Peru",
-		"_fullname": "carlos_jose_rojas_reyes",
-		"_location": {
-			"lat": -12.046374,
-			"lng": -77.0427934
 		}
 	},
 	{
