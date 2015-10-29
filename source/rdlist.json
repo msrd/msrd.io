@@ -1703,5 +1703,19 @@
 			"lat": 38.9586307,
 			"lng": -77.35700279999999
 		}
-	}
+	},
+	{
+		"First": "Oleg",
+		"Last": "Krylov",
+		"City": "Saint-Petersburg",
+		"State": null,
+		"Country": "RUS",
+		"Email": "krylov@outlook.com",
+		"GravatarHash": "092900b9863a9c7fb082f796932307fe",
+		"_placename": "Saint-Petersburg, RUS",
+		"_fullname": "oleg_krylov",
+		"_location": {
+			"lat": 59.73771279999999,
+			"lng": 24.1825333
+		}
 ]
