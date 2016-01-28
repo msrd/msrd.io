@@ -302,7 +302,7 @@ module.exports = function (grunt) {
                         dot: true,
                         cwd: c.source,
                         dest: c.release,
-                        src: ["components/**/*.*", "js/*.js", "font/*.*",  "images/{,*/}*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "web.config"]        // don't copy CSS for release; usemin does it
+                        src: ["CNAME", "components/**/*.*", "js/*.js", "font/*.*",  "images/{,*/}*.*", "*.{ico,txt}", "**/*.{,svg,png,jpg}", ".htaccess", "web.config"]        // don't copy CSS for release; usemin does it
                     },
                     {
                         expand: true,
