@@ -219,6 +219,21 @@
 			"lng": -86.7816016
 		}
 	},
+		{
+		"First": "Brian",
+		"Last": "Bourne",
+		"City": "Toronto",
+		"State": "ON",
+		"Country": "Canada",
+		"Email": "brian@newsignature.com",
+		"GravatarHash": "3a91d82418bbfa0958f2c20bb50cb83e",
+		"_placename": "Toronto, ON, Canada",
+		"_fullname": "brian_bourne",
+		"_location": {
+			"lat": 43.651067,
+			"lng": -79.378743
+		}
+	},
 	{
 		"First": "Brian",
 		"Last": "Bourne",
