@@ -1,3 +1,6 @@
+<span style="color:red;font-size:1.6rem">ARCHIVED Feb 2019</span>
+The new Microsoft Regional Directors site is https://rd.microsoft.com
+
 msrd.io
 =======
 The web site for the Microsoft Regional Directors (MS RD), a global community of independent Microsoft ambasadors.
