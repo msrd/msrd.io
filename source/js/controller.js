@@ -1,4 +1,4 @@
-var app = angular.module('msrd', [])
+var app = angular.module('msrd', []);
     // config(function($routeProvider){
     //     $routeProvider.
     //         when('/archive', {templateUrl:'../pages/archive.html', controller:archiveCtrl}).
@@ -6,18 +6,25 @@ var app = angular.module('msrd', [])
     //         otherwise(redirectTo:'/home'});
     // )};
 
+var decodeEmail = function ( encodedEmail ) {
+    var result = '';
+    for ( var i = 0; i < encodedEmail.length; i++ ) {
+        var letter = String.fromCharCode( encodedEmail[i] - 1 );
+        result += letter;
+    }
+    return result;
+};
+
 app.factory('RdList', ['$http', function ($http) {
     return{
         get: function(callback){
             $http.get('../rdlist.json').success(function(item){
                 item.forEach(function (data){
                     data.FullName = data.First + ' ' + data.Last;
-                    if(data.GravatarHash){
-                        data.Avatar = 'http://www.gravatar.com/avatar/' + data.GravatarHash + '?s=256';
-                    }
-                    else{
-                        data.Avatar = '../images/logo/ico/fav256.png';
-                    }
+                    data.Email = decodeEmail( data.Email );
+                    data.Avatar = data.GravatarHash
+                        ? 'http://www.gravatar.com/avatar/' + data.GravatarHash + '?s=256'
+                        : '../images/logo/ico/fav256.png';
                 });
                 callback(item);
             });
@@ -40,8 +47,6 @@ app.controller('searchCtrl', function($scope, RdList) {
         $scope.search.FullName = null;
     };
 });
-
-
 
 app.controller('newsCtrl', function($scope, $http){
 
